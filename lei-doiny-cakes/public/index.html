@@ -1,43 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!--SEO-->
+    <meta name="description" content="Pastelería diferente por Lei Doiny, cocinera y pastelera apasionada por lo que hace. Tortas especiales, y a pedido, cosas ricas, recetas, y catering para eventos.">
+    <meta name="keywords" content="comida, recetas, tortas, eventos">
+    <!--RESPONSIVE-->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="description" content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!--ESTILOS-->
+    <link rel="stylesheet" href="../src/index.css">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--TITULO-->
+    <title>LEI DOINY CAKES</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <header>
+      <div>
+        <!--LOGO-->
+        <img src="../img/logo.png" alt="logo">
+        <!--MENU NAV BAR-->
+        <nav>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mt-2 mt-lg-0 ml-auto">
+              <li class="nav-item">
+                <a class="navbar-brand" href="#menu">Menú</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand" href="#como_comprar">Cómo comprar</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand" href="#formulario">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand" href="#FAQ">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <button id="carrito_menu" type="button" class="btn" data-toggle="modal" data-target="#exampleModal">
+                  <img src="..img/carrito.png" alt="carrito de compras">
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    </header>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <!--BOOTSTRAP-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!--JS-->
+    <script src="../src/components/NavBar.js"></script>
   </body>
 </html>
