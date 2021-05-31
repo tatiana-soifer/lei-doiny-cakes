@@ -1,0 +1,17 @@
+#root{
+    background-color: #545454;
+}
+.navbar-brand{
+    list-style: none;
+    color: white;
+}
+#logo{
+    position: absolute;
+    height: 100px;
+    left: 20px;
+    top: 28px;
+}
+#carrito_menu{
+    background: none;
+    border: none;
+}
