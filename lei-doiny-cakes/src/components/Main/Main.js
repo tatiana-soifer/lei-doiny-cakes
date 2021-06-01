@@ -1,5 +1,6 @@
-import './Main.css';
+import React from 'react';
 import NavBar from '../NavBar/NavBar';
+import './Main.css';
 
 
 function Main () {
