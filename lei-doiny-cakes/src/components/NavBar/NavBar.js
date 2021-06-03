@@ -1,5 +1,5 @@
-import logo from '../../assets/logos/logo.png';
-import carrito from '../../assets/icons/carrito.png';
+import logo from '../../assets/logo/logo.png';
+import boton_carrito from './CardWidget';
 import './NavBar.css';
 
 
@@ -26,9 +26,7 @@ function NavBar(){
                             <a className="navbar-brand" href="#FAQ">FAQ</a>
                         </li>
                         <li className="nav-item">
-                            <button id="carrito_menu" type="button" className="btn" data-toggle="modal" data-target="#exampleModal">
-                                <img src={carrito} alt="carrito de compras" />
-                            </button>
+                            <boton_carrito />
                         </li>
                     </ul>
                 </div>
