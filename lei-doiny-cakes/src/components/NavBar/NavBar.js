@@ -1,4 +1,4 @@
-import logo from '../../assets/logo/logo.png';
+import logo from '../../assets/logos/logo.png';
 import carrito from '../../assets/icons/carrito.png';
 import './NavBar.css';
 
