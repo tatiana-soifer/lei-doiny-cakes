@@ -1,5 +1,5 @@
 import logo from '../../assets/logo/logo.png';
-import boton_carrito from './CardWidget';
+import CardWidget from './CardWidget';
 import './NavBar.css';
 
 
@@ -25,11 +25,9 @@ function NavBar(){
                         <li className="nav-item">
                             <a className="navbar-brand" href="#FAQ">FAQ</a>
                         </li>
-                        <li className="nav-item">
-                            <boton_carrito />
-                        </li>
                     </ul>
                 </div>
+                <CardWidget />
             </nav>
         </div>
     );

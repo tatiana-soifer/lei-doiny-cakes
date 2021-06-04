@@ -1,11 +1,15 @@
+import React from 'react';
 import carrito from '../../assets/icons/carrito.png';
 
-function boton_carrito (){
-    return(
-        <button id="carrito_menu" type="button" className="btn" data-toggle="modal" data-target="#exampleModal">
-            <img src={carrito} alt="carrito de compras" />
-        </button>
+
+const CardWidget = () => {
+    return (
+        <div>
+            <button id="carrito_menu" className="btn" type="button" data-toggle="modal" data-target="#exampleModal">
+                <img src={carrito} alt="carrito de compras" />
+            </button>
+        </div>
     );
 };
 
-export default boton_carrito;
+export default CardWidget;
