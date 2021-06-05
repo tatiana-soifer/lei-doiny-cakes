@@ -1,7 +1,6 @@
-import Counter from '../Counter/Counter';
 import ItemListContainer from '../ItemList/ItemListContainer';
 import NavBar from '../NavBar/NavBar';
-import './Main.css';
+import '../css/Main.css';
 
 
 function Main () {

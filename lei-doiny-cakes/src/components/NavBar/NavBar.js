@@ -1,6 +1,6 @@
 import logo from '../../assets/logo/logo.png';
 import CardWidget from './CardWidget';
-import './NavBar.css';
+import '../css/Main.css';
 
 
 function NavBar(){

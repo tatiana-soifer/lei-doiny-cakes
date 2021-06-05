@@ -2,6 +2,7 @@ import React from 'react';
 import Counter from '../Counter/Counter';
 import choco_oreo from '../../assets/img/choco_oreo.jpg';
 import informacion from '../../assets/icons/informacion.png';
+import './../css/Main.css';
 
 
 const ItemListContainer = () => {

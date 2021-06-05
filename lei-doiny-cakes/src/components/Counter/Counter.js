@@ -1,5 +1,5 @@
-import './Counter.css'
-import '../Main/Main.css'
+import './../css/Main.css';
+
 
 const Counter = ({initial, stock, onAdd}) => {
     
