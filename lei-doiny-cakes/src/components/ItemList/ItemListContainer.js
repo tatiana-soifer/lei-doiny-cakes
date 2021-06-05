@@ -22,7 +22,7 @@ const ItemListContainer = () => {
                             <div className="card-body">
                                 <h3 className="card-title">Choco-oreo</h3>
                                 <h4>$ 1850</h4>
-                                <Counter initial={1} stock={10} onAdd={onAdd} />
+                                <Counter initialState={1} stock={10} onAdd={onAdd} />
                             </div>
                         </div>
                     </div>
