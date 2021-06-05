@@ -2,9 +2,20 @@
 body {
   margin: 0;
   background: linear-gradient(170.21deg, #D8D8D8 7.36%, rgba(243, 214, 225, 0.9) 98.85%);
-}
+};
 
 
 //FUENTES
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+h3{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: #5A5A5A;
+};
+h4{
+  color: #5A5A5A;
+  font-family: 'Montserrat', sans-serif;
+};
