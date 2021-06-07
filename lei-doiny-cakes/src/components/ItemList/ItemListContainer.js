@@ -20,8 +20,8 @@ const ItemListContainer = () => {
                                 <img src={choco_oreo} className="card-img-top" alt="torta choco-oreo" />
                             </div>
                             <div className="card-body">
-                                <h3 className="card-title">Choco-oreo</h3>
-                                <h4>$ 1850</h4>
+                                <h4 className="card-title">Choco-oreo</h4>
+                                <h5>$ 1850</h5>
                                 <Counter initialState={1} stock={10} onAdd={onAdd} />
                             </div>
                         </div>
@@ -32,9 +32,9 @@ const ItemListContainer = () => {
                                 <img src={doble_oreo} className="card-img-top" alt="torta doble-oreo" />
                             </div>
                             <div className="card-body">
-                                <h3 className="card-title">Doble-oreo</h3>
-                                <h4>$ 1850</h4>
-                                <Counter initial={1} stock={10} onAdd={onAdd} />
+                                <h4 className="card-title">Doble-oreo</h4>
+                                <h5>$ 1850</h5>
+                                <Counter initialState={1} stock={10} onAdd={onAdd} />
                             </div>
                         </div>
                     </div>

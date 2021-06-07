@@ -9,13 +9,26 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
-h3{
+
+//TITULOS
+h1{
+  font-family: Lobster;
+  font-size: 63px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 66px;
+  letter-spacing: 0em;
+  text-align: left;
+  background: #F22973;
+  position: absolute;
+}
+h4{
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-size: 24px;
   color: #5A5A5A;
 };
-h4{
+h5{
   color: #5A5A5A;
   font-family: 'Montserrat', sans-serif;
-};
+}
