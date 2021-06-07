@@ -1,7 +1,7 @@
 import React from 'react';
 import carrito from '../../assets/icons/carrito.png';
 
-
+//IMAGEN CARRITO PARA EL NAVBAR
 const CardWidget = () => {
     return (
         <div>

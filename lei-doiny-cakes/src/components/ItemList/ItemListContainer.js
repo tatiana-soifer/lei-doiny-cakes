@@ -1,7 +1,7 @@
 import React from 'react';
 import Counter from '../Counter/Counter';
 import choco_oreo from '../../assets/img/choco_oreo.jpg';
-import doble_oreo from '../../assets/img/doble_oreo.jpg'
+import doble_oreo from '../../assets/img/doble_oreo.jpg';
 import './../css/Main.css';
 
 
@@ -11,7 +11,6 @@ const ItemListContainer = () => {
     }
     return (
         <div>
-            <h1>Bienvenidos a Lei Doiny Cakes</h1>
             <div className="container">
                 <div className="cuadricula_productos row">
                     <div className="col-lg-3 col-md-6 col-sm-12 mb-4">
@@ -34,7 +33,7 @@ const ItemListContainer = () => {
                             <div className="card-body">
                                 <h4 className="card-title">Doble-oreo</h4>
                                 <h5>$ 1850</h5>
-                                <Counter initialState={1} stock={10} onAdd={onAdd} />
+                                <Counter initialState={1} stock={5} onAdd={onAdd} />
                             </div>
                         </div>
                     </div>
