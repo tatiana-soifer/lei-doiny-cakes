@@ -27,7 +27,6 @@ function NavBar(){
                         </li>
                     </ul>
                 </div>
-                <CardWidget />
             </nav>
         </div>
     );
