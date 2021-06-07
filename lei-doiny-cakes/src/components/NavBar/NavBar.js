@@ -25,6 +25,9 @@ function NavBar(){
                         <li className="nav-item">
                             <a className="navbar-brand" href="#FAQ">FAQ</a>
                         </li>
+                        <li>
+                            <CardWidget />
+                        </li>
                     </ul>
                 </div>
             </nav>

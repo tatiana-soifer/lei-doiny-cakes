@@ -5,11 +5,11 @@ import '../css/Main.css';
 
 function Main () {
   return (
-    <div className="App">
+    <div className="Main">
       <NavBar />
       <ItemListContainer />
     </div>
   );
-}
+};
 
 export default Main;
