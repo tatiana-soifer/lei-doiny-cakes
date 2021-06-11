@@ -19,11 +19,11 @@ const Counter = ({initialState, stock, onAdd}) => {
     return (
         <div>
             <div className="boton_counter">
-                <button className="btn btn-secondary boton" data-toggle="modal" onClick={removeItems}>-</button>
+                <button className="btn btn-secondary boton" onClick={removeItems}>-</button>
                     <label>{items}</label>
-                <button className="btn btn-secondary boton" data-toggle="modal" onClick={addItems}>+</button>
+                <button className="btn btn-secondary boton" onClick={addItems}>+</button>
             </div>
-            <button id="boton_anadir" className="btn btn-secondary" data-toggle="modal">Añadir</button>
+            <button id="boton_anadir" className="btn btn-secondary">Añadir</button>
         </div>
     );
 };

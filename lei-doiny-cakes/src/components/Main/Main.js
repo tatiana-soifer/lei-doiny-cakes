@@ -1,4 +1,4 @@
-import ItemListContainer from '../ItemList/ItemListContainer';
+import ItemListContainer from '../Item/ItemList/ItemListContainer';
 import NavBar from '../NavBar/NavBar';
 import '../css/Main.css';
 
