@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react';
+/*import React, {useState, Component} from 'react';
 import '../../css/Main.css';
-import productList from '../Item';
+import ProductList from '../Item';
 
 function ItemList () {
   const [tortas, setTortas] = useState([
-    <productList />
+    <ProductList />
   ]);
   return <ul>
     {tortas.map(u => <li key={u.id}>{u.Torta} </li>)}
@@ -12,3 +12,4 @@ function ItemList () {
 };
 
 export default ItemList;
+*/

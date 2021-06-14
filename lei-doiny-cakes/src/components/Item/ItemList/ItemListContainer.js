@@ -1,6 +1,6 @@
 import React from 'react';
 import Counter from '../../Counter/Counter';
-import ItemList from './ItemList';
+import ProductList from '../Item';
 import choco_oreo from '../../../assets/img/choco_oreo.jpg';
 import doble_oreo from '../../../assets/img/doble_oreo.jpg';
 import praline from '../../../assets/img/praline.jpg';
@@ -30,6 +30,7 @@ const ItemListContainer = () => {
                                 <Counter initialState={1} stock={10} onAdd={onAdd} />
                             </div>
                         </div>
+                        <ProductList />
                     </div>
                     <div className="col-lg-3 col-md-6 col-sm-12 mb-4">
                         <div className="card shadow mb-1 rounded">
@@ -52,7 +53,6 @@ const ItemListContainer = () => {
                                 <h4 className="card-title">Praline</h4>
                                 <h5>$ 1750</h5>
                                 <Counter initialState={1} stock={15} onAdd={onAdd} />
-                                <ItemList />
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,6 @@ const ItemListContainer = () => {
                                 <h4 className="card-title">Franui</h4>
                                 <h5>$ 1950</h5>
                                 <Counter initialState={1} stock={3} onAdd={onAdd} />
-                                <ItemList />
                             </div>
                         </div>
                     </div>
