@@ -1,5 +1,6 @@
 import React from 'react';
 import Counter from '../../Counter/Counter';
+import ItemList from './ItemList';
 import choco_oreo from '../../../assets/img/choco_oreo.jpg';
 import doble_oreo from '../../../assets/img/doble_oreo.jpg';
 import praline from '../../../assets/img/praline.jpg';
@@ -9,8 +10,6 @@ import marquisse from '../../../assets/img/marquisse.jpg';
 import chessecakeFrutosRojos from '../../../assets/img/chessecake_frutos_rojos.jpg';
 import crumbleManzana from '../../../assets/img/crumble_manzana.jpg';
 import './../../css/Main.css';
-import './ItemList';
-
 
 const ItemListContainer = () => {
     const onAdd =(amount) =>{
@@ -53,6 +52,7 @@ const ItemListContainer = () => {
                                 <h4 className="card-title">Praline</h4>
                                 <h5>$ 1750</h5>
                                 <Counter initialState={1} stock={15} onAdd={onAdd} />
+                                <ItemList />
                             </div>
                         </div>
                     </div>
@@ -65,6 +65,7 @@ const ItemListContainer = () => {
                                 <h4 className="card-title">Franui</h4>
                                 <h5>$ 1950</h5>
                                 <Counter initialState={1} stock={3} onAdd={onAdd} />
+                                <ItemList />
                             </div>
                         </div>
                     </div>
