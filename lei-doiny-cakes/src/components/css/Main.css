@@ -71,3 +71,6 @@ h5 {
 #carrito_menu {
   background: none;
   border: none; }
+
+#boton_navbar {
+  border: 1px solid white; }
