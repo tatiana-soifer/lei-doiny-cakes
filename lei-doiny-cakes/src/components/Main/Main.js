@@ -1,6 +1,5 @@
 import React from 'react';
 import NavBar from '../NavBar/NavBar';
-import ProductList from '../Item/Item';
 import ItemListContainer from '../Item/ItemList/ItemListContainer';
 
 
