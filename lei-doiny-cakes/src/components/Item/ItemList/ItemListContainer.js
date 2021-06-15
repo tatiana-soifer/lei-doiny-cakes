@@ -8,6 +8,7 @@ import mousse from '../../../assets/img/mousse.jpg';
 import marquisse from '../../../assets/img/marquisse.jpg';
 import chessecakeFrutosRojos from '../../../assets/img/chessecake_frutos_rojos.jpg';
 import crumbleManzana from '../../../assets/img/crumble_manzana.jpg';
+import ProductList from '../Item';
 import './../../css/Main.css';
 
 const ItemListContainer = () => {
@@ -114,6 +115,7 @@ const ItemListContainer = () => {
                             </div>
                         </div>
                     </div>
+                    <ProductList />
                 </div>
             </div>
         </div>
