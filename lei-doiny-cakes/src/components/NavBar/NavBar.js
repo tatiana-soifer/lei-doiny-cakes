@@ -17,7 +17,7 @@ function NavBar(){
                             <a className="navbar-brand" href="#menu">Menú</a>
                         </li>
                         <li className="nav-item">
-                            <a className="navbar-brand" href="#como_comprar">Cómo comprar</a>
+                            <a className="navbar-brand" href="#comoComprar">Cómo comprar</a>
                         </li>
                         <li className="nav-item">
                             <a className="navbar-brand" href="#contacto">Contacto</a>

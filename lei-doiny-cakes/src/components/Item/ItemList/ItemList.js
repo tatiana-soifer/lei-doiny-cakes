@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react';
+import React, { useState } from 'react';
 import '../css/Main.css';
 
 
@@ -61,7 +61,7 @@ function ItemList({items}){
             Precio: 1850
         }
     ]);
-    return<ul>
-        {tortas.map (u => <li key={u.Id}>{u.Torta}</li>)}
-        </ul>
+    return(<ul>
+            {tortas.map (u => <li key={u.Id}>{u.Torta}</li>)}
+        </ul>);
 };
