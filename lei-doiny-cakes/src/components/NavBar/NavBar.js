@@ -7,23 +7,25 @@ function NavBar(){
     return(
         <div>
             <nav id="menu" className="navbar navbar-expand-lg fixed-top">
-                <img src={logo} alt="logo" id="logo" />
+                <button id="boton_logo">
+                    <img src={logo} id="logo" alt="logo" href="/Home" />
+                </button>
                 <button id="boton_navbar" className="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <ul className="navbar-nav mt-2 mt-lg-0 ml-auto">
+                    <ul className="navbar-nav mt-2 mt-lg-0  ml-auto">
                         <li className="nav-item">
-                            <a className="navbar-brand" href="#menu">Menú</a>
+                            <a className="navbar-brand" href="/Menu">Menú</a>
                         </li>
                         <li className="nav-item">
-                            <a className="navbar-brand" href="#comoComprar">Cómo comprar</a>
+                            <a className="navbar-brand" href="/ComoComprar">Cómo comprar</a>
                         </li>
                         <li className="nav-item">
-                            <a className="navbar-brand" href="#contacto">Contacto</a>
+                            <a className="navbar-brand" href="/Contacto">Contacto</a>
                         </li>
                         <li className="nav-item">
-                            <a className="navbar-brand" href="#FAQ">FAQ</a>
+                            <a className="navbar-brand" href="/FAQ">FAQ</a>
                         </li>
                         <li>
                             <CardWidget />

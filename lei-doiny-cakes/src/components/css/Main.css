@@ -93,6 +93,10 @@ p {
   left: 20px;
   top: 28px; }
 
+#boton_logo {
+  background: none;
+  border: none; }
+
 #carrito_menu {
   background: none;
   border: none; }
