@@ -1,0 +1,49 @@
+.como_comprar{
+    padding-bottom: 5%;
+    h3{
+        text-align: center;
+    }
+    h4{
+        text-align: center;
+    }
+    img{
+        display: flex;
+    }
+}
+.grid_como_comprar{
+    display: grid;
+    grid-template-areas: "tortas tarjetas envios";
+    grid-column-gap: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.tortas{
+    grid-area: tortas;
+    justify-self: center;
+    img{
+        padding-bottom: 5%;
+        padding-top: 2%;
+        display: block;
+        margin: auto;
+    }
+}
+.tarjetas{
+    grid-area: tarjetas;
+    justify-self: center;
+    img{
+        padding-bottom: 5%;
+        padding-top: 2%;
+        display: block;
+        margin: auto;
+    }
+}
+.envios{
+    grid-area: envios;
+    justify-self: center;
+    img{
+        padding-bottom: 5%;
+        padding-top: 2%;
+        display: block;
+        margin: auto;
+    }
+}
