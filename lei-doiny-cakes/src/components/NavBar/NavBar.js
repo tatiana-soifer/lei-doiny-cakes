@@ -10,11 +10,11 @@ function NavBar(){
                 <button id="boton_logo">
                     <img src={logo} id="logo" alt="logo" href="/Home" />
                 </button>
-                <button id="boton_navbar" className="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <button id="boton_navbar" className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <ul className="navbar-nav mt-2 mt-lg-0  ml-auto">
+                <div id="navbarTogglerDemo01" className="collapse navbar-collapse ml-auto">
+                    <ul className="navbar-nav mt-2 mt-lg-0 ml-auto">
                         <li className="nav-item">
                             <a className="navbar-brand" href="/Menu">Menú</a>
                         </li>

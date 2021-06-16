@@ -62,9 +62,9 @@ const ProductList = () =>{
     ];
     return (
         <div>
-            {lista.map(element => {
+            {lista.map((element, i) => {
                 return (
-                    <div>
+                    <div key={i}>
                         <h2>{element.Torta}</h2>
                         <h4>Descripción: {element.Descripcion}</h4>
                         <h3>Precio: ${element.Precio}</h3>

@@ -177,9 +177,10 @@ p {
       background: #DAD8D9; }
 
 .presentacion {
+  background-image: url(../../assets/img/marquisse_fondo.jpg);
   background-size: cover;
   background-position: center center;
-  padding-bottom: 15%;
+  padding-bottom: 50%;
   border: none; }
   .presentacion h1 {
     font-family: 'Lobster', cursive;
@@ -194,6 +195,7 @@ p {
     width: 40%;
     left: 5%;
     padding-left: 5%;
+    padding-top: 25%;
     font-size: 23px;
     color: #5A5A5A; }
   .presentacion .b_presentacion {
