@@ -7,6 +7,8 @@ import ComoComprar from '../Sections/ComoComprar';
 import Contacto from '../Sections/Contacto';
 import FAQ from '../Sections/FAQ';
 import Nosotros from '../Sections/Nosotros';
+import GetItems from '../Item/ItemDetail/ItemDetailContainer';
+import '../css/Main.css'
 
 
 function Main () {
@@ -24,6 +26,7 @@ function Main () {
                 </Route>
                 <Route exact path='/Menu'>
                     <ItemListContainer />
+                    <GetItems />
                 </Route>
                 <Route exact path='/Contacto'>
                     <Contacto />
