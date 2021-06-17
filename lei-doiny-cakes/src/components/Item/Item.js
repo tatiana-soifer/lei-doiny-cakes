@@ -1,80 +1,28 @@
 
+import Counter from '../Counter/Counter';
 import '../css/Main.css';
 
-const ProductList = () =>{
-    const lista = [
-        {
-            Id: 1,
-            Torta: 'Praline',
-            Descripcion: 'Crema pastelera de chocolate y praline de frutos secos. Tamaño: Molde 26cm',
-            Stock: 15,
-            Precio: 1750
-        },
-        {
-            Id: 2,
-            Torta: 'Franui',
-            Descripcion: 'Base crocante de chocolate, con una mousse de chocolate negro y mousse de frambuesa, bañada en chocolate blanco. Tamaño: Molde 26cm',
-            Stock: 3,
-            Precio: 1950
-        },
-        {
-            Id: 3,
-            Torta: 'Choco-oreo',
-            Descripcion: 'Es la mezcla perfecta entre la Chocotorta y la Doble Oreo. Una bomba explosiva que hay que probar. Tamaño: Molde 26cm',
-            Stock: 10,
-            Precio: 1850
-        },
-        {
-            Id: 4,
-            Torta: 'Doble-oreo',
-            Descripcion: 'Dos capas de Oreo, dulce de leche y crema chantillí. Tamaño: Molde 26cm',
-            Stock: 5,
-            Precio: 1850
-        },
-        {
-            Id: 5,
-            Torta: 'Mousse de Chocolate',
-            Descripcion: 'Clásica mousse de chocolate negro, con una base de brownie humedo y chocolate amargo rallado por arriba. Tamaño: Molde 26cm',
-            Stock: 5,
-            Precio: 1800
-        },
-        {
-            Id: 6,
-            Torta: 'Marquisse',
-            Descripcion: 'Brownie húmedo, dulce de leche, crema chantillí o merengue Italiaano y lluvia de chocolate. Tamaño: Molde 26cm',
-            Stock: 5,
-            Precio: 1850
-        },
-        {
-            Id: 7,
-            Torta: 'Cheesecake',
-            Descripcion: 'Cheescake con base crocante, crema de limon y frutos rojos. Tamaño: Molde 26cm',
-            Stock: 5,
-            Precio: 1800
-        },
-        {
-            Id: 8,
-            Torta: 'Crumble de Manzana',
-            Descripcion: 'Base de masa quebrada dulce, manzana y un crumble crocante. Tamaño: Molde 26cm',
-            Stock: 5,
-            Precio: 1850
+function Item ({item}) {
+    const onAdd = (count) => {
+        if(count > 0) {
+            console.log(`${count} productos comprados`);
         }
-    ];
-    return (
-        <div>
-            {lista.map((element, i) => {
-                return (
-                    <div key={i}>
-                        <h2>{element.Torta}</h2>
-                        <h4>Descripción: {element.Descripcion}</h4>
-                        <h3>Precio: ${element.Precio}</h3>
-                        <h4>Stock: {element.Stock}</h4>
-                    </div>
-                )
-            }
-            )}
+    }
+    return(
+        <div className="container">
+            <div className="row">
+                <div>
+                    <img src={item.Foto} alt={item.Torta} />
+                </div>
+                <div>
+                    <h2>{item.Torta}</h2>
+                    <h4>{item.Descripcion}</h4>
+                    <h3>${item.Precio}</h3>
+                    <Counter initialState={1} stock={5} onAdd={onAdd} />
+                </div>
+            </div>
         </div>
     )
 };
 
-export default ProductList;
+export default Item;

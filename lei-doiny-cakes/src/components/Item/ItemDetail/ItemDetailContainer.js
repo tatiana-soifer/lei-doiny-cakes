@@ -2,7 +2,7 @@ import '../../css/Main.css';
 import React, {useState, useEffect} from 'react';
 
 const GetItems = () => {
-    const [tortas, setTortas] = useState ();
+    const [item, setTortas] = useState ();
     useEffect(() => {
         const data = [
             {
@@ -64,11 +64,11 @@ const GetItems = () => {
         ]
     return(
         <div>
-            {tortas.map(torta =>{
+            {tortas.map(item =>{
                 return(
                     <div>
-                        <p>{torta.Id}</p>
-                        <p>{torta.Torta}</p>
+                        <p>{item.Id}</p>
+                        <p>{item.Torta}</p>
                     </div>
                 )
             })}
