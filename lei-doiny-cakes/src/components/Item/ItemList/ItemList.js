@@ -9,7 +9,7 @@ function ItemList ({items}){
                     <div className="row">
                     {
                         items.map(item =>( 
-                            <Item item={item} key={item.Id} />
+                            <Item item={item} key={item.id} />
                         ))
                     }
                     </div>
