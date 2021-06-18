@@ -1,20 +1,22 @@
-import {useState, useEffect} from "react";
 import Item from '../Item';
-import '../css/Main.css';
+import '../../css/Main.css';
 
 function ItemList ({items}){
     return (
         <>
             {
-                <div>{
-                    items.map(item =>( 
-                        <Item item={item} key={i} />
-                    ))
-                }
+                <div className="container">
+                    <div className="row">
+                    {
+                        items.map(item =>( 
+                            <Item item={item} key={item.Id} />
+                        ))
+                    }
+                    </div>
                 </div>
             }
         </>
-    );
+    )
 };
 
 export default ItemList;
