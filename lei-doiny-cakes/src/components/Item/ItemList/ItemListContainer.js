@@ -1,4 +1,6 @@
 import React from 'react';
+import {useParams} from 'react-router-dom';
+import ItemList from '../../Item/ItemList/ItemList';
 import Counter from '../../Counter/Counter';
 import choco_oreo from '../../../assets/img/choco_oreo.jpg';
 import doble_oreo from '../../../assets/img/doble_oreo.jpg';
@@ -8,13 +10,13 @@ import mousse from '../../../assets/img/mousse.jpg';
 import marquisse from '../../../assets/img/marquisse.jpg';
 import chessecakeFrutosRojos from '../../../assets/img/chessecake_frutos_rojos.jpg';
 import crumbleManzana from '../../../assets/img/crumble_manzana.jpg';
-import ItemList from '../../Item/ItemList/ItemList';
 import './../../css/Main.css';
 
 const ItemListContainer = () => {
     const onAdd =(amount) =>{
-        console.log(amount)
-    }
+        console.ñlog(amount)
+    };
+    const {id} = useParams();
     return (
         <div>
             <div className="container">
@@ -27,7 +29,7 @@ const ItemListContainer = () => {
                             <div className="card-body">
                                 <h4 className="card-title">Choco-oreo</h4>
                                 <h5>$ 1850</h5>
-                                <Counter initialState={1} stock={10} onAdd={onAdd} />
+                                <Counter initialState={1} stock={15} onAdd={onAdd} />
                             </div>
                         </div>
                     </div>
@@ -39,7 +41,7 @@ const ItemListContainer = () => {
                             <div className="card-body">
                                 <h4 className="card-title">Doble-oreo</h4>
                                 <h5>$ 1850</h5>
-                                <Counter initialState={1} stock={5} onAdd={onAdd} />
+                                <Counter initialState={1} stock={15} onAdd={onAdd} />
                             </div>
                         </div>
                     </div>
@@ -63,7 +65,7 @@ const ItemListContainer = () => {
                             <div className="card-body">
                                 <h4 className="card-title">Franui</h4>
                                 <h5>$ 1950</h5>
-                                <Counter initialState={1} stock={3} onAdd={onAdd} />
+                                <Counter initialState={1} stock={15} onAdd={onAdd} />
                             </div>
                         </div>
                     </div>
@@ -75,7 +77,7 @@ const ItemListContainer = () => {
                             <div className="card-body">
                                 <h4 className="card-title">Mousse</h4>
                                 <h5>$ 1800</h5>
-                                <Counter initialState={1} stock={5} onAdd={onAdd} />
+                                <Counter initialState={1} stock={15} onAdd={onAdd} />
                             </div>
                         </div>
                     </div>
@@ -87,7 +89,7 @@ const ItemListContainer = () => {
                             <div className="card-body">
                                 <h4 className="card-title">Marquisse</h4>
                                 <h5>$ 1350</h5>
-                                <Counter initialState={1} stock={5} onAdd={onAdd} />
+                                <Counter initialState={1} stock={15} onAdd={onAdd} />
                             </div>
                         </div>
                     </div>
@@ -99,7 +101,7 @@ const ItemListContainer = () => {
                             <div className="card-body">
                                 <h4 className="card-title">Cheesecake</h4>
                                 <h5>$ 1800</h5>
-                                <Counter initialState={1} stock={5} onAdd={onAdd} />
+                                <Counter initialState={1} stock={15} onAdd={onAdd} />
                             </div>
                         </div>
                     </div>
@@ -111,11 +113,11 @@ const ItemListContainer = () => {
                             <div className="card-body">
                                 <h4 className="card-title">Crumble</h4>
                                 <h5>$ 1800</h5>
-                                <Counter initialState={1} stock={5} onAdd={onAdd} />
+                                <Counter initialState={1} stock={15} onAdd={onAdd} />
                             </div>
                         </div>
                     </div>
-                    <ItemList />
+                    <ItemList item={id}/>
                 </div>
             </div>
         </div>
@@ -123,4 +125,3 @@ const ItemListContainer = () => {
 };
 
 export default ItemListContainer;
-

@@ -18,7 +18,7 @@ function Item ({item}) {
                     <h2>{item.Torta}</h2>
                     <h4>{item.Descripcion}</h4>
                     <h3>${item.Precio}</h3>
-                    <Counter initialState={1} stock={5} onAdd={onAdd} />
+                    <Counter initialState={1} stock={15} onAdd={onAdd} />
                 </div>
             </div>
         </div>
