@@ -1,24 +1,29 @@
-
+import React from 'react';
+import {Link} from 'react-router-dom';
 import Counter from '../Counter/Counter';
 import '../css/Main.css';
 
-function Item ({item}) {
+function Item ({data}) {
     const onAdd = (count) => {
         if(count > 0) {
             console.log(`${count} productos comprados`);
         }
     }
+    const {id, Torta, Descripcion, Precio, Foto} = data;
     return(
         <div className="container">
             <div className="row">
                 <div>
-                    <img src={item.Foto} alt={item.Torta} />
+                    <img src={Foto} alt={Torta} />
                 </div>
                 <div>
-                    <h2>{item.Torta}</h2>
-                    <h4>{item.Descripcion}</h4>
-                    <h3>${item.Precio}</h3>
+                    <h2>{Torta}</h2>
+                    <h4>{Descripcion}</h4>
+                    <h3>${Precio}</h3>
                     <Counter initialState={1} stock={15} onAdd={onAdd} />
+                    <button>
+                        <Link to={`/item/:${id}`}>Ver mas</Link> 
+                    </button>
                 </div>
             </div>
         </div>
