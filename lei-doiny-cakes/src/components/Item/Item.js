@@ -3,15 +3,14 @@ import {Link} from 'react-router-dom';
 import Counter from '../Counter/Counter';
 import '../css/Main.css';
 
-function Item ({data}) {
+const Item = ({id, Torta, Descripcion, Precio, Foto}) => {
     const onAdd = (count) => {
         if(count > 0) {
             console.log(`${count} productos comprados`);
         }
     }
-    const {id, Torta, Descripcion, Precio, Foto} = data;
     return(
-        <div className="container">
+        <div className="container" id={id}>
             <div className="row">
                 <div className="card shadow mb-1 rounded">
                     <div>
@@ -24,7 +23,7 @@ function Item ({data}) {
                     <h3>${Precio}</h3>
                     <Counter initialState={1} stock={15} onAdd={onAdd} />
                     <button>
-                        <Link to={`/item/:${id}`}>Ver mas</Link> 
+                        <Link to={`/item/:${id}`} className="btn botonDetalle">Ver mas</Link> 
                     </button>
                 </div>
             </div>

@@ -69,17 +69,6 @@ p {
   border: none;
   color: #5A5A5A; }
 
-.cuadricula_productos {
-  padding-top: 20%; }
-  .cuadricula_productos .card {
-    border-radius: 17px 17px 17px 17px !important;
-    border: none; }
-    .cuadricula_productos .card .card-body {
-      background-color: #F3D6E1;
-      border-radius: 0px 0px 17px 17px;
-      border-color: none;
-      padding-bottom: 30%; }
-
 #menu {
   background-color: none; }
 
@@ -207,3 +196,14 @@ p {
     margin-left: 10%;
     justify-items: center;
     font-size: 23px; }
+
+.cuadricula_productos {
+  padding-top: 20%; }
+  .cuadricula_productos .card {
+    border-radius: 17px 17px 17px 17px !important;
+    border: none; }
+    .cuadricula_productos .card .card-body {
+      background-color: #F3D6E1;
+      border-radius: 0px 0px 17px 17px;
+      border-color: none;
+      padding-bottom: 30%; }
