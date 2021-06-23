@@ -1,25 +1,19 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import Item from '../Item';
 import '../../css/Main.css';
 
-const ItemList = ({id, Foto, Torta, Precio, Descripcion}) => {
+const ItemList = ({items}) => {
     return(
-        <div className="itemCard" id={id}>               
-            <div className="img-item-container">
-                <img src={Foto} alt={Descripcion}></img>
+        <div className="container">               
+            <div className="row">
+                {items.map ((e, i) => {
+                    return (
+                        <Item id={e.id} Foto={e.Foto} Torta={e.Torta} Precio={e.Precio} Descripcion={e.Descripcion} key={i} />
+                    )
+                })};
             </div>
-            <div>
-                <div>
-                    <h3>{Torta}</h3>
-                    <h4>{Descripcion}</h4>
-                    <p>-</p>
-                    <p>${Precio}</p>
-                    <p>-</p>
-                    <Link to={`/item/:${id}`}>Ver mas</Link> 
-                </div>
-            </div>           
-        </div>        
+        </div> 
     );
-}
+};
 
 export default ItemList;

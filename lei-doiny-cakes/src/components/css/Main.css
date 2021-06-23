@@ -81,7 +81,7 @@ p {
       padding-bottom: 30%; }
 
 #menu {
-  background-color: #545454; }
+  background-color: none; }
 
 .navbar-brand {
   list-style: none;
@@ -103,6 +103,9 @@ p {
 
 #boton_navbar {
   border: 1px solid white; }
+
+.navbar_color {
+  background-color: #545454; }
 
 .como_comprar {
   padding-bottom: 5%; }

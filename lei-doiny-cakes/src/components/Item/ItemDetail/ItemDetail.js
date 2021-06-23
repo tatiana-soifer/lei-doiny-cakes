@@ -1,20 +1,30 @@
+import React from 'react';
+import Counter from '../../Counter/Counter';
 import '../../css/Main.css';
 
-function ItemDetail({item}){
+const ItemDetail = ({item}) => {
+    const onAdd = (amount) =>{
+        console.log(amount)
+    };
     return(
         <>
         {
-        <div className="container">
+        <div id={item.id} className="container">
             <div className="row">
-                <img src={item.Foto} alt={item.Torta} />
-                <p>{item.Torta}</p>
-                <p>{item.Descripcion}</p>
-                <p>${item.Precio}</p>
+                <div className="col-lg-6 col-sm-12">
+                    <img src={item.Foto} alt={item.Descripcion} />
+                </div>
+                <div className="col-lg-6 col-sm-12">
+                    <h2>{item.Torta}</h2>
+                    <h4>{item.Descripcion}</h4>
+                    <h3>${item.Precio}</h3>
+                    <Counter initialState={1} stock={15} onAdd={onAdd} />
+                </div>
             </div>
         </div>
         }
     </>  
-    )
-}
+    );
+};
 
 export default ItemDetail;
