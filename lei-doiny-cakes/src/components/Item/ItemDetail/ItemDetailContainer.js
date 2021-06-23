@@ -1,4 +1,5 @@
-import {useState, useEffect, useParams} from 'react';
+import {useState, useEffect} from 'react';
+import {useParams} from 'react-router-dom';
 import praline from '../../../assets/img/praline.jpg';
 import franui from '../../../assets/img/franui.jpg';
 import chocoOreo from '../../../assets/img/choco_oreo.jpg';

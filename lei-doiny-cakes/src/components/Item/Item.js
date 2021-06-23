@@ -13,11 +13,13 @@ function Item ({data}) {
     return(
         <div className="container">
             <div className="row">
-                <div>
-                    <img src={Foto} alt={Torta} />
+                <div className="card shadow mb-1 rounded">
+                    <div>
+                        <img src={Foto} alt={Torta} />
+                    </div>
                 </div>
                 <div>
-                    <h2>{Torta}</h2>
+                    <h2 className="card-title">{Torta}</h2>
                     <h4>{Descripcion}</h4>
                     <h3>${Precio}</h3>
                     <Counter initialState={1} stock={15} onAdd={onAdd} />

@@ -1,5 +1,5 @@
-import React from 'react';
-import {useParams, useState, useEffect} from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import {useParams} from 'react-router-dom';
 import ItemList from '../../Item/ItemList/ItemList';
 import Counter from '../../Counter/Counter';
 import praline from '../../../assets/img/praline.jpg';
@@ -13,9 +13,11 @@ import crumbleManzana from '../../../assets/img/crumble_manzana.jpg';
 import './../../css/Main.css';
 
 const ItemListContainer = () => {
-    const onAdd = (amount) =>{
-        console.log(amount)
-    };
+    const onAdd = (count) => {
+        if(count > 0) {
+            console.log(`${count} productos comprados`);
+        }
+    }
     const [items, setItems] = useState ([]);
     const {category} = useParams ();
     useEffect(() => {
@@ -96,9 +98,15 @@ const ItemListContainer = () => {
     }, [category]);
     return(
         <div className="container">
-            <div className="row">                
-                <ItemList items={items} />
-                <Counter initialState={1} stock={15} onAdd={onAdd} />
+            <div className="row">
+                <div className="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <div className="card shadow mb-1 rounded">
+                        <div className="card-body card_show">
+                            <ItemList items={items} />
+                            <Counter initialState={1} stock={15} onAdd={onAdd} />
+                        </div>
+                    </div>
+                </div>                
             </div>
         </div>        
     );
