@@ -11,11 +11,11 @@ const ItemDetail = ({item}) => {
         {
         <div id={item.id} className="container">
             <div className="row">
-                <div className="col-lg-6 col-sm-12">
+                <div className="col-lg-6 col-sm-12 producto_item">
                     <img src={item.Foto} alt={item.Descripcion} />
                 </div>
                 <div className="col-lg-6 col-sm-12">
-                    <h2>{item.Torta}</h2>
+                    <h1>{item.Torta}</h1>
                     <h4>{item.Descripcion}</h4>
                     <h3>${item.Precio}</h3>
                     <Counter initialState={1} stock={15} onAdd={onAdd} />
