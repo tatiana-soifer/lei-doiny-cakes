@@ -7,7 +7,8 @@ const ItemDetail = ({item}) => {
     const onAdd = (amount) =>{
         console.log(amount)
         setIsClicked(true)
-    };
+    }
+    console.log(isClicked);
     return(
         <>
         {
@@ -20,7 +21,7 @@ const ItemDetail = ({item}) => {
                     <h1>{item.Torta}</h1>
                     <h4>{item.Descripcion}</h4>
                     <h3>${item.Precio}</h3>
-                    <Counter initialState={1} stock={15} onAdd={onAdd} />
+                    <Counter initialState={1} stock={item.Stock} onAdd={onAdd} />
                 </div>
             </div>
         </div>

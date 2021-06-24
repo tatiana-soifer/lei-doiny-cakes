@@ -8,7 +8,8 @@ import ComoComprar from '../Sections/ComoComprar';
 import Contacto from '../Sections/Contacto';
 import FAQ from '../Sections/FAQ';
 import Nosotros from '../Sections/Nosotros';
-import '../css/Main.css'
+import Cart from '../Sections/Cart';
+import '../css/Main.css';
 
 
 function Main () {
@@ -25,6 +26,7 @@ function Main () {
                 <Route exact path="/Contacto" component={Contacto}></Route>
                 <Route exact path="/FAQ" component={FAQ}></Route>
                 <Route exact path="/Nosotros" component={Nosotros}></Route>
+                <Route exact path="/cart" component={Cart}></Route>
             </Switch>
         </BrowserRouter>
     );

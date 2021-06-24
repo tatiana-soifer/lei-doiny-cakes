@@ -27,9 +27,10 @@ function NavBar(){
                     <li className="nav-item">
                         <NavLink className="navbar-brand" activeClassName="active" to={'/FAQ'}>FAQ</NavLink>
                     </li>
-                    <li>
-                        
-                        <CardWidget />
+                    <li className="nav-item">
+                        <NavLink className="navbar-brand" activeClassName="active" to={'/Cart'}>
+                            <CardWidget />
+                        </NavLink>
                     </li>
                 </ul>
             </nav>
