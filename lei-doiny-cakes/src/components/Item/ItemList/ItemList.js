@@ -10,7 +10,7 @@ const ItemList = ({items}) => {
                     return (
                         <Item id={e.id} Foto={e.Foto} Torta={e.Torta} Precio={e.Precio} Descripcion={e.Descripcion} key={i} />
                     )
-                })};
+                })}
             </div>
         </div> 
     );

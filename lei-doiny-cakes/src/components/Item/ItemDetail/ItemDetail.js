@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useState, Link} from 'react';
 import Counter from '../../Counter/Counter';
 import '../../css/Main.css';
 
 const ItemDetail = ({item}) => {
+    const [isClicked, setIsClicked] = useState (false);
     const onAdd = (amount) =>{
         console.log(amount)
+        setIsClicked(true)
     };
     return(
         <>
@@ -23,6 +25,8 @@ const ItemDetail = ({item}) => {
             </div>
         </div>
         }
+        {isClicked && <Link to="/cart">Terminar compra</Link>}
+        {!isClicked && <Counter onAdd = {onAdd} />}  
     </>  
     );
 };

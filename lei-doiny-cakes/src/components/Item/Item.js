@@ -10,29 +10,25 @@ const Item = ({id, Torta, Descripcion, Precio, Foto}) => {
         }
     }
     return(
-        <div className="menu_productos">
-            <div id={id}>
-                <div>
-                    <div className="col-lg-3 col-md-6 col-sm-12 mb-4 ">
-                        <div className="card shadow mb-1 rounded">
-                            <div className="card_show">
-                                <img src={Foto} alt={Torta} />
-                            </div>
+        <div id={id}>
+            <div className="cuadricula_productos">
+                <div className="col-lg-3 col-md-6 col-sm-12 mb-4 ">
+                    <div className="card shadow mb-1 rounded">
+                        <div className="card_show">
+                            <img src={Foto} alt={Torta} />
                         </div>
-                        <div className="card-body">
-                            <h2 className="card-title">{Torta}</h2>
-                            <h4>{Descripcion}</h4>
-                            <h3>${Precio}</h3>
-                            <Counter initialState={1} stock={15} onAdd={onAdd} />
-                            <button>
-                                <Link to={`/item/:${id}`} className="btn botonDetalle">Ver mas</Link> 
-                            </button>
-                        </div>
+                    </div>
+                    <div className="card-body">
+                        <h2 className="card-title">{Torta}</h2>
+                        <h4>{Descripcion}</h4>
+                        <h3>${Precio}</h3>
+                        <Counter initialState={1} stock={15} onAdd={onAdd} />
+                        <Link to={`/item/:${id}`} className="btn botonDetalle">Ver mas</Link> 
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 };
 
 export default Item;

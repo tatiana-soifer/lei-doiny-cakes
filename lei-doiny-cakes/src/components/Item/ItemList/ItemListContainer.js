@@ -97,18 +97,10 @@ const ItemListContainer = () => {
         });
     }, [category]);
     return(
-        <div className="container">
-            <div className="row">
-                <div className="col-lg-3 col-md-6 col-sm-12 mb-4">
-                    <div className="card shadow mb-1 rounded">
-                        <div className="card-body card_show">
-                            <ItemList items={items} />
-                            <Counter initialState={1} stock={15} onAdd={onAdd} />
-                        </div>
-                    </div>
-                </div>                
-            </div>
-        </div>        
+        <div className="menu_productos">
+            <ItemList items={items} />
+            <Counter initialState={1} stock={15} onAdd={onAdd} />
+        </div> 
     );
 };
 
