@@ -16,7 +16,6 @@ import desayuno4 from '../../../assets/img/desayuno4.jpg';
 import letterCake from '../../../assets/img/letter_cake_chocotorta_.jpg';
 import numberCake from '../../../assets/img/letter_cake_marquisse_.jpg';
 import shots from '../../../assets/img/shots.jpg';
-
 import './../../css/Main.css';
 
 const ItemListContainer = () => {
@@ -179,7 +178,7 @@ const ItemListContainer = () => {
         });
     }, [category]);
     return(
-        <div className="menu_productos">
+        <div>
             <ItemList items={items} />
         </div> 
     );

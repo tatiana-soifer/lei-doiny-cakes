@@ -22,9 +22,7 @@ function Home (){
                         </ol>
                     </div>
                     <div className="cuadriculaProductos">
-                        <div className="col-lg-3 col-md-6 col-sm-12 mb-4">
-                            <ItemListContainer />
-                        </div>
+                        <ItemListContainer />
                     </div>
                 </div>
             </div>
