@@ -194,7 +194,7 @@ p {
     width: 50%;
     top: 35%;
     margin-left: 5%; }
-  .presentacion .p_presentacion {
+  .presentacion .pPresentacion {
     height: 78px;
     width: 40%;
     left: 5%;
@@ -202,7 +202,7 @@ p {
     padding-top: 25%;
     font-size: 23px;
     color: #5A5A5A; }
-  .presentacion .b_presentacion {
+  .presentacion .bPresentacion {
     height: 59px;
     width: 247px;
     margin-left: 10%;
