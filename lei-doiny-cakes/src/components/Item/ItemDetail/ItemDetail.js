@@ -2,7 +2,7 @@ import React, {useState, Link} from 'react';
 import Counter from '../../Counter/Counter';
 import '../../css/Main.css';
 
-const ItemDetail = ({item}) => {
+const ItemDetail = (item) => {
     const [isClicked, setIsClicked] = useState (false);
     const onAdd = (amount) =>{
         console.log(amount)
@@ -21,7 +21,6 @@ const ItemDetail = ({item}) => {
                     <h1>{item.Torta}</h1>
                     <h4>{item.Descripcion}</h4>
                     <h3>${item.Precio}</h3>
-                    <Counter initialState={1} stock={item.Stock} onAdd={onAdd} />
                 </div>
             </div>
         </div>

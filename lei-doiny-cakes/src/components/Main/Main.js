@@ -15,7 +15,7 @@ import '../css/Main.css';
 function Main () {
     return (
         <BrowserRouter>
-            <div className="Main">
+            <div>
                 <NavBar />
             </div>
             <Switch>
