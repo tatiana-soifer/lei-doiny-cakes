@@ -1,0 +1,54 @@
+//MENU DE PRODUCTOS
+.menuProductos{
+    display: flex;
+    padding-bottom: 5%;
+}
+.cuadriculaProductos{
+    padding-top: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    .card{
+        border-radius: 17px 17px 17px 17px!important;
+        border: none;
+        .card-body{
+            background-color: #F3D6E1;
+            border-radius: 0px 0px 17px 17px;
+            border-color: none;
+            padding-bottom: 30%;
+            button{
+                float: right;
+            }
+            h2{
+                font-size: 25px;
+                margin-bottom: 0.75rem;
+            }
+        }
+        .card-img-top{
+            border-radius: 17px 17px 0px 0px;
+            height: 100%;
+        }
+    }
+}
+
+.menuListado{
+    display: flex;
+    padding-bottom: 2%;
+    justify-content: space-around;
+    
+    ol{
+        width: 50%;
+    }
+}
+.categoriaItem:hover{
+    color: #F22973;
+}
+.categoriaItem{
+    list-style: none;
+    text-align: center;
+    color: #5A5A5A;
+    display:inline;
+    padding: 2%;
+}
+.botonDetalle{
+    background-color: none;
+}

@@ -27,6 +27,10 @@ function Main () {
                 <Route exact path="/FAQ" component={FAQ}></Route>
                 <Route exact path="/Nosotros" component={Nosotros}></Route>
                 <Route exact path="/cart" component={Cart}></Route>
+                <Route exact path="/tortas"></Route>
+                <Route exact path="/desayunosMeriendas"></Route>
+                <Route exact path="/letterCakes"></Route>
+                <Route exact path="/shots"></Route>
             </Switch>
         </BrowserRouter>
     );

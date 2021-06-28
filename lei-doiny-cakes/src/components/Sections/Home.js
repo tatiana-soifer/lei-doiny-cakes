@@ -1,5 +1,6 @@
-import '../css/Main.css';
+import {Link} from 'react-router-dom';
 import ItemListContainer from '../Item/ItemList/ItemListContainer';
+import '../css/Main.css';
 
 function Home (){
     return(
@@ -14,11 +15,10 @@ function Home (){
                     <h2>Explorá nuestro menú</h2>
                     <div className="menuListado">
                         <ol>
-                            <li className="categoriaItem" category="todos">Todos</li>
-                            <li className="categoriaItem" category="tortas">Tortas</li>
-                            <li className="categoriaItem" category="desayunosMeriendas">Desayunos y Meriendas</li>
-                            <li className="categoriaItem" category="letterCakes">Letter Cake</li>
-                            <li className="categoriaItem" category="shots">Shots</li>
+                            <Link className="categoriaItem" category="tortas">Tortas</Link>
+                            <Link className="categoriaItem" category="desayunosMeriendas">Desayunos y Meriendas</Link>
+                            <Link className="categoriaItem" category="letterCakes">Letter Cake</Link>
+                            <Link className="categoriaItem" category="shots">Shots</Link>
                         </ol>
                     </div>
                     <div className="cuadriculaProductos">

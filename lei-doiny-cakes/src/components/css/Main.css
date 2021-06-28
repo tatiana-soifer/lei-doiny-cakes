@@ -210,6 +210,9 @@ p {
     margin-top: 15%;
     font-size: 23px; }
 
+.ItemDetailContainer {
+  width: 100%; }
+
 .menuProductos {
   display: flex;
   padding-bottom: 5%; }
@@ -228,23 +231,42 @@ p {
       padding-bottom: 30%; }
       .cuadriculaProductos .card .card-body button {
         float: right; }
-    .cuadriculaProductos .card .card_show img {
-      border-radius: 17px 17px 0px 0px; }
-
-.botonDetalle {
-  background-color: none; }
+      .cuadriculaProductos .card .card-body h2 {
+        font-size: 25px;
+        margin-bottom: 0.75rem; }
+    .cuadriculaProductos .card .card-img-top {
+      border-radius: 17px 17px 0px 0px;
+      height: 100%; }
 
 .menuListado {
   display: flex;
   padding-bottom: 2%;
   justify-content: space-around; }
-  .menuListado li:hover {
-    color: #F22973; }
-  .menuListado li {
-    list-style: none;
-    text-align: center;
-    color: #5A5A5A;
-    display: inline;
-    padding: 2%; }
   .menuListado ol {
     width: 50%; }
+
+.categoriaItem:hover {
+  color: #F22973; }
+
+.categoriaItem {
+  list-style: none;
+  text-align: center;
+  color: #5A5A5A;
+  display: inline;
+  padding: 2%; }
+
+.botonDetalle {
+  background-color: none; }
+
+.ItemListContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+  .ItemListContainer div {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+.ItemList {
+  margin: 0%; }

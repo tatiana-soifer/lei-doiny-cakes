@@ -1,4 +1,5 @@
-import React, {useState, Link} from 'react';
+import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 import Counter from '../../Counter/Counter';
 import '../../css/Main.css';
 
@@ -26,7 +27,7 @@ const ItemDetail = (item) => {
         </div>
         }
         {isClicked && <Link to="/cart">Terminar compra</Link>}
-        {!isClicked && <Counter onAdd = {onAdd} />}  
+        {!isClicked && <Counter onAdd = {onAdd} stock={item.stock}/>}  
     </>  
     );
 };
