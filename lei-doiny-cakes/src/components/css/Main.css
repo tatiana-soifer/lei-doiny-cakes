@@ -233,7 +233,8 @@ p {
         float: right; }
       .cuadriculaProductos .card .card-body h2 {
         font-size: 25px;
-        margin-bottom: 0.75rem; }
+        margin-bottom: 0.75rem;
+        align-self: center; }
     .cuadriculaProductos .card .card-img-top {
       border-radius: 17px 17px 0px 0px;
       height: 100%; }

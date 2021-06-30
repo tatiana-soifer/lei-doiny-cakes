@@ -1,16 +1,20 @@
 import React from 'react';
+import {useParams} from 'react-router';
 import Item from '../Item';
 import '../../css/Main.css';
 
 const ItemList = ({items}) => {
+    const {categoria} = useParams();
     return(
-        <div className="ItemList card-group">
-            {items.map ((e, i) => {
-                return (
-                    <Item id={e.id} Foto={e.Foto} Torta={e.Torta} Precio={e.Precio} Descripcion={e.Descripcion} key={i} />
-                )
-            })}
-        </div>
+        <>
+            {items
+            .filter ((item) => item.Categoria === categoria)
+            .map ((item) => (
+                <div key={item.id}>
+                    <Item item = {item} />
+                </div>
+            ))};
+        </>
     );
 };
 
