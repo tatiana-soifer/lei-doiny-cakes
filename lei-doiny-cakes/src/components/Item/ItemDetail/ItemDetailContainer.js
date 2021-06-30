@@ -6,7 +6,7 @@ import '../../css/Main.css';
 
 const ItemDetailContainer = () => {
     const [detalles, setDetalles] = useState([]);
-    let { id: productId } = useParams();
+    let {id: productId} = useParams();
     const [producto] = Productos.filter((detalles) => detalles.id === parseInt(productId));
     const getItems = () => {
         new Promise((result, reject) => {

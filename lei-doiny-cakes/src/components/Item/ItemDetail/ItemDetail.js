@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import Counter from '../../Counter/Counter';
 import '../../css/Main.css';
 
-const ItemDetail = (detail) => {
+const ItemDetail = (detalle) => {
     const [isClicked, setIsClicked] = useState (false);
     const onAdd = (amount) =>{
         console.log(amount)
@@ -13,21 +13,21 @@ const ItemDetail = (detail) => {
     return(
         <>
         {
-        <div id={detail.id} className="container">
+        <div id={detalle.id} className="container">
             <div className="row">
                 <div className="col-lg-6 col-sm-12 productoItem">
-                    <img src={detail.Foto} alt={detail.Descripcion} />
+                    <img src={detalle.Foto} alt={detalle.Descripcion} />
                 </div>
                 <div className="col-lg-6 col-sm-12">
-                    <h1>{detail.Torta}</h1>
-                    <h4>{detail.Descripcion}</h4>
-                    <h3>${detail.Precio}</h3>
+                    <h1>{detalle.Torta}</h1>
+                    <h4>{detalle.Descripcion}</h4>
+                    <h3>${detalle.Precio}</h3>
                 </div>
             </div>
         </div>
         }
         {isClicked && <Link to="/cart">Terminar compra</Link>}
-        {!isClicked && <Counter onAdd = {onAdd} stock={detail.stock}/>}  
+        {!isClicked && <Counter onAdd = {onAdd} stock={detalle.stock}/>}  
     </>  
     );
 };
