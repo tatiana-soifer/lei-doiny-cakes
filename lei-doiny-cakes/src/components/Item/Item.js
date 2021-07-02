@@ -12,14 +12,14 @@ const Item = ({item}) => {
     return(
         <div className="col-lg-3 col-md-6 col-sm-12">
             <div className="card shadow mb-1 rounded">
-                <div>
-                    <img className="card-img-top" src={item.Foto} alt={item.Torta} />
+                <div className="card-img-top">
+                    <img src={item.Foto} alt={item.Torta} />
                 </div>
                 <div className="card-body">
                     <h2 className="card-title">{item.Torta}</h2>
                     <h3>${item.Precio}</h3>
-                    <Counter initialState={1} stock={item.stock} onAdd={onAdd} />
-                    <Link to={`/item/:${item.id}`} className="btn botonDetalle">Ver mas</Link> 
+                    <Counter initialState={1} stock={15} onAdd={onAdd} />
+                    <Link to={`/item/${item.id}`} className="btn botonDetalle">Ver mas</Link> 
                 </div>
             </div>
         </div>

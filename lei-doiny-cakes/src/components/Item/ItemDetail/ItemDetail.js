@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import Counter from '../../Counter/Counter';
 import '../../css/Main.css';
 
-const ItemDetail = (detalle) => {
+const ItemDetail = ({detalle}) => {
     const [isClicked, setIsClicked] = useState (false);
     const onAdd = (amount) =>{
         console.log(amount)

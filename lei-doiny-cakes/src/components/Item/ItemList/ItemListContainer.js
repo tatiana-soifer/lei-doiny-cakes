@@ -4,22 +4,21 @@ import Productos from '../../Data/Productos.json';
 import './../../css/Main.css';
 
 const ItemListContainer = () => {
-    const [items, setItems] = useState ([]);
+    const [items, setItems] = useState([]);
     useEffect(() => {
-        new Promise((resolve, reject) => {
+        new Promise((result, reject) => {
             setTimeout(() => {
-                resolve (Productos)
+            result(Productos);
             }, 2000);
-        })
-        .then((response) => setItems(response));
+        }).then((response) => setItems(response));
     }, []);
-    return(
-        <>
-            <div className="ItemListContainer">
+    return (
+        <div className="container">
+            <div>
                 <ItemList items={items} />
-            </div> 
-        </>
-    );
-};
+            </div>
+        </div>
+    )
+}
 
 export default ItemListContainer;
