@@ -16,6 +16,12 @@ const Counter = ({initialState, stock, onAdd}) => {
             setItems (count - 1)
         };
     };
+    function agregado (e) {
+            e.preventDefault();
+        return (
+            alert ('Producto agregado al carrito')
+        );
+    }
     return (
         <div>
             <div className="boton_counter">
@@ -23,7 +29,7 @@ const Counter = ({initialState, stock, onAdd}) => {
                     <label>{count}</label>
                 <button className="btn btn-secondary boton" onClick={addItems}>+</button>
             </div>
-            <button id="boton_anadir" className="btn btn-secondary">Añadir</button>
+            <button id="boton_anadir" className="btn btn-secondary" onClick={agregado}>Añadir</button>
         </div>
     );
 };

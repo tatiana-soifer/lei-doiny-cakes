@@ -12,7 +12,6 @@
         color: #F22973;
         width: 50%;
         top: 35%;
-        margin-left: 5%;
     }
     .pPresentacion{
         height: 78px;
@@ -33,3 +32,67 @@
     }
 }
 
+//CUADRICULA DE PRODUCTOS
+.cuadriculaProductos{
+    display: flex;
+    flex-wrap: wrap;
+}
+.producto_item{
+	transition: all .4s;
+}
+
+//MENU LISTADO PRODUCTOS
+.menuListado{
+    display: flex;
+    padding-bottom: 2%;
+    justify-content: space-around;
+    ol{
+        width: 50%;
+    }
+    li:hover{
+        color: #F22973;
+    }
+    li{
+        list-style: none;
+        text-align: center;
+        color: #5A5A5A;
+        display:inline;
+        padding: 2%;
+    }
+}
+
+//CLIENTES FELICES
+.clientesFelices{
+    padding-bottom: 6%;
+    ol{
+        bottom: -45%;
+    }
+    .caja{
+        width: 18rem;
+        background: linear-gradient(114.48deg, rgba(216, 216, 216, 0.7) 9.06%, rgba(216, 216, 216, 0.3) 90.08%);
+        box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+        border-radius: 17px;
+        margin-left: 1%;
+        margin-right: 1%;
+        padding: 0%;
+        border: 1px #F22973;
+        h5{
+            font-size: 16px;
+            color: #9b8b8b;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            padding: 2%;
+            padding-top: 4%;
+            padding-left: 5%;
+        }
+        p{
+            color: #9b8b8b;
+            font-family: 'Montserrat', sans-serif;
+            padding-top: 5%;
+            padding: 2%;
+            text-align: center;
+            margin-bottom: 0%;
+        }
+        
+    }
+}

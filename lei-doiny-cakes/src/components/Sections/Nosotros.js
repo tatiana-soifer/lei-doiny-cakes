@@ -1,6 +1,5 @@
-import '../css/Main.css';
 import cocinera from '../../assets/img/cocinera.png';
-
+import '../css/Main.css';
 
 function Nosotros (){
     return(

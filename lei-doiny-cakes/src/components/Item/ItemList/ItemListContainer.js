@@ -9,15 +9,15 @@ const ItemListContainer = () => {
         new Promise((result, reject) => {
             setTimeout(() => {
             result(Productos);
-            }, 2000);
+            }, 1000);
         }).then((response) => setItems(response));
     }, []);
     return (
-        <div className="container">
-            <div>
+        <>
+            <div className="cuadriculaProductos">                
                 <ItemList items={items} />
             </div>
-        </div>
+        </>
     )
 }
 

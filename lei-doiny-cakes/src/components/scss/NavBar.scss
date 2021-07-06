@@ -1,10 +1,23 @@
 #menu{
     background-color: none;
 }
+.navbar{
+    display: flow-root;
+}
 .navbar-brand{
     list-style: none;
-    color: white;
+    a{
+        color: white;
+        :hover{
+            color: #F22973;
+        }
+    }
+    
 }
+.nav-link{
+    display: -webkit-inline-flex;
+}
+
 #logo{
     position: absolute;
     height: 100px;
@@ -19,6 +32,7 @@
 #carrito_menu{
     background: none;
     border: none;
+    margin-left: unset;
 }
 
 #boton_navbar{

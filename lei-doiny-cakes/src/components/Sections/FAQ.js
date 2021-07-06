@@ -1,3 +1,4 @@
+//import React, { useState } from 'react';
 import '../css/Main.css';
 
 function FAQ (){
@@ -55,3 +56,32 @@ function FAQ (){
 };
 
 export default FAQ;
+
+
+/*
+const App = () => {
+    const [condition, setCondition] = useState(true);
+    return (
+        <div>
+            <h1>Renderizado condicional</h1>
+        <div>
+            {condition ? (
+            <div className="container">
+                Componente a mostrar si se cumple la condición.
+            </div>
+            ) : (
+                <div className="container">
+                    Componente a mostrar si NO se cumple la condición.
+                </div>
+            )}
+            </div>
+            <div>
+            <button onClick={() => setCondition(!condition)}>
+                Cambiar condición
+            </button>
+            </div>
+        </div>
+        );
+    };
+
+export default App;*/

@@ -1,40 +1,34 @@
 import {NavLink, Link} from 'react-router-dom';
 import logo from '../../assets/logo/logo.png';
-import CardWidget from './CardWidget';
+import CartWidget from '../NavBar/CartWidget';
 import '../css/Main.css';
-
 
 function NavBar(){
     return(
-        <div id="menu" className="navbar navbar-expand-lg fixed-top">
-            <Link id="boton_logo" to={'/'}>
-                <img src={logo} id="logo" alt="logo" />
-            </Link>
-            <button id="boton_navbar" className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-            <nav id="navbarTogglerDemo01" className="collapse navbar-collapse ml-auto">
-                <ul className="navbar-nav mt-2 mt-lg-0 ml-auto">
-                    <li className="nav-item">
-                        <NavLink className="navbar-brand" activeClassName="active" to={'/'}>Menú</NavLink>
+        <header>
+            <nav class="navbar navbar-expand-lg fixed-top fondo_presentacion fondo_nav justify-content-end">
+                <Link to="/">
+                    <img id="logo" src={logo} alt="logo" />
+                </Link>
+                <ul className="nav-items">
+                    <li className="navbar-brand">
+                        <NavLink to="/" activeClassName="selected" className="nav-link">Menú</NavLink>
                     </li>
-                    <li className="nav-item">
-                        <NavLink className="navbar-brand" activeClassName="active" to={'/ComoComprar'}>Cómo comprar</NavLink>
+                    <li className="navbar-brand">
+                        <NavLink to="/ComoComprar" activeClassName="selected" className="nav-link">Cómo comprar</NavLink>
                     </li>
-                    <li className="nav-item">
-                        <NavLink className="navbar-brand" activeClassName="active" to={'/Contacto'}>Contacto</NavLink>
+                    <li className="navbar-brand">
+                        <NavLink to="/Contacto" activeClassName="selected" className="nav-link">Contacto</NavLink>
                     </li>
-                    <li className="nav-item">
-                        <NavLink className="navbar-brand" activeClassName="active" to={'/FAQ'}>FAQ</NavLink>
+                    <li className="navbar-brand">
+                        <NavLink to="/FAQ" activeClassName="selected" className="nav-link">FAQ</NavLink>
                     </li>
-                    <li className="nav-item">
-                        <NavLink className="navbar-brand" activeClassName="active" to={'/Cart'}>
-                            <CardWidget />
-                        </NavLink>
+                    <li className="navbar-brand">
+                        <CartWidget />
                     </li>
                 </ul>
             </nav>
-        </div>
+        </header>
     );
 };
 
