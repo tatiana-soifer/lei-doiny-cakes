@@ -12,7 +12,7 @@ const NavBar = () => {
     }, 0);
     return(
         <header>
-            <nav class="navbar navbar-expand-lg fixed-top fondo_presentacion fondo_nav justify-content-end">
+            <nav className="navbar navbar-expand-lg fixed-top fondo_presentacion fondo_nav justify-content-end">
                 <Link to="/">
                     <img id="logo" src={logo} alt="logo" />
                 </Link>
