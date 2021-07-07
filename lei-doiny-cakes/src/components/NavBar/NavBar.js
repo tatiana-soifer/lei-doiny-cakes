@@ -1,9 +1,15 @@
+import React, {useContext} from "react";
 import {NavLink, Link} from 'react-router-dom';
 import logo from '../../assets/logo/logo.png';
 import CartWidget from '../NavBar/CartWidget';
+import CartContext from '../Context/Cart/CartContext';
 import '../css/Main.css';
 
 function NavBar(){
+    const {Cart} = useContext(CartContext);
+    let cartQuantity = Cart.reduce(function(previous, currently) {
+        return previous + currently.quantity;
+    }, 0);
     return(
         <header>
             <nav class="navbar navbar-expand-lg fixed-top fondo_presentacion fondo_nav justify-content-end">
@@ -24,7 +30,7 @@ function NavBar(){
                         <NavLink to="/FAQ" activeClassName="selected" className="nav-link">FAQ</NavLink>
                     </li>
                     <li className="navbar-brand">
-                        <CartWidget />
+                        <CartWidget cartLength={cartQuantity}/>
                     </li>
                 </ul>
             </nav>

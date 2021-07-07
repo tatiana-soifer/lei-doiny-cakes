@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 .btn span {
-  background: #F22973;
+  background: white;
   border-radius: 18px;
   color: white;
   position: absolute;
+  top: -10px;
+  right: -10px;
   padding: 5%;
   font-size: 15px; }
 

@@ -23,7 +23,7 @@ const Counter = ({initialState, stock, onAdd}) => {
         );
     }
     return (
-        <div>
+        <div className="counter">
             <div className="boton_counter">
                 <button className="btn btn-secondary boton" onClick={removeItems}>-</button>
                     <label>{count}</label>
