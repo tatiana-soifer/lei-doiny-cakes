@@ -10,17 +10,15 @@ const Item = ({item}) => {
         }
     }
     return(
-        <div className="col-lg-3 col-md-6 col-sm-12 mb-4 producto_item">
+        <div className="mb-4 productoItem">
             <div className="card shadow mb-1 rounded">
-                <div className="cardImg">
-                    <img className="card-img-top" src={item.Foto} alt={item.Torta} />
-                </div>
-                <div className="card-body">
-                    <h2 className="card-title">{item.Titulo}</h2>
-                    <h3>${item.Precio}</h3>
-                    <Counter initialState={1} stock={15} onAdd={onAdd} />
-                    <Link to={`/item/${item.id}`} className="btn botonDetalle">Ver mas</Link> 
-                </div>
+                <img className="card-img-top" src={item.Foto} alt={item.Torta} />
+            </div>
+            <div className="card-body">
+                <h2 className="card-title">{item.Titulo}</h2>
+                <h3>${item.Precio}</h3>
+                <Counter initialState={1} stock={15} onAdd={onAdd} />
+                <Link to={`/item/${item.id}`} className="btn botonDetalle">Ver mas</Link> 
             </div>
         </div>
     );

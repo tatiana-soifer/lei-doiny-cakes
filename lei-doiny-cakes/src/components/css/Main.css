@@ -277,6 +277,8 @@ p {
   border: none;
   display: flex;
   flex-direction: column; }
+  .cuadriculaProductos .card img {
+    border-radius: 17px 17px 0px 0px; }
   .cuadriculaProductos .card .card-body {
     background-color: #F3D6E1;
     border-radius: 0px 0px 17px 17px;
@@ -287,8 +289,6 @@ p {
       font-size: 40px;
       margin-bottom: 0.75rem;
       align-self: center; }
-  .cuadriculaProductos .card .cardImg img {
-    border-radius: 17px 17px 0px 0px; }
   .cuadriculaProductos .card .card-img-top {
     border-radius: 17px 17px 0px 0px;
     height: 100%;
@@ -301,7 +301,7 @@ p {
     object-position: center;
     mix-blend-mode: multiply; }
 
-.producto_item {
+.productoItem {
   transition: all .4s; }
 
 .single-item {

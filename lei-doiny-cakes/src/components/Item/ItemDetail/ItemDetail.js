@@ -16,13 +16,15 @@ const ItemDetail = ({detalle}) => {
         {
         <div id={detalle.id} className="container">
             <div className="row">
-                <div className="col-lg-6 col-sm-12 productoItem">
-                    <img src={detalle.Foto} alt={detalle.Descripcion} />
-                </div>
-                <div className="col-lg-6 col-sm-12">
-                    <h1>{detalle.Torta}</h1>
-                    <h4>{detalle.Descripcion}</h4>
-                    <h3>${detalle.Precio}</h3>
+                <div className="col-lg-10">
+                    <div className="col-lg-6 left-side-product-box pb-3 productoItem">
+                        <img src={detalle.Foto} alt={detalle.Descripcion} />
+                    </div>
+                    <div className="col-lg-6 col-sm-12">
+                        <h1>{detalle.Torta}</h1>
+                        <h5>{detalle.Descripcion}</h5>
+                        <h3>${detalle.Precio}</h3>
+                    </div>
                 </div>
             </div>
         </div>
