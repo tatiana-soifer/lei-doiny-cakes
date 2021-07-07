@@ -1,120 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
-#boton_anadir {
-  background: linear-gradient(180deg, rgba(252, 249, 81, 0.9) 0%, #F0BE06 100%);
+.btn span {
+  background: #F22973;
+  border-radius: 18px;
+  color: white;
   position: absolute;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 16px;
-  color: #5A5A5A;
-  border: none;
-  width: 30%;
-  margin: 2%; }
-
-.boton_counter {
-  display: flex;
-  justify-content: space-between;
-  width: 100%; }
-
-body {
-  margin: 0;
-  background: linear-gradient(170.21deg, #D8D8D8 7.36%, rgba(243, 214, 225, 0.9) 98.85%);
-  list-style: none; }
-
-h1 {
-  font-family: Lobster;
-  font-size: 63px;
-  font-style: normal;
-  line-height: 66px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #F22973;
-  display: flex; }
-
-h2 {
-  font-family: 'Lobster', cursive;
-  text-align: center;
-  color: #F22973;
-  font-size: 48px;
-  padding-top: 5%;
-  padding-bottom: 5%; }
-
-h3 {
-  color: #5A5A5A;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  font-size: 24px; }
-
-h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  font-size: 24px;
-  color: #5A5A5A; }
-
-h5 {
-  color: #5A5A5A;
-  font-family: 'Montserrat', sans-serif; }
-
-p {
-  font-family: 'Montserrat', sans-serif;
-  color: #5A5A5A; }
-
-.btn {
-  border-radius: 17px;
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(180deg, rgba(252, 249, 81, 0.9) 0%, #F0BE06 100%);
-  border: none;
-  color: #5A5A5A; }
-
-#logo {
-  position: absolute;
-  height: 100px;
-  width: 196px;
-  left: 136px;
-  top: 27px; }
-
-#borde_boton {
-  border: 3px solid white;
-  color: white; }
-
-#menu {
-  background-color: none; }
-
-.navbar {
-  display: flow-root; }
-
-.navbar-brand {
-  list-style: none; }
-  .navbar-brand a {
-    color: white; }
-    .navbar-brand a :hover {
-      color: #F22973; }
-
-.nav-link {
-  display: -webkit-inline-flex; }
-
-#logo {
-  position: absolute;
-  height: 100px;
-  left: 20px;
-  top: 28px; }
-
-#boton_logo {
-  background: none;
-  border: none; }
-
-#carrito_menu {
-  background: none;
-  border: none;
-  margin-left: unset; }
-
-#boton_navbar {
-  border: 1px solid white; }
-
-.navbar_color {
-  background-color: #545454; }
+  padding: 5%;
+  font-size: 15px; }
 
 .como_comprar {
   padding-bottom: 20%; }
@@ -159,6 +51,37 @@ p {
     display: block;
     margin: auto; }
 
+#formulario {
+  background: #DAD8D9; }
+  #formulario h2 {
+    font-size: 52px !important;
+    text-align: end;
+    padding-right: 16%; }
+  #formulario img {
+    margin-left: -15%; }
+  #formulario .form-control {
+    border: 1px solid #5A5A5A; }
+    #formulario .form-control .form-control {
+      background: #DAD8D9; }
+
+#boton_anadir {
+  background: linear-gradient(180deg, rgba(252, 249, 81, 0.9) 0%, #F0BE06 100%);
+  position: absolute;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 16px;
+  color: #5A5A5A;
+  border: none;
+  width: 30%;
+  margin: 2%; }
+
+.boton_counter {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+
 .preguntas_frecuentes {
   margin-top: 6%;
   padding-bottom: 6%; }
@@ -174,19 +97,6 @@ p {
     border-radius: 17px; }
     .preguntas_frecuentes .card .card-body {
       padding: 0%; }
-
-#formulario {
-  background: #DAD8D9; }
-  #formulario h2 {
-    font-size: 52px !important;
-    text-align: end;
-    padding-right: 16%; }
-  #formulario img {
-    margin-left: -15%; }
-  #formulario .form-control {
-    border: 1px solid #5A5A5A; }
-    #formulario .form-control .form-control {
-      background: #DAD8D9; }
 
 .presentacion {
   background-image: url(../../assets/img/marquisse_fondo.jpg);
@@ -269,8 +179,66 @@ p {
       text-align: center;
       margin-bottom: 0%; }
 
-.ItemDetailContainer {
-  width: 100%; }
+body {
+  margin: 0;
+  background: linear-gradient(170.21deg, #D8D8D8 7.36%, rgba(243, 214, 225, 0.9) 98.85%);
+  list-style: none; }
+
+h1 {
+  font-family: Lobster;
+  font-size: 63px;
+  font-style: normal;
+  line-height: 66px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #F22973;
+  display: flex; }
+
+h2 {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  color: #F22973;
+  font-size: 48px;
+  padding-top: 5%;
+  padding-bottom: 5%; }
+
+h3 {
+  color: #5A5A5A;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 24px; }
+
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: #5A5A5A; }
+
+h5 {
+  color: #5A5A5A;
+  font-family: 'Montserrat', sans-serif; }
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  color: #5A5A5A; }
+
+.btn {
+  border-radius: 17px;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(180deg, rgba(252, 249, 81, 0.9) 0%, #F0BE06 100%);
+  border: none;
+  color: #5A5A5A; }
+
+#logo {
+  position: absolute;
+  height: 100px;
+  width: 196px;
+  left: 136px;
+  top: 27px; }
+
+#borde_boton {
+  border: 3px solid white;
+  color: white; }
 
 .cuadriculaProductos .card {
   border-radius: 17px 17px 17px 17px !important;
@@ -324,11 +292,69 @@ p {
   width: 30%;
   margin: 2%; }
 
-.menuProductos {
-  display: flex;
-  padding-bottom: 5%; }
+.ItemDetailContainer {
+  width: 100%; }
 
 .ItemList {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem; }
+
+.menuProductos {
+  display: flex;
+  padding-bottom: 5%; }
+
+#menu {
+  background-color: none; }
+
+.navbar {
+  display: flow-root; }
+
+.navbar-brand {
+  list-style: none; }
+  .navbar-brand a {
+    color: white; }
+    .navbar-brand a :hover {
+      color: #F22973; }
+
+.nav-link {
+  display: -webkit-inline-flex; }
+
+#logo {
+  position: absolute;
+  height: 100px;
+  left: 20px;
+  top: 28px; }
+
+#boton_logo {
+  background: none;
+  border: none; }
+
+#carrito_menu {
+  background: none;
+  border: none;
+  margin-left: unset; }
+
+#boton_navbar {
+  border: 1px solid white; }
+
+.navbar_color {
+  background-color: #545454; }
+
+.nosotros {
+  padding-top: 5%;
+  padding-bottom: 5%; }
+  .nosotros .amor_firma {
+    text-align: center;
+    font-weight: bold; }
+  .nosotros h3 {
+    font-family: 'Great Vibes', cursive;
+    color: #F22973;
+    font-size: 53px;
+    text-align: end; }
+
+.cocinera {
+  padding-top: 5%;
+  padding-left: 15%;
+  display: block;
+  margin: auto; }
