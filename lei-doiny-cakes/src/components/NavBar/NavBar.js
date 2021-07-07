@@ -5,9 +5,9 @@ import CartWidget from '../NavBar/CartWidget';
 import CartContext from '../Context/Cart/CartContext';
 import '../css/Main.css';
 
-function NavBar(){
-    const {Cart} = useContext(CartContext);
-    let cartQuantity = Cart.reduce(function(previous, currently) {
+const NavBar = () => {
+    const {cart} = useContext(CartContext);
+    let cartQuantity = cart.reduce(function(previous, currently) {
         return previous + currently.quantity;
     }, 0);
     return(
