@@ -1,16 +1,16 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import {Link} from 'react-router-dom';
 import Counter from '../../Counter/Counter';
-import cartContext from '../../Context/Cart/CartContext';
+import cartContext from '../../Context/CartContext';
 import '../../css/Main.css';
 
 const ItemDetail = ({detalle}) => {
     const [isClicked, setIsClicked] = useState (false);
-    const onAdd = (amount) =>{
-        console.log(amount)
-        setIsClicked(true)
-    }
-    console.log(isClicked);
+    const {addItem} = useContext(CartContext);
+    const onAdd = (cantidadSeleccionada) => {
+        setIsClicked (cantidadSeleccionada);
+        addItem (detalle, cantidadSeleccionada);
+    };
     return(
         <>
         {

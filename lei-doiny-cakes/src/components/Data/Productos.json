@@ -5,7 +5,7 @@
         "Descripcion": "Crema pastelera de chocolate y praline de frutos secos. Tamaño: Molde 26cm",
         "Stock": 5,
         "Precio": 1750,
-        "Catogoria": "tortas",
+        "category": "tortas",
         "Foto": "https://lh3.google.com/u/0/d/1P2INEyV70-94IzDUY6mvprJf6zLfrICQ=w1418-h1356-iv1"
     },
     {
@@ -14,7 +14,7 @@
         "Descripcion": "Es la mezcla perfecta entre la Chocotorta y la Doble Oreo. Una bomba explosiva que hay que probar. Tamaño: Molde 26cm",
         "Stock": 5,
         "Precio": 1850,
-        "Catogoria": "tortas",
+        "category": "tortas",
         "Foto": "https://lh3.google.com/u/0/d/1FU8FH0mMjTRViY3ctlM_ey2ckoE8Hlx2=w1418-h1356-iv1"
     },
     {
@@ -23,7 +23,7 @@
         "Descripcion": "Dos capas de Oreo, dulce de leche y crema chantillí. Tamaño: Molde 26cm",
         "Stock": 5,
         "Precio": 1850,
-        "Catogoria": "tortas",
+        "category": "tortas",
         "Foto": "https://lh3.google.com/u/0/d/1f-obUMqnwQvWV-p3nhroQopCdE567BaZ=w1418-h1356-iv1"
     },
     {
@@ -32,7 +32,7 @@
         "Descripcion": "Clásica mousse de chocolate negro, con una base de brownie humedo y chocolate amargo rallado por arriba. Tamaño: Molde 26cm",
         "Stock": 5,
         "Precio": 1800,
-        "Catogoria": "tortas",
+        "category": "tortas",
         "Foto": "https://lh3.google.com/u/0/d/1oPqtuDBiL0eOSn6NABE4IwUbXFI3G9D9=w1418-h1356-iv1"
     },
     {
@@ -41,7 +41,7 @@
         "Descripcion": "Brownie húmedo, dulce de leche, crema chantillí o merengue Italiaano y lluvia de chocolate. Tamaño: Molde 26cm",
         "Stock": 5,
         "Precio": 1850,
-        "Catogoria": "tortas",
+        "category": "tortas",
         "Foto": "https://lh3.google.com/u/0/d/1o5ZKz3LXYJ5QsW1XK4psSBMhADqNxQev=w1418-h1356-iv1"
     },
     {
@@ -50,7 +50,7 @@
         "Descripcion": "Cheescake con base crocante, crema de limon y frutos rojos. Tamaño: Molde 26cm",
         "Stock": 5,
         "Precio": 1800,
-        "Catogoria": "tortas",
+        "category": "tortas",
         "Foto": "https://lh3.google.com/u/0/d/1PdOWaUtWPe0Mbik3hWvrOijzjtnNjvM2=w2880-h1356-iv1"
     },
     {
@@ -59,7 +59,7 @@
         "Descripcion": "2 mini tortas a elección (coco con dulce de leche o sablé), un jugo, dos muffins y un brownie bien húmedo.",
         "Stock": 5,
         "Precio": 1850,
-        "Catogoria": "desayunoMerienda",
+        "category": "desayunoMerienda",
         "Foto": "https://lh3.google.com/u/0/d/1FU8FH0mMjTRViY3ctlM_ey2ckoE8Hlx2=w1418-h1356-iv1"
     },
     {
@@ -68,7 +68,7 @@
         "Descripcion": "2 mini tortas a elección (coco con dulce de leche o sablé), 2 jugos, 4 muffins, 2 brownies húmedos.",
         "Stock": 5,
         "Precio": 2500,
-        "Catogoria": "desayunosMeriendas",
+        "category": "desayunosMeriendas",
         "Foto": "https://lh3.google.com/u/0/d/1q810yE4_ET3CFcyIXfBq6240PEh2sWOE=w1418-h1356-iv1"
     },
     {
@@ -77,7 +77,7 @@
         "Descripcion": "1 mini chocotorta, 2 chocolatadas Nesquik, 4 muffins, 2 brownies húmedos, galletitas de vainilla y productos para decorar las mismas.",
         "Stock": 5,
         "Precio": 3000,
-        "Catogoria": "desayunosMeriendas",
+        "category": "desayunosMeriendas",
         "Foto": "https://lh3.google.com/u/0/d/1TDqzyvficJWuVBpTb6kwhoOefYHxza5W=w1418-h1356-iv1"
     },
     {
@@ -86,7 +86,7 @@
         "Descripcion": "2 mini tortas a elección (coco con dulce de leche o sablé), 2 jugos, 4 muffins, 2 brownies húmedos, 2 granolas, un paquete de talitas.",
         "Stock": 5,
         "Precio": 4500,
-        "Catogoria": "desayunosMeriendas",
+        "category": "desayunosMeriendas",
         "Foto": "https://lh3.google.com/u/0/d/1VY6Vy4_376QB3Bwk3zTxXNueZO3w_hWM=w1418-h1356-iv1"
     },
     {
@@ -95,7 +95,7 @@
         "Descripcion": "Descripción: Es la clásica chocotorta con forma de letra o número decorada de manera personalizada con golosinas o alguna temática en particular. Tamaño: 21cm x 15cm aproximadamente.",
         "Stock": 5,
         "Precio": 2500,
-        "Catogoria": "letterCakes",
+        "category": "letterCakes",
         "Foto": "https://lh3.googleusercontent.com/fife/AAWUweVqteWdYEM_QnanC1yKnqxetSFLseNQU6S_0mQ-hbrig31dfHK8r_7513U2IFf3LBwbiJNTdm-GZ2NNzYpGkMHJ_CNzU3IP-YrfT0065LtVHkCTzUjx0aIzIAlhZClBlXdwlBD4BLXOocXkhipvh7BIegMXyTnYGtQfIo_lt1P1FU2FS_bE6j08PiBm-gLoJUrlx3ixTCiiiOemR0OhtqzKL7U68773cmVEljiOAvBLK8CyYkX7oWV_WMPIqv-Hguwhjq0PBTRMs2QrW9zUsk8hvr2CZ-XqPPR5Fe0mK7dvU6YvyyO2Ae6DADzW5RAzFWBzt1tIU2p6Ppervi3f-o9j40eqCp6XcMcv0_G6a2COhqxswvM0qhNy3hlBQdQHzgOolnyotytktKeqgHvXJvhuHXmhd6bTFAS4_uQ7KhewQTYyLoC4RXW70DSbxSHhq5pMt0-wqUOyPbYmHyvhWLBetb7g81XFPLMmXvocjJQjke_RaqI8QpM-RUtif8jJNCgeuh6mlUUkEblH8nu_270k3fXbKRS07jOVy_A7BMD-pr87HTMomFo990UMkoayXnk50gmviFpGzAby7u-WDcDXDcgYzx0r_-TvGHFvDfl8ggxmCKf3G3bTRmNOAOGqpkcoIPHHTG-GQFHVUVHOC_c2lKQbbCXyLCNz9nGTXfwhElrinee0DMkIBFShGxYsf_FzosAfaoolU4lV97q7OfxfTNtQs9oWlKM=w1418-h1356-ft"
     },
     {
@@ -104,7 +104,7 @@
         "Descripcion": "Descripción: Torta en forma de número, de brownie húmedo, dulce de leche, crema chantillí o merengue Italiaano y lluvia de golosinas. Tamaño: 21cm x 15cm aproximadamente.",
         "Stock": 5,
         "Precio": 2500,
-        "Catogoria": "letterCakes",
+        "category": "letterCakes",
         "Foto": "https://lh3.google.com/u/0/d/17F2Qhz7iBYbYpFIk5S4AtOkQ1VZ3uir8=w1418-h1356-iv1"
     },
     {
@@ -113,7 +113,7 @@
         "Descripcion": "Descripción: Incluye 6 shots de Chocotorta, 6 shots de Lemmon Pie, 6 shots de Marquisse, y 6 shots de Cheescake.",
         "Stock": 5,
         "Precio": 4000,
-        "Catogoria": "shots",
+        "category": "shots",
         "Foto": "https://lh3.google.com/u/0/d/1P2INEyV70-94IzDUY6mvprJf6zLfrICQ=w1418-h1356-iv1"
     },
     {
@@ -122,7 +122,7 @@
         "Descripcion": "Descripción: Incluye 10 shots de Chocotorta, 10 shots de Lemmon Pie, 10 shots de Marquisse, 10 shots de Cheescake, 10 shots de Bon o Bon, y 10 shots de Banana Split.",
         "Stock": 5,
         "Precio": 5000,
-        "Catogoria": "shots",
+        "category": "shots",
         "Foto": "https://lh3.google.com/u/0/d/1P2INEyV70-94IzDUY6mvprJf6zLfrICQ=w1418-h1356-iv1"
     }
 ]

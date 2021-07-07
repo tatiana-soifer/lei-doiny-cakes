@@ -1,13 +1,13 @@
 import React, {useContext} from "react";
 import {NavLink, Link} from 'react-router-dom';
 import logo from '../../assets/logo/logo.png';
-import CartWidget from '../NavBar/CartWidget';
-import CartContext from '../Context/Cart/CartContext';
+import CartWidget from '../NavBar/CartWidget.js';
+import CartContext from '../Context/CartContext.js';
 import '../css/Main.css';
 
 const NavBar = () => {
     const {cart} = useContext(CartContext);
-    let cartQuantity = cart.reduce(function(previous, currently) {
+    let cartQuantity = cart.reduce (function (previous, currently) {
         return previous + currently.quantity;
     }, 0);
     return(
