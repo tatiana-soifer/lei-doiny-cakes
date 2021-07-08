@@ -4,9 +4,9 @@ import CartContext from '../Context/CartContext.js';
 import '../css/Main.css';
 
 const Cart = () => {
-    const {cart, clear removeItem} = useContext (CartContext);
-    let total = cart.reduce(function(previo, actual) {
-        return previo + actual.item.Precio * current.cantidad;
+    const {cart, clear, removeItem} = useContext (CartContext);
+    let total = cart.reduce (function (previo, actual) {
+        return previo + actual.item.Precio * actual.cantidad;
     }, 0);
     return (
         <>
@@ -39,7 +39,7 @@ const Cart = () => {
                                                     <td className="tablaCantidad">{producto.item.cantidad}</td>
                                                     <td className="tablaSubtotal">{producto.item.precio * producto.cantidad}</td>
                                                     <td>
-                                                        <button className="delete btn btn-danger boton_carrito_borrar" onClick={() => removeItem(producto.item.id)}>Cancelar</button>
+                                                        <button className="delete btn btn-danger botonCarritoBorrar" onClick={() => removeItem(producto.item.id)}>Cancelar</button>
                                                     </td>
                                                 </tr>
                                             );
