@@ -7,8 +7,8 @@ import '../css/Main.css';
 
 const NavBar = () => {
     const {cart} = useContext(CartContext);
-    let cartQuantity = cart.reduce (function (previous, currently) {
-        return previous + currently.quantity;
+    let cartCantidad = cart.reduce (function (previo, actual) {
+        return previo + actual.cantidad;
     }, 0);
     return(
         <header>
@@ -30,7 +30,7 @@ const NavBar = () => {
                         <NavLink to="/FAQ" activeClassName="selected" className="nav-link">FAQ</NavLink>
                     </li>
                     <li className="navbar-brand">
-                        <CartWidget cartLength={cartQuantity}/>
+                        <CartWidget cartLength={cartCantidad}/>
                     </li>
                 </ul>
             </nav>

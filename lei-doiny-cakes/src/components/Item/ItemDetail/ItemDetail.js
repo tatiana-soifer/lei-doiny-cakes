@@ -1,7 +1,7 @@
 import React, {useState, useContext} from 'react';
 import {Link} from 'react-router-dom';
 import Counter from '../../Counter/Counter';
-import cartContext from '../../Context/CartContext';
+import CartContext from '../../Context/CartContext';
 import '../../css/Main.css';
 
 const ItemDetail = ({detalle}) => {
