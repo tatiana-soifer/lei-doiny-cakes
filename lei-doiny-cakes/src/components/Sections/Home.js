@@ -1,6 +1,7 @@
 import {NavLink} from 'react-router-dom';
 import ItemListContainer from '../Item/ItemList/ItemListContainer';
 import Productos from '../Data/Productos.json';
+import Footer from '../Sections/Footer.js';
 import '../css/Main.css';
 
 function Home (){
@@ -91,6 +92,9 @@ function Home (){
                     </div>
                 </div>
             </div>
+        </div>
+        <div className="footer">
+            <Footer />
         </div>
     </div>
     )

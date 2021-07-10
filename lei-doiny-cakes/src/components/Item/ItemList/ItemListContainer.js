@@ -1,28 +1,35 @@
 import React, {useEffect, useState} from 'react';
-import ItemList from '../../Item/ItemList/ItemList';
+import {useParams} from 'react-router';
 import {getFirestore} from '../../../Factory/Firebase';
-import Productos from '../../Data/Productos.json';
+import ItemList from '../../Item/ItemList/ItemList';
 import './../../css/Main.css';
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
+    const {categoryId} = useParams();
+    let title;
+    !categoryId ? title = 'Home' : title = categoryId; 
     useEffect(() => {
-        setLoading(true);
         const db = getFirestore();
-        const itemCollection = db.collection ('items');
-        itemCollection.get().then((querySnapshot)=>{
-            if (querySnapshot.size === 0){
-                console.log('No hay resultados.')
-            }
-        setItems(querySnapshot.docs.map(doc.data()));
-        }).catch ((e)=>{
-        console.log('Hubo un error', e);
-        }).finally(()=>{
-            setLoading(false);
+        const itemCollection = db.collection('items');
+        if(!categoryId){            
+            itemCollection.get().then(querySnapshot => {
+            setItems(querySnapshot.docs.map(doc => (
+                {id: doc.id, ...doc.data()}
+            )));
         });
+        } else {
+            const category = itemCollection.where('categoryId', '===', categoryId);
+            category.get().then(querySnapshot => {
+            setItems(querySnapshot.docs.map(doc => ({id: doc.id, ...doc.data() }) ))});
+        }
+    }, [categoryId]);
     return (
         <>
-            <div className="cuadriculaProductos">                
+            <div className="cuadriculaProductos">
+                <div>
+                    <h2>{title}</h2>
+                </div>       
                 <ItemList items={items} />
             </div>
         </>

@@ -44,19 +44,19 @@ const Footer = () =>{
                             <h4>Seguinos en nuestras redes</h4>
                         </div>
                         <div>
-                            <Link href="https://web.whatsapp.com/" target="blank">
+                            <Link to="https://web.whatsapp.com/" target="blank">
                                 <img src={whatsapp} alt="whatsapp" title="whatsapp" />
                             </Link>
-                            <Link href="https://www.facebook.com/Leidoiny-Cakes-1218950871493041/?hc_ref=ARQYTRuzalG90OdyVzor4YJlndkvL0GC6nX75gTqeBS0bhI_AiMVUQXqzjN_1IDtZUs&fref=nf&__tn__=kC-R" target="blank">
+                            <Link to="https://www.facebook.com/Leidoiny-Cakes-1218950871493041/?hc_ref=ARQYTRuzalG90OdyVzor4YJlndkvL0GC6nX75gTqeBS0bhI_AiMVUQXqzjN_1IDtZUs&fref=nf&__tn__=kC-R" target="blank">
                                 <img src={facebook} alt="facebook" title="facebook" />
                             </Link>
-                            <Link href="https://www.instagram.com/leidoiny_cakes/?hl=es" target="blank">
+                            <Link to="https://www.instagram.com/leidoiny_cakes/?hl=es" target="blank">
                                 <img src={instagram} alt="instagram" title="instagram" />
                             </Link>
-                            <Link href="https://www.tiktok.com/" target="blank">
+                            <Link to="https://www.tiktok.com/" target="blank">
                                 <img src={tiktok} alt="instagram" title="tiktok" />
                             </Link>
-                            <Link href="https://ar.pinterest.com" target="blank">
+                            <Link to="https://ar.pinterest.com" target="blank">
                                 <img src={pinterest} alt="instagram" title="pinterest" />
                             </Link>
                         </div>

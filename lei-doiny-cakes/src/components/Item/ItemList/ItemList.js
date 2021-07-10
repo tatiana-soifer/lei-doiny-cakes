@@ -4,11 +4,11 @@ import Item from '../Item';
 import '../../css/Main.css';
 
 const ItemList = ({items}) => {
-    const {categoria} = useParams();
+    const {category} = useParams();
     return(
         <>
             {items
-            .filter((item) => item.Categoria === categoria)
+            .filter((item) => item.category === category)
             .map((item) => (
                 <div key={item.id}>
                     <Item item={item} />

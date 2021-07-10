@@ -14,20 +14,20 @@ const ItemDetail = ({detalle}) => {
     return(
         <>
         {
-        <div id={detalle.id} className="container">
-            <div className="row">
-                <div className="col-lg-10">
-                    <div className="col-lg-6 left-side-product-box pb-3 productoItem">
-                        <img src={detalle.Foto} alt={detalle.Descripcion} />
-                    </div>
-                    <div className="col-lg-6 col-sm-12">
-                        <h1>{detalle.Torta}</h1>
-                        <h5>{detalle.Descripcion}</h5>
-                        <h3>${detalle.Precio}</h3>
+            <div id={detalle.id} className="container">
+                <div className="row">
+                    <div className="col-lg-10">
+                        <div className="col-lg-6 left-side-product-box pb-3 productoItem">
+                            <img src={detalle.Foto} alt={detalle.Descripcion} />
+                        </div>
+                        <div className="col-lg-6 col-sm-12">
+                            <h1>{detalle.Torta}</h1>
+                            <h5>{detalle.Descripcion}</h5>
+                            <h3>${detalle.Precio}</h3>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         }
         {isClicked && <Link to="/cart">Terminar compra</Link>}
         {!isClicked && <Counter onAdd = {onAdd} stock={detalle.stock}/>}  

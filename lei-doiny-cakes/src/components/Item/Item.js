@@ -15,7 +15,7 @@ const Item = ({item}) => {
                 <img className="card-img-top" src={item.Foto} alt={item.Torta} />
             </div>
             <div className="card-body">
-                <h2 className="card-title">{item.Titulo}</h2>
+                <h2 className="card-title">{item.title}</h2>
                 <h3>${item.Precio}</h3>
                 <Counter initialState={1} stock={15} onAdd={onAdd} />
                 <Link to={`/item/${item.id}`} className="btn botonDetalle">Ver mas</Link> 
