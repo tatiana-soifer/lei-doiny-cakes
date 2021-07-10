@@ -12,28 +12,35 @@ const NavBar = () => {
     }, 0);
     return(
         <header>
-            <nav className="navbar navbar-expand-lg fixed-top fondo_presentacion fondo_nav justify-content-end">
+            <div className="barra">
                 <Link to="/">
-                    <img id="logo" src={logo} alt="logo" />
+                    <img src={logo} id="logo" alt="logo"/>
                 </Link>
-                <ul className="nav-items">
-                    <li className="navbar-brand">
-                        <NavLink to="/" activeClassName="selected" className="nav-link">Menú</NavLink>
-                    </li>
-                    <li className="navbar-brand">
-                        <NavLink to="/ComoComprar" activeClassName="selected" className="nav-link">Cómo comprar</NavLink>
-                    </li>
-                    <li className="navbar-brand">
-                        <NavLink to="/Contacto" activeClassName="selected" className="nav-link">Contacto</NavLink>
-                    </li>
-                    <li className="navbar-brand">
-                        <NavLink to="/FAQ" activeClassName="selected" className="nav-link">FAQ</NavLink>
-                    </li>
-                    <li className="navbar-brand">
-                        <CartWidget cartLength={cartCantidad}/>
-                    </li>
-                </ul>
-            </nav>
+                <NavLink id="menu2" className="navbar navbar-expand-lg fixed-top fondo_presentacion fondo_nav">
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+                        <ul className="navbar-nav mt-2 mt-lg-0 ml-auto">
+                            <li className="nav-item">
+                                <Link className="navbar-brand" exact to="/" activeClassName="selected">Menú</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="navbar-brand" exact to="/ComoComprar" activeClassName="selected">Cómo comprar</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="navbar-brand" exact to="/Contacto" activeClassName="selected">Contacto</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="navbar-brand" exact to="/FAQ" activeClassName="selected">FAQ</Link>
+                            </li>
+                            <li className="nav-item">
+                                <CartWidget cartLength={cartCantidad}/>
+                            </li>
+                        </ul>
+                    </div>
+                </NavLink>
+            </div>
         </header>
     );
 };

@@ -43,7 +43,7 @@ const Cart = () => {
                                                     </td>
                                                 </tr>
                                             );
-                                        })}
+                                        })};
                                     </tbody>
                                 </table>
                                 <div className="row">
@@ -64,8 +64,8 @@ const Cart = () => {
                 </div>
             ) : (
                 <div>
-                    <p>El carrito está vacío.</p>
-                        <Link className="btn btn-primary" exact to={"/"}>Volver al Menu</Link>
+                    <h3>No hay productos en tu carrito.</h3>
+                    <Link className="btn btn-primary" exact to={"/"}>Volver al Menu</Link>
                 </div>
             )}
         </>
