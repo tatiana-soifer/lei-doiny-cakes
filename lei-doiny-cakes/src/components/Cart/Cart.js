@@ -10,7 +10,13 @@ const Cart = () => {
     }, 0);
     return (
         <>
-            {cart.length > 0 ? (
+            {cart.length === 0 && 
+                <div>
+                    <h3>No hay productos en tu carrito.</h3>
+                    <Link className="btn btn-primary" to={"/"}>Ir al Menu</Link>
+                </div>
+            }
+            {cart.length !== 0 && (
                 <div className="container">
                     <div className="row">
                         <div className="cart">
@@ -50,7 +56,7 @@ const Cart = () => {
                                     <button className="btn btn-info" onClick={() => clear()}>Vaciar carrito</button>
                                 </div>
                                 <div className="col">
-                                    <h3 className="itemTotalCarrito">{total}</h3>
+                                    <h3 className="itemTotalCarrito">Total a pagar:{total}</h3>
                                 </div>
                                 <div className="row mx-4">
                                     <div className="col d-flex justify-content-end">
@@ -61,11 +67,6 @@ const Cart = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-            ) : (
-                <div>
-                    <h3>No hay productos en tu carrito.</h3>
-                    <Link className="btn btn-primary" exact to={"/"}>Volver al Menu</Link>
                 </div>
             )}
         </>
