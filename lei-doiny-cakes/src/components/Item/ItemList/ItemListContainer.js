@@ -7,8 +7,6 @@ import './../../css/Main.css';
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
     const {categoryId} = useParams();
-    let title;
-    !categoryId ? title = 'Home' : title = categoryId; 
     useEffect(() => {
         const db = getFirestore();
         const itemCollection = db.collection('items');
@@ -18,18 +16,16 @@ const ItemListContainer = () => {
                 {id: doc.id, ...doc.data()}
             )));
         });
-        } else {
+        } else{
             const category = itemCollection.where('categoryId', '===', categoryId);
             category.get().then(querySnapshot => {
-            setItems(querySnapshot.docs.map(doc => ({id: doc.id, ...doc.data() }) ))});
-        }
+            setItems(querySnapshot.docs.map(doc => ({id: doc.id, ...doc.data()})))
+            });
+        };
     }, [categoryId]);
     return (
         <>
-            <div className="cuadriculaProductos">
-                <div>
-                    <h2>{title}</h2>
-                </div>       
+            <div className="cuadriculaProductos"> 
                 <ItemList items={items} />
             </div>
         </>

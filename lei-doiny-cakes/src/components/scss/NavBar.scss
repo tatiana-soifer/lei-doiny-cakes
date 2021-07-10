@@ -3,8 +3,14 @@
 }
 .navbar{
     display: flow-root;
+    &:hover{
+        &.active{
+            background-color: #545454;
+            transition: all 0.2s ease;
+        }          
+    }
 }
-.navbar-brand{
+.nav-item{
     list-style: none;
     a{
         color: white;
@@ -35,7 +41,4 @@
 }
 #boton_navbar{
     border: 1px solid white;
-}
-.cambioColor{
-    background-color: #545454;
 }

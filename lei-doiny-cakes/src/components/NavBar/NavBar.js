@@ -12,7 +12,7 @@ const NavBar = () => {
     }, 0);
     const [navbar, setNavbar] = useState(false);
     const cambioColor = () => {
-        window.scrollY >= 40 ? setNavbar(true) : setNavbar(false)
+        window.scroll >= 70 ? setNavbar(true) : setNavbar(false)
     };
     window.addEventListener('scroll', cambioColor);
     return(

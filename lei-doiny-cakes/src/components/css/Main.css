@@ -1,5 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+.cart {
+  min-height: 80vh;
+  margin: 0 auto;
+  width: 100%;
+  background: linear-gradient(170.21deg, #D8D8D8 7.36%, rgba(243, 214, 225, 0.9) 98.85%); }
+  .cart th {
+    text-align: center; }
+  .cart .tablaProductos {
+    display: flex; }
+    .cart .tablaProductos img {
+      width: 9rem;
+      object-fit: contain;
+      border-radius: 4%;
+      margin-right: 5%; }
+  .cart .tablaCantidad input {
+    border: none;
+    margin-bottom: 15%;
+    width: 25%;
+    margin-right: 5%; }
+
+#botonCartFinal {
+  margin: 1%; }
+
+.botonCartBorrar {
+  width: auto;
+  background: #EC5555 !important;
+  color: white; }
+
+#botonCart {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 .btn span {
   background: white;
   border-radius: 18px;
@@ -100,6 +133,52 @@
     .preguntas_frecuentes .card .card-body {
       padding: 0%; }
 
+.footer {
+  background: #F3D6E1;
+  padding-top: 2%;
+  justify-content: space-around; }
+  .footer h4 {
+    font-weight: bold; }
+  .footer p {
+    font-size: 14px; }
+
+.contacto {
+  max-width: 100%; }
+  .contacto img {
+    float: left; }
+  .contacto ol {
+    padding: 0%; }
+  .contacto li {
+    list-style: none;
+    justify-content: center; }
+  .contacto p {
+    margin-left: 2%; }
+
+.pago {
+  justify-self: center;
+  padding-left: 5%; }
+  .pago .grid_pago {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5%; }
+
+.sociales {
+  padding-left: 15%; }
+  .sociales .grid_sociales {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 5%; }
+
+.copy {
+  text-align: center;
+  padding-bottom: 2%;
+  padding-top: 2%; }
+
+.suscripcion {
+  padding-top: 5%; }
+
 .presentacion {
   background-image: url(../../assets/img/marquisse_fondo.jpg);
   background-size: cover;
@@ -113,7 +192,7 @@
     font-size: 64px;
     color: #F22973;
     width: 50%;
-    top: 35%; }
+    top: 32%; }
   .presentacion .pPresentacion {
     height: 78px;
     width: 40%;
@@ -311,12 +390,15 @@ p {
 
 .navbar {
   display: flow-root; }
+  .navbar:hover.active {
+    background-color: #545454;
+    transition: all 0.2s ease; }
 
-.navbar-brand {
+.nav-item {
   list-style: none; }
-  .navbar-brand a {
+  .nav-item a {
     color: white; }
-    .navbar-brand a :hover {
+    .nav-item a :hover {
       color: #F22973; }
 
 .nav-link {
@@ -339,9 +421,6 @@ p {
 
 #boton_navbar {
   border: 1px solid white; }
-
-.navbar_color {
-  background-color: #545454; }
 
 .nosotros {
   padding-top: 5%;
