@@ -19,9 +19,8 @@ const ItemListContainer = () => {
         } else{
             const category = itemCollection.where('categoryId', '===', categoryId);
             category.get().then(querySnapshot => {
-            setItems(querySnapshot.docs.map(doc => ({id: doc.id, ...doc.data()})))
-            });
-        };
+            setItems(querySnapshot.docs.map(doc => ({id: doc.id, ...doc.data()})))});
+        }
     }, [categoryId]);
     return (
         <>
