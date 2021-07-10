@@ -1,15 +1,15 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import NavBar from '../NavBar/NavBar';
-import ItemListContainer from '../Item/ItemList/ItemListContainer';
-import ItemDetailContainer from '../Item/ItemDetail/ItemDetailContainer';
-import Home from '../Sections/Home';
-import ComoComprar from '../Sections/ComoComprar';
-import Contacto from '../Sections/Contacto';
-import FAQ from '../Sections/FAQ';
-import Nosotros from '../Sections/Nosotros';
-import Cart from '../Context/Cart/Cart';
-import CacheProvider from '../../providers/CacheProvider';
+import NavBar from '../NavBar/NavBar.js';
+import ItemListContainer from '../Item/ItemList/ItemListContainer.js';
+import ItemDetailContainer from '../Item/ItemDetail/ItemDetailContainer.js';
+import Home from '../Sections/Home.js';
+import ComoComprar from '../Sections/ComoComprar.js';
+import Contacto from '../Sections/Contacto.js';
+import FAQ from '../Sections/FAQ.js';
+import Nosotros from '../Sections/Nosotros.js';
+import Cart from '../Cart/Cart.js';
+import CacheProvider from '../../providers/CacheProvider.js';
 import '../css/Main.css';
 
 

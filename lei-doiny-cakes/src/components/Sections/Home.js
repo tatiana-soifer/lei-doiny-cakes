@@ -1,13 +1,10 @@
 import {NavLink} from 'react-router-dom';
-import ItemListContainer from '../Item/ItemList/ItemListContainer';
-import Productos from '../Data/Productos.json';
+import ItemListContainer from '../Item/ItemList/ItemListContainer.js';
+import Nosotros from '../Sections/Nosotros.js'
 import Footer from '../Sections/Footer.js';
 import '../css/Main.css';
 
 function Home (){
-    const categories = [
-        ...new Set(Productos.map((item) => item.category)),
-    ];
     return(
         <div>
             <div className="presentacion">
@@ -92,6 +89,9 @@ function Home (){
                     </div>
                 </div>
             </div>
+        </div>
+        <div className="nosotros">
+            <Nosotros />
         </div>
         <div className="footer">
             <Footer />

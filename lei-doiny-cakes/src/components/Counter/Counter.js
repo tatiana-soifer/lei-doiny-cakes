@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import './../css/Main.css';
 
 const Counter = ({initialState, stock, onAdd}) => {
@@ -19,7 +19,7 @@ const Counter = ({initialState, stock, onAdd}) => {
     function agregado (e) {
             e.preventDefault();
         return (
-            alert ('Producto agregado al carrito')
+            alert ('Producto agregado al carrito!')
         );
     }
     return (

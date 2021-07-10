@@ -1,3 +1,4 @@
+/*
 import React, {useState} from 'react';
 import {getFirestore} from '../../Factory/Firebase.js';
 import Send from '../../assets/icons/send.png';
@@ -46,3 +47,4 @@ const Suscripcion = () => {
 };
 
 export default Suscripcion;
+*/

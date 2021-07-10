@@ -1,6 +1,6 @@
 import React from 'react';
 import {useParams} from 'react-router';
-import Item from '../Item';
+import Item from '../Item.js';
 import '../../css/Main.css';
 
 const ItemList = ({items}) => {

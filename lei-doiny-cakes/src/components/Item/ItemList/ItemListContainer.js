@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router';
-import {getFirestore} from '../../../Factory/Firebase';
+import {getFirestore} from '../../../Factory/Firebase.js';
 import ItemList from '../../Item/ItemList/ItemList';
 import './../../css/Main.css';
 

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import CartContext from '../components/Context/Cart/CartContext';
+import CartContext from '../components/Context/CartContext.js';
 
 const CacheProvider = ({defaultValue = [], children}) => {
     const [cart, setCart] = useState (defaultValue);

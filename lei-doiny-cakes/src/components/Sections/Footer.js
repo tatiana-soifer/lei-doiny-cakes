@@ -1,5 +1,4 @@
 import {Link} from 'react-router-dom';
-import Suscripcion from './Suscripcion';
 import telefono from '../../assets/icons/telefono.png';
 import ubicacion from '../../assets/icons/ubicacion.png';
 import mail from '../../assets/icons/mail.png';
@@ -59,9 +58,6 @@ const Footer = () =>{
                             <Link to="https://ar.pinterest.com" target="blank">
                                 <img src={pinterest} alt="instagram" title="pinterest" />
                             </Link>
-                        </div>
-                        <div className="suscripcion">
-                            <Suscripcion />
                         </div>
                     </div>
                     <div className="pago col-lg-2 col-sm-12">
