@@ -1,5 +1,5 @@
 //BODY
-body {
+body{
   margin: 0;
   background: linear-gradient(170.21deg, #D8D8D8 7.36%, rgba(243, 214, 225, 0.9) 98.85%);
   list-style: none;
@@ -13,14 +13,14 @@ body {
 
 //TITULOS
 h1{
-  font-family: Lobster;
-  font-size: 63px;
+  font-family: 'Lobster', cursive;
+  font-size: 64px;
   font-style: normal;
   line-height: 66px;
   letter-spacing: 0em;
-  text-align: left;
   color: #F22973;
   display: flex;
+  text-align: center;
 }
 h2{
   font-family: 'Lobster', cursive;

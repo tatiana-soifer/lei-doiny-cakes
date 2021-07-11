@@ -1,11 +1,5 @@
 import {NavLink} from 'react-router-dom';
 import ItemListContainer from '../Item/ItemList/ItemListContainer.js';
-import ClientesFelices from '../Sections/ClientesFelices.js';
-import ComoComprar from '../Sections/ComoComprar.js';
-import Elegir from './Elegir.js';
-import Nosotros from '../Sections/Nosotros.js';
-import Contacto from '../Sections/Contacto.js';
-import Footer from '../Sections/Footer.js';
 import '../css/Main.css';
 
 function Home (){
@@ -15,9 +9,6 @@ function Home (){
                 <h1>Disfrutá increibles tortas artesanales</h1>
                 <p className="pPresentacion">Nos encanta formar parte de tu festejo.¡Dejate tentar por las más ricas tentaciones!</p>
                 <button className="bPresentacion btn">Ver más</button>
-            </div>
-            <div className="comoComprar">
-                <ComoComprar />
             </div>
             <div className="menuProductos">
                 <div className="container">
@@ -35,21 +26,6 @@ function Home (){
                         <ItemListContainer />
                     </div>
                 </div>
-            </div>
-            <div>
-                <Elegir />
-            </div>
-            <div>
-                <ClientesFelices />
-            </div>
-            <div>
-                <Nosotros />
-            </div>
-            <div>
-                <Contacto />
-            </div>
-            <div>
-                <Footer />
             </div>
         </div>
     )
