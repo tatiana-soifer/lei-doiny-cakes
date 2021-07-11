@@ -1,4 +1,3 @@
-
 import tarjetas from '../../assets/icons/tarjetas.png';
 import moto from '../../assets/icons/moto.png';
 import torta from '../../assets/icons/torta.png';
