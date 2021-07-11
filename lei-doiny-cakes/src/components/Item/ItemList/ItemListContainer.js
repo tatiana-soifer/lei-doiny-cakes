@@ -9,7 +9,7 @@ const ItemListContainer = () => {
     const {categoryId} = useParams();
     useEffect(() => {
         const db = getFirestore();
-        const itemCollection = db.collection('items');
+        const itemCollection = db.collection('itemCollection');
         if(!categoryId){            
             itemCollection.get().then(querySnapshot => {
             setItems(querySnapshot.docs.map(doc => (

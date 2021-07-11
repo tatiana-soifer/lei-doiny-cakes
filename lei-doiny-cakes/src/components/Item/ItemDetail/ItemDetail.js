@@ -18,12 +18,12 @@ const ItemDetail = ({detalle}) => {
                 <div className="row">
                     <div className="col-lg-10">
                         <div className="col-lg-6 left-side-product-box pb-3 productoItem">
-                            <img src={detalle.Foto} alt={detalle.Descripcion} />
+                            <img src={detalle.photo} className=""alt={detalle.title} />
                         </div>
                         <div className="col-lg-6 col-sm-12">
-                            <h1>{detalle.Torta}</h1>
-                            <h5>{detalle.Descripcion}</h5>
-                            <h3>${detalle.Precio}</h3>
+                            <h1>{detalle.title}</h1>
+                            <h5>{detalle.description}</h5>
+                            <h3>${detalle.price}</h3>
                         </div>
                     </div>
                 </div>

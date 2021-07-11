@@ -12,7 +12,6 @@ const ItemDetailContainer = () => {
         const db = getFirestore();
         const itemCollection = db.collection('itemCollection');    
         const itemId = itemCollection.doc(id.substr(1));
-        
         itemId.get().then(doc =>{
             if (!doc.exists) {
                 console.log('No se encontro el Item.')
