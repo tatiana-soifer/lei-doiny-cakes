@@ -48,8 +48,7 @@ const ItemListContainer = () => {
         
     return (
         <>
-        {
-            loading ?
+        {loading ?
             <LoaderingLoader />
             :
             <div className="cuadriculaProductos"> 
