@@ -13,38 +13,35 @@ const ItemListContainer = () => {
         setLoading(true);
         const db = getFirestore();
         const itemCollection = db.collection('itemCollection');            
-            if(!categoryId){itemCollection
-                    .get()
-                    .then((querySnapshot) => {
-                    if (querySnapshot.size === 0) {
-                        console.log('No results!');
-                    }
-                    setItems(querySnapshot.docs.map((doc) => doc.data()));
-                    })
-                    .catch((e) => {
-                    console.e('Error buscando items', e);
-                    })
-                    .finally(() => {
-                    setLoading(false);
-                    });
-                }else{
-                const itemCollectionCategory = itemCollection.where('idCategory', '===', categoryId)
-                itemCollectionCategory
-                    .get()
-                    .then((querySnapshot) => {
-                    if (querySnapshot.size === 0) {
-                        console.log('No hay esultados!');
-                    }
-                    setItems(querySnapshot.docs.map((doc) => doc.data()));
-                    })
-                    .catch((error) => {
-                    console.error('Error searching items', error);
-                    })
-                    .finally(() => {
-                    setLoading(false);
-                    });
+        if(!categoryId){
+            itemCollection.get().then((querySnapshot) => {
+                if (querySnapshot.size === 0) {
+                    console.log('No results!');
                 }
-            }, [categoryId]);
+                setItems(querySnapshot.docs.map((doc) => doc.data()));
+            })
+            .catch((e) => {
+                console.e('Error buscando items', e);
+            })
+            .finally(() => {
+                setLoading(false);
+            });
+        } else{
+            const itemCollectionCategory = itemCollection.where('idCategory', '===', categoryId)
+            itemCollectionCategory.get().then((querySnapshot) => {
+                if (querySnapshot.size === 0) {
+                    console.log('No hay esultados!');
+                }
+                setItems(querySnapshot.docs.map((doc) => doc.data()));
+            })
+            .catch((error) => {
+                console.error('Error searching items', error);
+            })
+            .finally(() => {
+                setLoading(false);
+            });
+        }
+    }, [categoryId]);
         
     return (
         <>

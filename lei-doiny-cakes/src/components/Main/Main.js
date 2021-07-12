@@ -47,10 +47,10 @@ function Main () {
                         </Route>
                     </Switch>
                 </CacheProvider>
-            </BrowserRouter>
             <div>
                 <Footer />
             </div>
+            </BrowserRouter>
         </>
     );
 };
