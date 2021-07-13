@@ -13,7 +13,7 @@ function LoaderingLoader() {
                 <div className="sk-chase-dot"></div>
             </div>
         </div>
-        );
+    );
 };
 
 export default LoaderingLoader;

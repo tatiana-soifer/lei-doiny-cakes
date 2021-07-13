@@ -4,7 +4,7 @@ import PorcionDobleOreo from '../../assets/img/porcion_doble_oreo.png';
 
 function Contacto (){
     return(
-        <div>
+        <>
             <form id="formulario">
                     <h2>Tenes algúna duda?</h2>
                     <div className="container">
@@ -44,7 +44,7 @@ function Contacto (){
                         </div>
                     </div>
             </form>
-        </div>
+        </>
     )
 };
 

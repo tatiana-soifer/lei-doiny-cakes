@@ -4,7 +4,7 @@ import '../css/Main.css';
 
 function Home (){
     return(
-        <div>
+        <>
             <div className="presentacion">
                 <h1>Disfrutá increibles tortas artesanales</h1>
                 <p className="pPresentacion">Nos encanta formar parte de tu festejo.¡Dejate tentar por las más ricas tentaciones!</p>
@@ -27,7 +27,7 @@ function Home (){
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 };
 

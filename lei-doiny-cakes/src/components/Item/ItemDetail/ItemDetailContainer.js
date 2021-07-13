@@ -33,9 +33,10 @@ const ItemDetailContainer = () => {
     }, [id]);
     return(
         <>
-            {loading ?
+            {
+                loading ?
                 <Loader />
-            :
+                :
                 <ItemDetail detalle={detalles} />
             }
         </>
