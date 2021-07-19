@@ -31,9 +31,6 @@ const NavBar = () => {
                                 <NavLink className="navbar-brand" exact to="/" activeClassName="selected">Menú</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="navbar-brand" exact to="/ComoComprar" activeClassName="selected">Cómo comprar</NavLink>
-                            </li>
-                            <li className="nav-item">
                                 <NavLink className="navbar-brand" exact to="/Contacto" activeClassName="selected">Contacto</NavLink>
                             </li>
                             <li className="nav-item">

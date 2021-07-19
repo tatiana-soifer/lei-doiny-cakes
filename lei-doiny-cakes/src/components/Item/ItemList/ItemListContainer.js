@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import {getFirestore} from '../../../Factory/Firebase.js';
 import ItemList from '../../Item/ItemList/ItemList';
-import LoaderingLoader from '../../Loader/Loader.js';
+import Loader from '../../Loader/Loader.js';
 import './../../css/Main.css';
 
 const ItemListContainer = () => {
@@ -27,15 +27,15 @@ const ItemListContainer = () => {
                 setLoading(false);
             });
         } else{
-            const itemCollectionCategory = itemCollection.where('idCategory', '===', categoryId)
+            const itemCollectionCategory = itemCollection.where('id', '===', categoryId)
             itemCollectionCategory.get().then((querySnapshot) => {
                 if (querySnapshot.size === 0) {
                     console.log('No hay esultados!');
                 }
                 setItems(querySnapshot.docs.map((doc) => doc.data()));
             })
-            .catch((error) => {
-                console.error('Error searching items', error);
+            .catch((e) => {
+                console.error('Error searching items', e);
             })
             .finally(() => {
                 setLoading(false);
@@ -45,7 +45,7 @@ const ItemListContainer = () => {
     return (
         <>
         {loading ?
-            <LoaderingLoader />
+            <Loader />
             :
             <div className="cuadriculaProductos"> 
                 <ItemList items={items} />

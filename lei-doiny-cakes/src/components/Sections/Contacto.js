@@ -1,6 +1,5 @@
-import '../css/Main.css';
 import PorcionDobleOreo from '../../assets/img/porcion_doble_oreo.png';
-
+import '../css/Main.css';
 
 function Contacto (){
     return(

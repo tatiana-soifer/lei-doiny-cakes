@@ -34,14 +34,19 @@
   justify-content: center; }
 
 .btn span {
-  border-radius: 18px;
+  border-radius: 15px;
   border: 2px solid white;
   color: #F22973;
   position: absolute;
-  top: 2px;
+  top: 12px;
   right: 2px;
-  padding: 12px;
-  font-size: 10px; }
+  font-size: 10px;
+  padding: 1%;
+  background-color: white; }
+
+#carritoMenu img {
+  background: none;
+  border: none; }
 
 .clientesFelices {
   padding-bottom: 6%; }
@@ -75,9 +80,13 @@
 .como_comprar {
   padding-bottom: 20%; }
   .como_comprar h3 {
-    text-align: center; }
+    text-align: center;
+    font-size: 20px; }
   .como_comprar h4 {
-    text-align: center; }
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    width: 80%; }
   .como_comprar img {
     display: flex; }
 
@@ -219,7 +228,7 @@
   padding-top: 2%;
   justify-content: space-around; }
   .footer h4 {
-    font-weight: bold; }
+    font-size: 15px; }
   .footer p {
     font-size: 14px; }
 
@@ -264,7 +273,8 @@
   background-image: url(../../assets/img/marquisse_fondo.jpg);
   background-size: cover;
   background-position: center center;
-  border: none; }
+  border: none;
+  padding-top: 5%; }
   .presentacion h1 {
     position: absolute;
     width: 50%;
@@ -433,11 +443,13 @@ p {
   padding-bottom: 5%; }
 
 :root {
-  --sk-size: 40px;
+  --sk-size: 60px;
   --sk-color: #F22973; }
 
 .sk-center {
-  margin: auto; }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .sk-chase {
   width: var(--sk-size);

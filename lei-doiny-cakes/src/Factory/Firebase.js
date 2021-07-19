@@ -1,7 +1,12 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
+import 'firebase/auth'; // for authentication
+import 'firebase/storage'; // for storage
+import 'firebase/database'; // for realtime databas
+import 'firebase/messaging'; // for cloud messaging
+import 'firebase/functions'; // for cloud functions
 
-var app = firebase.initializeApp({
+const app = firebase.initializeApp({
     apiKey: "AIzaSyAhnjJUAGeYhHSNBte7SDFnnklia5WGKHQ",
     authDomain: "lei-doiny-cakes-reactjs.firebaseapp.com",
     projectId: "lei-doiny-cakes-reactjs",
@@ -11,9 +16,10 @@ var app = firebase.initializeApp({
     measurementId: "G-837TRN7F87"
 });
 
-export function getFirebase() {
+export const getFirebase = () => {
     return app;
 };
-export function getFirestore() {
-    return firebase.firestore(app);
+
+export const getFirestore = () => {
+    return firebase.firestore();
 };

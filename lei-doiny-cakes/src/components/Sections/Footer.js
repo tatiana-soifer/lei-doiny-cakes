@@ -18,7 +18,7 @@ import '../css/Main.css';
 
 const Footer = () =>{
     return(
-        <footer className="footer">
+        <div className="footer">
             <div className="container">
                 <div className="row">
                     <div className="contacto col-lg-4 col-sm-12">
@@ -88,7 +88,7 @@ const Footer = () =>{
             <div className="copy">
                 <p>Copyright 2021 © TS | Made with ❤️</p>
             </div>
-        </footer>
+        </div>
     );
 };
 

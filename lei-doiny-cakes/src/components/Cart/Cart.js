@@ -6,7 +6,7 @@ import '../css/Main.css';
 const Cart = () => {
     const {cart, clear, removeItem} = useContext (CartContext);
     let total = cart.reduce (function (previo, actual) {
-        return previo + actual.item.Precio * actual.cantidad;
+        return previo + actual.item.price * actual.quantity;
     }, 0);
     return (
         <>
@@ -34,16 +34,16 @@ const Cart = () => {
                                         </tr>
                                     </thead>
                                     <tbody className="tbody">
-                                        {cart.map((producto)=> {
+                                        {cart.map((producto) => {
                                             return(
                                                 <tr>
                                                     <td>
-                                                        <img className="tablaImg" src={producto.item.foto} alt={producto.item.descripcion}/>
-                                                        <h4 className="tablaTitulo">{producto.item.foto}</h4>
+                                                        <img className="tablaImg" src={producto.item.photo} alt={producto.item.description}/>
+                                                        <h4 className="tablaTitulo">{producto.item.photo}</h4>
                                                     </td>
-                                                    <td className="tablaPrecio">{producto.item.precio}</td>
-                                                    <td className="tablaCantidad">{producto.item.cantidad}</td>
-                                                    <td className="tablaSubtotal">{producto.item.precio * producto.cantidad}</td>
+                                                    <td className="tablaPrecio">{producto.item.price}</td>
+                                                    <td className="tablaCantidad">{producto.item.quantity}</td>
+                                                    <td className="tablaSubtotal">{producto.item.price * producto.quantity}</td>
                                                     <td>
                                                         <button className="delete btn btn-danger botonCarritoBorrar" onClick={() => removeItem(producto.item.id)}>Cancelar</button>
                                                     </td>
@@ -60,18 +60,17 @@ const Cart = () => {
                                 </div>
                                 <div className="row mx-4">
                                     <div className="col d-flex justify-content-end">
-                                        <Link id="botonCartFinal" className="btn btn-secondary" exact to={"/"}>Seguir comprando</Link>
-                                        <button className="btn btn-secondary" type="button" >Finalizar compra</button>
+                                        <Link id="botonCartFinal" className="btn btn-secondary" exact to={'/'}>Seguir comprando</Link>
+                                        <button className="btn btn-secondary" type="button">Finalizar compra</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            )};
+            )}
         </>
     )
 };
 
 export default Cart;
-

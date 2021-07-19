@@ -1,10 +1,12 @@
 :root {
-    --sk-size: 40px;
+    --sk-size: 60px;
     --sk-color: #F22973;
 }
 .sk-center{
-    margin: auto;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .sk-chase {
     width: var(--sk-size);
     height: var(--sk-size);

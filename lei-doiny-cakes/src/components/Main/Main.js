@@ -47,9 +47,9 @@ function Main () {
                         </Route>
                     </Switch>
                 </CacheProvider>
-                <div>
+                <>
                     <Footer />
-                </div>
+                </>
             </BrowserRouter>
         </>
     );
