@@ -30,6 +30,11 @@
   align-items: center;
   justify-content: center; }
 
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 .btn span {
   border-radius: 15px;
   border: 2px solid white;
