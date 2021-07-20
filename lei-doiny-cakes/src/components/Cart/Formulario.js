@@ -1,7 +1,7 @@
 import React from "react";
 import '../css/Main.css';
 
-export const PurchaseForm = ({finalizarCompra, formData, setFormData}) => {
+const FormularioCompra = ({finalizarCompra, formData, setFormData}) => {
     return (
         <form>
             <div className="form-group">
@@ -22,3 +22,5 @@ export const PurchaseForm = ({finalizarCompra, formData, setFormData}) => {
         </form>
     );
 };
+
+export default FormularioCompra;
