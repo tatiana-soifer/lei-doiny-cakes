@@ -3,6 +3,7 @@ import {getFirestore} from '../../Factory/Firebase.js'
 import {Link} from 'react-router-dom';
 import Counter from '../Counter/Counter';
 import informacion from '../../assets/icons/informacion.png';
+
 import '../css/Main.css';
 
 const Item = ({item}) => {

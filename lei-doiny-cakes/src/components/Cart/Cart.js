@@ -1,13 +1,49 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import {Link} from "react-router-dom";
 import CartContext from '../Context/CartContext.js';
+import Loader from '../../Loader/Loader.js';
+import firebase from "firebase/app";
+import {getFirestore} from "../../Factory/Firebase.js";
 import '../css/Main.css';
 
 const Cart = () => {
     const {cart, clear, removeItem} = useContext (CartContext);
+    const [loader, setLoader] = useState(false);
+    const [order, setOrder] = useState({ id: "", generated: false });
+    const [formData, setFormData] = useState({});
     let total = cart.reduce (function (previo, actual) {
         return previo + actual.item.price * actual.quantity;
     }, 0);
+    const finalizarCompra = () => {
+        setLoader(true);
+        const db = getFirestore();
+        const orders = db.collection("orders");
+        const buyer = {
+            email: formData.email || '',
+            name: formData.name || '',
+            phone: formData.phone || '',
+        };
+    
+        const newOrder = {
+            buyer: buyer,
+            items: cart,
+            date: firebase.firestore.Timestamp.fromDate(new Date()),
+            total: total,
+        };
+        orders
+            .add(newOrder)
+            .then(({ id }) => {
+            console.log("Pedido guardado correctamente", id);
+            setOrder({ id: id, generated: true });
+            clear();
+            })
+            .catch((e) => {
+                console.log("Error al guardar el pedido!", e);
+            })
+            .finally(() => {
+                setLoader(false);
+            });
+        };
     return (
         <>
             {cart.length === 0 && 
