@@ -7,13 +7,10 @@
   background: linear-gradient(170.21deg, #D8D8D8 7.36%, rgba(243, 214, 225, 0.9) 98.85%); }
   .cart th {
     text-align: center; }
+  .cart h2, .cart h5, .cart p {
+    padding-left: 2%; }
   .cart .tablaProductos {
     display: flex; }
-    .cart .tablaProductos img {
-      width: 9rem;
-      object-fit: contain;
-      border-radius: 4%;
-      margin-right: 5%; }
   .cart .tablaCantidad input {
     border: none;
     margin-bottom: 15%;
