@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react';
 import {Link} from 'react-router-dom';
 import {getFirestore} from '../../Factory/Firebase.js';
 import CartContext from '../Context/CartContext.js';
-import Loader from '../../Loader/Loader.js';
+import Loader from '../Loader/Loader.js';
 import firebase from 'firebase/app';
 import Formulario from '../Cart/Formulario.js'
 import '../css/Main.css';
@@ -85,10 +85,10 @@ const Cart = () => {
                                                 </tbody>
                                             </table>
                                             <div className="row">
-                                                <button className="btn" onClick={() => clear()}>Vaciar carrito</button>
+                                                <button className="btn" onClick={() => clear()}>Vaciar Carrito</button>
                                             </div>
                                             <div className="col">
-                                                <h3 className="itemTotalCarrito">Total a pagar:{total}</h3>
+                                                <h3 className="itemTotalCarrito">Total a Pagar:{total}</h3>
                                             </div>
                                             <Formulario finalizarCompra={finalizarCompra} formData={formularioData} setFormData={setFormularioData} />
                                         </div>
@@ -99,8 +99,8 @@ const Cart = () => {
                             <div>
                                 {order.generated ? (
                                     <>
-                                        <h2>Compra finalizada con exito.</h2>
-                                        <p>Orden ID: {order.id}</p>
+                                        <h2>Muchas gracias por tu compra!</h2>
+                                        <p>El ID de tu Pedido es: {order.id}</p>
                                     </>
                                 ) : (
                                     <p>El carrito está vacío.</p>

@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext, useState} from 'react';
 import {NavLink, Link} from 'react-router-dom';
 import logo from '../../assets/logo/logo.png';
 import CartWidget from '../NavBar/CartWidget.js';
