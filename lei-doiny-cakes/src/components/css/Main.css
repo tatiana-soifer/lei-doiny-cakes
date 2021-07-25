@@ -35,6 +35,11 @@
   align-items: center;
   justify-content: center; }
 
+.vacio {
+  display: flex; }
+  .vacio p {
+    text-align: center; }
+
 .btn span {
   border-radius: 15px;
   border: 2px solid white;
