@@ -11,20 +11,20 @@ function CartContent({item, quantity}){
         }
     return (
         <>
-        {quantity === 0? (
-            <h1>No hay productos agregados</h1>
-        ): (
-        <>
-        <div className="container-cardContenido">
-            <img src={item.img} alt="Imagen artículo" />
-            <h2>{item.desc}</h2> 
-            <h3>$ {price}</h3>
-            <h3>{quantity}</h3>
-            <h2> ${totalPriceProduct}</h2>
-        </div>
-            <button className="btn btn-second" onClick={()=>remover(item)}>Borrar producto</button>
-        </>
-        )}
+            {quantity === 0? (
+                <h1>No hay productos agregados</h1>
+            ): (
+                <>
+                    <div className="container-cardContenido">
+                        <img src={item.photo} alt={item.title} />
+                        <h2>{item.description}</h2> 
+                        <h3>$ {price}</h3>
+                        <h3>{quantity}</h3>
+                        <h2> ${totalPriceProduct}</h2>
+                    </div>
+                    <button className="btn btn-second" onClick={()=>remover(item)}>Borrar producto</button>
+                </>
+            )}
         </>
     )
 }

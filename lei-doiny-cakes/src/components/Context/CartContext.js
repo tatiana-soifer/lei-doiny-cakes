@@ -3,13 +3,15 @@ import '../css/Main.css';
 
 export const CartContext = createContext();
 export const useCart = () => useContext(CartContext);
+
 const initialState = {items: [], totalPrice:0}
 const initialStateWish = {items:[]}; 
+
 export const CartProvider = ({children}) => {
     function setLocalStorage(key, value) {
         try{
             window.localStorage.setItem(key, JSON.stringify(value));
-        } catch (e){
+        } catch(e){
             console.log(e);
         }
     }  
@@ -29,30 +31,29 @@ export const CartProvider = ({children}) => {
     useEffect(() => {
         setLocalStorage("wishList", wishList);
     }, [wishList]);
-    const addItem = (desc, img,  quantity, price, id, stock) =>{
+    const addItem = (description, photo,  quantity, price, id, stock) =>{
         const itemIndex = cartInfo.items.findIndex(i => id === i.item.id)
         if (itemIndex !== -1){
-            return( setCartInfo({ ...cartInfo, items: [ ...cartInfo.items.slice(0,itemIndex), 
-                {'item': {img, id, price, stock}, "quantity":cartInfo.items[itemIndex].quantity + quantity }, 
-                ...cartInfo.items.slice(itemIndex+1) ]}));
+            return( setCartInfo({ ...cartInfo, items: [...cartInfo.items.slice(0,itemIndex), 
+                {'item': {photo, id, price, stock}, "quantity":cartInfo.items[itemIndex].quantity + quantity}, 
+                ...cartInfo.items.slice(itemIndex+1)]}));
         } else{
-            setCartInfo({ ...cartInfo, items:[ ...cartInfo.items, {'item': {img, id, price, desc, stock}, quantity } ]})
+            setCartInfo({ ...cartInfo, items:[ ...cartInfo.items, {'item': {photo, id, price, description, stock}, quantity}]})
         }
-        
-        const newItem = [...cartInfo.items, {item: {id, price, desc, img, stock}, quantity}]
+        const newItem = [...cartInfo.items, {item: {id, price, description, photo, stock}, quantity}]
         setCartInfo({ ...cartInfo, items: newItem})
     }
-    const addWishList = (title, price, img, id, desc ) =>{
+    const addWishList = (title, price, photo, id, description ) =>{
         const itemIndex = wishList.items.findIndex(i => id === i.item.id)
         if (itemIndex !== -1){
             return( setWishList({ ...wishList, items: [ ...wishList.items.slice(0,itemIndex), 
-                {'item': { title, price, img, id, desc }}, 
+                {'item': { title, price, photo, id, description }}, 
                 ...wishList.items.slice(itemIndex+1) 
             ]}));
         } else{
-            setWishList({ ...wishList, items:[ ...wishList.items, {'item': {title, price, img, id, desc}}]})
+            setWishList({ ...wishList, items:[ ...wishList.items, {'item': {title, price, photo, id, description}}]})
         }
-        const newItem = [...wishList.items, {item: {title, price, img, id, desc}}]
+        const newItem = [...wishList.items, {item: {title, price, photo, id, description}}]
         setWishList({ ...wishList, items: newItem})
     }
     const removeItems = (item) => {
@@ -76,6 +77,6 @@ export const CartProvider = ({children}) => {
         return sumaPrices
     }
     return (
-        <CartContext.Provider value={{cartInfo, wishList, addItem, removeItems, clear, totalPrice, totalQuantity, addWishList, clearWishList} }>{children}</CartContext.Provider>
+        <CartContext.Provider value={{cartInfo, wishList, addItem, removeItems, clear, totalPrice, totalQuantity, addWishList, clearWishList}}>{children}</CartContext.Provider>
     );
 };

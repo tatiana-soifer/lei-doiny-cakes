@@ -6,7 +6,7 @@ function CartWishListContent (pId) {
     const id = pId.pId;
     return (
         <> 
-            <Link to={`/productDetail/${id}`}>
+            <Link to={`/itemDetail/${id}`}>
                 <button className="btn">Lo llevo</button>
             </Link>
         </>

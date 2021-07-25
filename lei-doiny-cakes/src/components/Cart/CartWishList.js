@@ -19,13 +19,12 @@ function CartWishList(){
                             return(
                                 <>
                                 <div key= {i.item.id} className="container-item-detail">
-                                    <img src= {i.item.img} alt="imagen item" />
+                                    <img src= {i.item.photo} alt={i.item.title} />
                                     <div className="info-item-details" >
                                         <h1>{i.item.title}</h1>
-                                        <p>{i.item.desc}</p>
+                                        <p>{i.item.description}</p>
                                         <p className="price-detail"> <span>$</span> {i.item.price} </p>
-                                            <CartWishListContent
-                                        pId= {i.item.id} />
+                                            <CartWishListContent pid= {i.item.id} />
                                     </div>
                                 </div>
                                 </>
