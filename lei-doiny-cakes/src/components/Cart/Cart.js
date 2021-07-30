@@ -1,18 +1,18 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import CartContext from '../Context/CartContext.js';
-import CartContent from './CartContent';
+import CartContent from './CartContent.js'
 import '../css/Main.css';
 
 function Cart(){
-    const cartInfo = CartContext()
-    const cartItems = cartInfo.cartInfo.items
+    const cartInfo = CartContext();
+    const cartItems = cartInfo.cartInfo.items;
     const clearProducts = () => {
-        cartInfo.clear()
-    }
-    const totalPriceItems= ()=>{
-    return cartInfo.totalPrice() 
-    }
+        cartInfo.clear();
+    };
+    const totalPriceItems= () => {
+        return cartInfo.totalPrice();
+    };
     return(
             <> 
                 <div className="container-cart">
@@ -32,15 +32,15 @@ function Cart(){
                                     </div>
                                         {cartItems?.map (i => {
                                             return (
-                                                <CartContent item={i.item} quantity={i.quantity} key={i.item.id}></CartContent>
+                                                <CartContent item={i.item} quantity={i.quantity} key={i.item.id} />
                                             )
                                         })} 
                                         <div className="total-price">
-                                            <h2><span> Total $ </span>{totalPriceItems()} </h2>
+                                            <h2><span> Total $ </span>{totalPriceItems()}</h2>
                                         </div>
                                         <div className="btns-carrito">
-                                            <Link to= "/"><button className=" btn btn-carrito">Continuar comprando</button></Link>
-                                            <button className=" btn btn-carrito"   onClick={clearProducts}>Vaciar carrito </button>
+                                            <Link to= "/" className="btn btn-carrito">Continuar comprando</Link>
+                                            <button className="btn btn-carrito" onClick={clearProducts}>Vaciar carrito</button>
                                         </div>
                                     </div>
                                     <div className="container-resumenCompra"> 
@@ -57,9 +57,7 @@ function Cart(){
                                             <h3>Total del pedido</h3>
                                             <p className="item">$ {totalPriceItems()}</p>
                                         </div>
-                                        <Link to="/cart/CheckOut">
-                                            <button className="btn btn-important" >Realizar pedido</button>
-                                        </Link>
+                                        <Link to="/cart/CheckOut" className="btn btn-important">Realizar pedido</Link>
                                     </div>
                                 </div>
                             </>

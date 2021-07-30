@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
 import './../css/Main.css';
 
-
-const Counter = ({ stock, initial, onAdd}) => {
+const Counter = ({stock, initial, onAdd}) => {
     const [stockRequired, setStockRequired] = useState(initial)
     const onAddCount = (value) => {
-        if ((stock >= stockRequired + value ) && ((stockRequired + value) >=0) ) {
+        if ((stock >= stockRequired + value) && ((stockRequired + value) >=0)) {
         setStockRequired(stockRequired + value)
         } else{
             }

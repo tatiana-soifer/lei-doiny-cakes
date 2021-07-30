@@ -1,50 +1,98 @@
-import React, {useContext, useState} from 'react';
-import {NavLink, Link} from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
+import {useCart} from '../Context/CartContext.js';
+import Cartwidget from './CartWidget.js';
+import {withStyles} from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
 import logo from '../../assets/logo/logo.png';
-import CartWidget from '../NavBar/CartWidget.js';
-import CartContext from '../Context/CartContext.js';
 import '../css/Main.css';
 
-const NavBar = () => {
-    const {cart} = useContext(CartContext);
-    let cartCantidad = cart.reduce (function (previo, actual) {
-        return previo + actual.cantidad;
-    }, 0);
-    const [navbar, setNavbar] = useState(false);
-    const cambioColor = () => {
-        window.scroll >= 70 ? setNavbar(true) : setNavbar(false)
-    };
-    window.addEventListener('scroll', cambioColor);
-    return(
-        <header>
-            <Link to="/">
-                <img src={logo} id="logo" alt="logo"/>
-            </Link>
-            <nav id="menu2" className={navbar ? 'navbar active' : 'navbar'}>
-                <div className="navbar navbar-expand-lg fixed-top">
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <ul className="navbar-nav mt-2 mt-lg-0 ml-auto">
-                            <li className="nav-item">
-                                <NavLink className="navbar-brand" exact to="/" activeClassName="selected">Menú</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="navbar-brand" exact to="/Contacto" activeClassName="selected">Contacto</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="navbar-brand" exact to="/FAQ" activeClassName="selected">FAQ</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <CartWidget cartLength={cartCantidad}/>
-                            </li>
-                        </ul>
-                    </div>
+class Navbar extends Component {
+    state = {clicked: false}
+    handleClick = () => {
+        this.setState ({ clicked: !this.state.clicked})
+    }
+    render() {
+        return (
+        <nav className="NavbarItems">
+            <div>
+                <div className="menu-icon" onClick={this.handleClick}>
+                    <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'} />
                 </div>
-            </nav>
-        </header>
-    );
-};
+                <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
+                    <Link to="/">Home</Link>
+                    <Link to="/cart">Carrito</Link>
+                    <Link to="/register">Newsletter</Link>
+                </ul>
+                <p>Menu</p>
+            </div>
+            <div className="logo-container">
+                <Link to="/">
+                    <div >
+                        <img src={logo} alt=""/>
+                    </div>
+                </Link>
+            </div>
+            <Link to="/register">
+                <div className="nav-suscribe">
+                    <i className="far fa-edit"></i>
+                    <h3>Suscribite</h3>
+                </div>
+            </Link>
+        </nav>
+        )
+    }
+}
 
-export default NavBar;
+export default Navbar;
+
+const StyledMenu = withStyles({
+    })((props) => (
+        <Menu elevation={0} getContentAnchorEl={null} anchorOrigin={{vertical: 'bottom', horizontal: 'center'}} transformOrigin={{vertical: 'top', horizontal: 'center'}} {...props} />
+));
+
+export function CustomizedMenus() {
+    const cartInfo = useCart()
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+    const totalPriceItems= ()=>{
+        return cartInfo.totalPrice() 
+    }
+    return(
+    <div>
+        <Button aria-controls="customized-menu" aria-haspopup="true" onClick={handleClick}>
+            <div className="button-carrito">
+                <i className="fas fa-shopping-bag"></i>
+                <Cartwidget/> 
+            </div>
+            <div className="linea-carrito"><p>carrito</p></div>
+        </Button>
+        <StyledMenu id="customized-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
+            <div className="navBar-card">
+                {
+                    totalPriceItems()>=1 ?
+                    <>
+                        <div className="navBarCard-totalPrice">
+                            <p>Items agregados:</p> 
+                            <Cartwidget/> 
+                        </div>
+                        <div className="navBarCard-totalPrice">
+                            <p>Subtotal:</p> 
+                            <h3> $ {totalPriceItems()}</h3>
+                        </div>
+                        <Link to="/cart" className="navBarCard-btn btn">Finalizar compra</Link>
+                    </>
+                    : <p>No hay articulos en tu carrito</p>
+                }
+                </div>
+            </StyledMenu>
+        </div>
+    );
+}
+

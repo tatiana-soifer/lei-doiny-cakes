@@ -1,10 +1,5 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
-import 'firebase/auth'; // for authentication
-import 'firebase/storage'; // for storage
-import 'firebase/database'; // for realtime databas
-import 'firebase/messaging'; // for cloud messaging
-import 'firebase/functions'; // for cloud functions
 
 const app = firebase.initializeApp({
     apiKey: "AIzaSyAhnjJUAGeYhHSNBte7SDFnnklia5WGKHQ",
@@ -16,10 +11,9 @@ const app = firebase.initializeApp({
     measurementId: "G-837TRN7F87"
 });
 
-export const getFirebase = () => {
+export function getFirebase(){
     return app;
-};
-
-export const getFirestore = () => {
-    return firebase.firestore();
-};
+}
+export function getFirestore(){
+    return firebase.firestore(app);
+}

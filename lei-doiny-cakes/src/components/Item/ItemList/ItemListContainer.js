@@ -1,57 +1,43 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import {getFirestore} from '../../../Factory/Firebase.js';
-import ItemList from '../../Item/ItemList/ItemList';
+import ItemList from './ItemList.js';
 import Loader from '../../Loader/Loader.js';
 import './../../css/Main.css';
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [loader, setLoader] = useState(true);
     const {categoryId} = useParams();
     useEffect(() => {
-        setLoading(true);
+        setLoader(true);
         const db = getFirestore();
-        const itemCollection = db.collection('itemCollection');            
-        if(!categoryId){
-            itemCollection.get().then((querySnapshot) => {
-                if (querySnapshot.size === 0) {
-                    console.log('No results!');
-                }
-                setItems(querySnapshot.docs.map((doc) => doc.data()));
-            })
-            .catch((e) => {
-                console.e('Error buscando items', e);
-            })
-            .finally(() => {
-                setLoading(false);
-            });
-        } else{
-            const itemCollectionCategory = itemCollection.where('id', '===', categoryId)
-            itemCollectionCategory.get().then((querySnapshot) => {
-                if (querySnapshot.size === 0) {
-                    console.log('No hay esultados!');
-                }
-                setItems(querySnapshot.docs.map((doc) => doc.data()));
-            })
-            .catch((e) => {
-                console.error('Error searching items', e);
-            })
-            .finally(() => {
-                setLoading(false);
-            });
-        }
-    }, [categoryId]);
+        const itemCollection = db.collection('itemCollection');
+        const filteredItems = categoryId ? itemCollection.where('category', '===', categoryId) : itemCollection
+        filteredItems.get().then((querySnapshot) => {
+            if (querySnapshot.size === 0){
+                console.log("No hay resultados");
+            }
+            setItems(querySnapshot.docs.map(doc => {return {'id': doc.id, ...doc.data()}}));
+        }).finally(() => {
+            setLoader(false)
+        })
+    },[categoryId]);
     return (
-        <>
-        {loading ?
-            <Loader />
-            :
-            <div className="cuadriculaProductos"> 
-                <ItemList items={items} />
+        <div className="container">
+            <div className="row">
+                <h1>Tienda Online</h1>
+                <div>
+                    {loader ?
+                        <Loader />
+                        :
+                            <div className="cuadriculaProductos"> 
+                                <ItemList items={items} />
+                            </div>
+                    }
+                </div>
             </div>
-        }
-        </>
+        </div>
     )
 };
 

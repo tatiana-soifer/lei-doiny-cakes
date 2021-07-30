@@ -1,5 +1,5 @@
 import React from 'react';
-import {useCart} from '../context/CartContext';
+import {useCart} from '../Context/CartContext';
 import Formulario from '../Formulario.js';
 import '../css/Main.css';
 
@@ -14,18 +14,18 @@ function CheckOut () {
         }
     const itemProduct = cartItems.map((i)=>{return (i.item)})
     const itemQuantity = cartItems.map((i)=>{return ( i)})
-        return (
+        return(
             <div className="container-checkOut">
                 <div> 
                 <div className="container-compra">
                     <h1>Resumen de compra</h1>
                     <p><span>{totalQuantitys()}</span> productos en el carrito</p>
-                    <div className="container-ItemsCompra" >
+                    <div className="container-ItemsCompra">
                         {cartItems?.map((i) => {
                             return(
                                 <div className="container-itemCompra" key= {i.item.id}>
-                                    <img src= {i.item.img} alt="imagen item" />
-                                    <h3>{i.item.desc}</h3>
+                                    <img src= {i.item.photo} alt="imagen item" />
+                                    <h3>{i.item.description}</h3>
                                     <p>Precio: ${i.item.price} </p>
                                     <p>Cantidad: {i.quantity} </p>
                                 </div>
@@ -36,7 +36,7 @@ function CheckOut () {
                 </div>
             </div>  
             <div className="container">
-                <Formulario value={{itemProduct, itemQuantity}}></Formulario>
+                <Formulario value={{itemProduct, itemQuantity}} />
             </div>
         </div>
     )

@@ -10,12 +10,12 @@ function ItemDetail({photo, title, price, description, id, stock, key}) {
     const [wishEvent, setWishEvent]= useState(0)
     const {addItem, addWishList} = useCart()
     const onAddItem = (e) => {
-    setEventItem(e)
-    addItem(title, photo, e, price, id, stock)
+        setEventItem(e)
+        addItem(title, photo, e, price, id, stock)
     }
-    const handleClick =(e) => {
-    setWishEvent(e)
-    addWishList(title, price, photo, id, description)
+    const handleClick = (e) => {
+        setWishEvent(e)
+        addWishList(title, price, photo, id, description)
     }
     return(
         <div key= {id} className="container">
@@ -30,10 +30,10 @@ function ItemDetail({photo, title, price, description, id, stock, key}) {
                         <h4><span>$</span> {price}</h4>
                         <h4>Cantidad:</h4>
                         {eventItem ===0?
-                            <Counter value={eventItem} onAdd={onAddItem} stock={stock} initial={1}></Counter> 
+                            <Counter value={eventItem} onAdd={onAddItem} stock={stock} initial={1} />
                             : 
                                 <div className="buttons-item-detail">
-                                    <Link to="/cart" className="btn">Lo llevo</Link>
+                                    <Link to="/cart" className="btn">Me lo llevo</Link>
                                 </div>
                         }
                         {wishEvent ===0?

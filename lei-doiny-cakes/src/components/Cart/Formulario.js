@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-import {useForm} from 'react-hook-form'
+import {useForm} from 'react-hook-form';
 import {getFireStore} from '../../Factory/Firebase.js';
-import {useCart} from '../context/CartContext';
+import {useCart} from '../Context/CartContext';
 import '../css/Main.css';
 
 const Formulario = (itemProduct) => {
@@ -16,11 +16,11 @@ const Formulario = (itemProduct) => {
     return cartInfo.clear
     }
     //DATOS DEL FORMULARIO
-    const {register, formState: { errors }, getValues, handleSubmit} = useForm();
+    const {register, formState: {e}, getValues, handleSubmit} = useForm();
     const onSubmit = (data, e) => {
-        e.target.reset()
-        e.preventDefault()
-        const buyer = data
+        e.target.reset();
+        e.preventDefault();
+        const buyer = data;
         //CREA LA ORDEN PARA EL FIREBASE
         const db = getFireStore();
         const ordenes = db.collection("orders");
@@ -34,16 +34,6 @@ const Formulario = (itemProduct) => {
         ordenes.add(newOrden).then(({id}) => {
             setOrderId(id); 
         }).finally(() => {})
-        //ACTUALIZAR EL STOCK
-        /*
-            const docRef = db.collection('items').doc("1")
-            docRef.update({
-            stock: 40
-        })
-            const actualizarStock = docRef.update({
-            stock: stock - 
-        })
-        */
     }
     return(
         <>
@@ -56,22 +46,22 @@ const Formulario = (itemProduct) => {
                             <div className="form-item">
                                 <label htmlFor="nombre">Tu nombre</label>
                                 <input type="name" {...register('nombre', {required: 'Debes ingresar tu nombre', maxLength: 20, minLength: 2})} />
-                                {errors.nombre && (<p>{errors.nombre.message}</p>)}
+                                {e.nombre && (<p>{e.nombre.message}</p>)}
                             </div>
                             <div className="form-item">
                                 <label htmlFor="nombre">Tu apellido</label>
                                 <input type="name" {...register("apellido", {required: 'Debes ingresar tu apellido', maxLength: 20, minLength: 2})} />
-                                {errors.apellido && (<p>{errors.apellido.message}</p>)}
+                                {e.apellido && (<p>{e.apellido.message}</p>)}
                             </div>
                             <div className="form-item">
                                 <label >Tu teléfono</label>
                                 <input type="phone" {...register("tel", {required: 'Debes ingresar tu teléfono'})} />
-                                {errors.tel && (<p>{errors.tel.message}</p>)}
+                                {e.tel && (<p>{e.tel.message}</p>)}
                             </div>
                             <div className="form-item">
-                            <label>Tu Mail: </label>
+                            <label>Tu Mail:</label>
                                 <input type="email" {...register("email", {required: 'Debes ingresar tu email'})}/>
-                                {errors.email && (<p>{errors.email.message}</p>)}
+                                {e.email && (<p>{e.email.message}</p>)}
                             </div>
                             <div className="form-item">
                                 <label>Confirma tu email</label>
@@ -80,8 +70,8 @@ const Formulario = (itemProduct) => {
                                     return email === value || "Los emails deben coincidir";
                                 }}})}/>
                                 {
-                                    errors.emailConfirmation &&(
-                                        <p>{errors.emailConfirmation.message}</p>
+                                    e.emailConfirmation &&(
+                                        <p>{e.emailConfirmation.message}</p>
                                     )
                                 }
                             </div>
@@ -89,13 +79,12 @@ const Formulario = (itemProduct) => {
                         </div>
                     </form>
                 </div>
-                : <div className="container-confCompra">
-                    <h2>Muchas gracias por tu compra!!</h2>
-                    <p>Tu nro de orden es: <span>{orderId}</span>. Recirás un email cuando tu pedido esté listo para ser retirado.</p>
-                    <Link to="/">
-                        <button className="btn btn-important" onClick={removerItem()}>Volver al inicio</button>
-                    </Link>
-                </div>
+                    : 
+                    <div className="container-confCompra">
+                        <h2>Muchas gracias por tu compra!!</h2>
+                        <p>Tu nro de orden es: <span>{orderId}</span>. Recirás un email cuando tu pedido esté listo para ser retirado.</p>
+                        <Link to="/" className="btn btn-important" onClick={removerItem()}>Volver al inicio</Link>
+                    </div>
             }
         </>
     );

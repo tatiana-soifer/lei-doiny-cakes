@@ -1,6 +1,6 @@
 import React from 'react';
 import {useCart} from '../Context/CartContext.js';
-import './Cart.css';
+import '../css/Main.css';
 
 function CartContent({item, quantity}){
     const price = item.price
@@ -8,7 +8,7 @@ function CartContent({item, quantity}){
     const {removeItems} = useCart()
     const remover =(item)=>{
         removeItems(item)
-        }
+    }
     return (
         <>
             {quantity === 0? (

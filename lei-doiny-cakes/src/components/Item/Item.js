@@ -1,24 +1,54 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import informacion from '../../assets/icons/informacion.png';
+import {makeStyles} from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 import '../css/Main.css';
 
-function Item ({photo, title, price, pId}) {
+const useStyles = makeStyles({
+    root: {
+        maxWidth: 345,
+    },
+    media: {
+        height: 140,
+    },
+});
+
+function Item ({photo, title, price, category, pId}){
+    const classes = useStyles();
     return(
-        <>
-            <div id="item" className="mb-4 productoItem">
-                <div className="card shadow mb-1 rounded">
-                    <img className="card-img-top" src={photo} alt={title} />
-                </div>
-                <div className="card-body">
-                    <h2 className="card-title">{title}</h2>
-                    <h3>${price}</h3>
-                    <Link to={`/item/${pId}`} className="botonDetalle">
+        <div className="cardContainer">
+            <Card className={classes.root}>
+                <Link to={`/productDetail/${pId}`}>
+                    <div className="cardContainer1">
+                        <CardActionArea>
+                            <CardContent>
+                                <h2>{title}</h2>
+                                <p className="itemCategory">{category}</p>
+                            </CardContent>
+                            <CardMedia className={classes.media} photo={photo} title={title} />
+                                <div className="cardHover">
+                                    <h2>Ver más</h2>
+                                </div>
+                        </CardActionArea>
+                    </div>
+                </Link>
+                <div className="cardContainer1">
+                <CardContent>
+                    <p><span>$</span>{price}</p>
+                </CardContent>
+                <CardActions className="card-container-buttons">
+                    <Link  to={`/itemDetail/${pId}`} className="botonDetalle">
                         <img src={informacion} alt='informacion'/>
                     </Link>
-                </div>
+                </CardActions>
             </div>
-        </>
+        </Card>
+    </div>
     );
 };
 

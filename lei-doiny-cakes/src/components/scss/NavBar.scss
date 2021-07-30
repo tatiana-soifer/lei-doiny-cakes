@@ -1,44 +1,9 @@
-#menu{
-    background-color: none;
-}
-.navbar{
-    display: flow-root;
-    &:hover{
-        &.active{
-            background-color: #545454;
-            transition: all 0.2s ease;
-        }          
-    }
-}
-.nav-item{
-    list-style: none;
-    a{
-        color: white;
-        :hover{
-            color: #F22973;
-        }
-    }
+.button-carrito{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    padding-right: 1rem;
+    column-gap: 0.5rem ;
     
-}
-.nav-link{
-    display: -webkit-inline-flex;
-}
-
-#logo{
-    position: absolute;
-    height: 100px;
-    left: 20px;
-    top: 28px;
-}
-#boton_logo{
-    background: none;
-    border: none;
-}
-#carrito_menu{
-    background: none;
-    border: none;
-    margin-left: unset;
-}
-#boton_navbar{
-    border: 1px solid white;
-}
+    }

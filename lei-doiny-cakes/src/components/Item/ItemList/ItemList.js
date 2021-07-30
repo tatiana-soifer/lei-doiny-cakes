@@ -1,20 +1,15 @@
-import React from 'react';
-import {useParams} from 'react-router';
 import Item from '../Item.js';
 import '../../css/Main.css';
 
-const ItemList = ({items}) => {
-    const {category} = useParams();
+const ItemList = (itemContent) => {
     return(
-        <>
-            {items
-            .filter((item) => item.category === category)
-            .map((item) => (
-                <div key={item.id}>
-                    <Item item={item} />
-                </div>
-            ))}
-        </>
+        <div className="cards-container">
+            {itemContent.children?.map(i => {
+                return(
+                    <Item title={i.title} photo={i.photo} pId={i.id} category={i.category} price={i.price} id={i.id} key={i.id}/>
+                )
+            })}
+        </div>
     );
 };
 
