@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom';
 import {withStyles} from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
-import {useCart} from './CartContext.js';
+import {useCart} from '../Cart/CartContext.js';
 import Cartwidget from './CartWidget';
-import '../css/Main.cs';
+import '../css/Main.css';
 
 
 const StyledMenu = withStyles({
@@ -14,7 +14,7 @@ const StyledMenu = withStyles({
     ));
 
 export default function NavHamburguesa() {
-    const cartInfo = useCart()
+    const cartInfo = useCart();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -23,8 +23,8 @@ export default function NavHamburguesa() {
         setAnchorEl(null);
     };
     const totalPriceItems = () => {
-        return cartInfo.totalPrice() 
-    }
+        return cartInfo.totalPrice();
+    };
     return (
         <div>
             <Button aria-controls="customized-menu" aria-haspopup="true" onClick={handleClick}>

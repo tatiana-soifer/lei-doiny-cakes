@@ -14,27 +14,25 @@ function CheckOut () {
         }
     const itemProduct = cartItems.map((i)=>{return (i.item)})
     const itemQuantity = cartItems.map((i)=>{return ( i)})
-        return(
-            <div className="container-checkOut">
-                <div> 
-                <div className="container-compra">
-                    <h1>Resumen de compra</h1>
-                    <p><span>{totalQuantitys()}</span> productos en el carrito</p>
-                    <div className="container-ItemsCompra">
-                        {cartItems?.map((i) => {
-                            return(
-                                <div className="container-itemCompra" key= {i.item.id}>
-                                    <img src= {i.item.photo} alt="imagen item" />
-                                    <h3>{i.item.description}</h3>
-                                    <p>Precio: ${i.item.price} </p>
-                                    <p>Cantidad: {i.quantity} </p>
-                                </div>
-                            )
-                        })}
-                    </div>
-                    <p>Precio total:$ <span> {totalPriceItems()}</span></p>
+    return(
+        <div className="container-checkOut">
+            <div className="container-compra">
+                <h1>Resumen de compra</h1>
+                <p><span>{totalQuantitys()}</span> productos en el carrito</p>
+                <div className="container-ItemsCompra">
+                    {cartItems?.map((i) => {
+                        return(
+                            <div key= {i.item.id}>
+                                <img src= {i.item.photo} alt={i.item.description} />
+                                <h3>{i.item.description}</h3>
+                                <p>Precio: ${i.item.price} </p>
+                                <p>Cantidad: {i.quantity} </p>
+                            </div>
+                        )
+                    })}
                 </div>
-            </div>  
+                <p>Precio total:$ <span> {totalPriceItems()}</span></p>
+            </div>
             <div className="container">
                 <Formulario value={{itemProduct, itemQuantity}} />
             </div>

@@ -29,7 +29,7 @@ export const CartProvider = ({children}) => {
         if (itemIndex !== -1){
             return( 
                 setCartInfo({
-                    ...cartInfo, items: [
+                    ...cartInfo, items: [ 
                         ...cartInfo.items.slice(0,itemIndex), 
                         {'item': {photo, id, price, stock}, 'quantity':cartInfo.items[itemIndex].quantity + quantity}, 
                         ...cartInfo.items.slice(itemIndex+1)

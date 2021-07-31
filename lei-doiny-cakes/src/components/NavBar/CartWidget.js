@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {useCart} from '../Context/CartContext.js';
+import {useCart} from '../Cart/CartContext.js';
 import '../css/Main.css';
 
 const Cartwidget = () => {
