@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import {useForm} from 'react-hook-form';
-import {getFireStore} from '../../../Factory/Firebase.js';
+import {getFireStore} from '../../Factory/Firebase.js';
 import {useCart} from './CartContext';
 import '../css/Main.css';
 
