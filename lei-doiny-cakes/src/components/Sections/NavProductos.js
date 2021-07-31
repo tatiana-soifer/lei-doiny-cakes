@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import AcordionNavBar from './AcordionNavBar';
+import NavHamburguesa from '../NavBar/NavHamburguesa.js';
 import '../css/Main.css';
 
 const NavProductos = () => {
@@ -14,7 +14,7 @@ const NavProductos = () => {
                 <Link to="/category/shots" className="btn categoria">Shots</Link>
             </div>
             <div className="navbarCards-icons">
-                <AcordionNavBar />
+                <NavHamburguesa />
             </div>
         </div>
     )

@@ -1,5 +1,18 @@
-.ItemList{
+.cards-container{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem;
+    grid-template-columns: 1fr ;
+}
+
+//RESPONSIVE
+@media (min-width: 550px){
+    .cards-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width: 860px){
+    .cards-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }

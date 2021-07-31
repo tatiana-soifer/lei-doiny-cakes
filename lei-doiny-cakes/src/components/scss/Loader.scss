@@ -2,6 +2,11 @@
     --sk-size: 60px;
     --sk-color: #F22973;
 }
+.loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .sk-center{
     display: flex;
     justify-content: center;

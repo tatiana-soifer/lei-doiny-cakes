@@ -1,10 +1,5 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import {useCart} from '../Context/CartContext.js';
-import Cartwidget from './CartWidget.js';
-import {withStyles} from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
 import logo from '../../assets/logo/logo.png';
 import '../css/Main.css';
 
@@ -30,7 +25,7 @@ class Navbar extends Component {
             <div className="logo-container">
                 <Link to="/">
                     <div >
-                        <img src={logo} alt=""/>
+                        <img src={logo} alt="logo"/>
                     </div>
                 </Link>
             </div>
@@ -46,53 +41,3 @@ class Navbar extends Component {
 }
 
 export default Navbar;
-
-const StyledMenu = withStyles({
-    })((props) => (
-        <Menu elevation={0} getContentAnchorEl={null} anchorOrigin={{vertical: 'bottom', horizontal: 'center'}} transformOrigin={{vertical: 'top', horizontal: 'center'}} {...props} />
-));
-
-export function CustomizedMenus() {
-    const cartInfo = useCart()
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
-    const totalPriceItems= ()=>{
-        return cartInfo.totalPrice() 
-    }
-    return(
-    <div>
-        <Button aria-controls="customized-menu" aria-haspopup="true" onClick={handleClick}>
-            <div className="button-carrito">
-                <i className="fas fa-shopping-bag"></i>
-                <Cartwidget/> 
-            </div>
-            <div className="linea-carrito"><p>carrito</p></div>
-        </Button>
-        <StyledMenu id="customized-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
-            <div className="navBar-card">
-                {
-                    totalPriceItems()>=1 ?
-                    <>
-                        <div className="navBarCard-totalPrice">
-                            <p>Items agregados:</p> 
-                            <Cartwidget/> 
-                        </div>
-                        <div className="navBarCard-totalPrice">
-                            <p>Subtotal:</p> 
-                            <h3> $ {totalPriceItems()}</h3>
-                        </div>
-                        <Link to="/cart" className="navBarCard-btn btn">Finalizar compra</Link>
-                    </>
-                    : <p>No hay articulos en tu carrito</p>
-                }
-                </div>
-            </StyledMenu>
-        </div>
-    );
-}
-

@@ -1,0 +1,112 @@
+.NavBarCards-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    border: 1px solid #F22973;
+    border-radius: 15px;
+    margin: 1rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    background-color: #fff;
+    z-index: 100;
+    padding: 1rem 0;
+    height: 10rem;
+    .navBarCards-btn{
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+    } 
+    .btn{
+        font-size: 2.5rem;
+        padding: 0.5rem;
+        background-color: #F22973;
+        border: 1px solid #F22973;
+        border-radius: 4px;
+        color: #fff;
+        letter-spacing: 0.1rem;
+        cursor: pointer;
+    }
+    .btn:hover{
+        color: #000000;
+        box-shadow: 2px 1px 1px rgb(192, 188, 188);
+        transition: 1s;
+    }
+}
+.searchItems-container{
+    width: 90%;
+    padding: 0 4rem;
+    .searchItems{
+        margin-bottom: 1rem;
+        width: 100%;
+        label{
+            font-size: 1.5rem;
+        } 
+        .MuiInputBase-root{
+            height: 4rem;
+        }
+        
+    } 
+}
+
+.icon-navbar{
+    margin: 1rem;
+    font-size: 2.5rem;
+    border: none;
+    color:#F22973;
+    margin-right: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+.navbarCards-icons{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+//RESPONSIVE
+@media (min-width: 678px){
+    .NavBarCards-container{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        justify-content: space-between;
+        justify-items: center;
+        height: 4rem;
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+    .searchItems-container{
+        width: 20rem;
+        margin-left: 1rem;
+        padding: 0;
+        .searchItems{
+            width: 15rem;
+        }
+        .MuiAutocomplete.root{
+            width: 20rem!important;
+        }
+    }
+    .navbarCards-icons{
+        font-size: 1.5rem;
+    }
+    .NavBarCards-container{
+        .navBarCards-btn{
+            width: 40%;
+            display: flex;
+            justify-content: space-around;
+            button{
+                font-size: 2rem;
+                margin: 0 0.2rem;
+            }
+        } 
+    }
+}

@@ -1,50 +1,95 @@
-
-//CARRITO
-.cart{
-    min-height: 80vh;
-    margin: 0 auto;
-    width: 100%;
-    background: linear-gradient(170.21deg, #D8D8D8 7.36%, rgba(243, 214, 225, 0.9) 98.85%);
-    th{
+.container-cart{
+    margin: 3rem;
+    min-height: 60vh;
+    h1{
+        text-align: center;
+        margin-bottom: 2rem;
+    }    
+}
+.container-cardContenido{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    margin-top: 1rem;
+    img{
+        width: 5rem;
+    }
+    h2{
         text-align: center;
     }
-    h2, h5, p{
-        padding-left: 2%;
+}
+.container-contenidoCarrito{
+    display: flex;
+}
+.container-resumenCompra{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 2rem;
+    p{
+        font-size: 1.5rem;
+        margin: 0.5rem;
     }
-    .tablaProductos{
-        display: flex;
+    a{
+        align-self: center;
+        margin: 1rem 0;
     }
-    .tablaCantidad{
-        input{
-            border: none;
-            margin-bottom: 15%;
-            width: 25%;
-            margin-right: 5%;
+    h3{
+        font-size: 1.2rem;
+    }
+}
+.cart-info{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+}
+.total-price{
+    h2{
+        text-align: end;
+        margin-right: 5%;
+        font-size: 2rem;
+    }
+    span{
+        color:#F22973;
+    }
+}
+.item-resumenCompra{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;        
+}
+
+//BOTONES
+.btn-carrito{
+    font-size: 1.8rem;
+    margin: 1rem 1rem 1rem 0;
+}
+.btn-important{
+    color: black;
+    box-shadow: 2px 2px 2px rgb(192, 188, 188);
+}
+.btn-second{
+    color: #F22973;
+    background-color: #ffffff;
+    font-size: 1.5rem;
+    margin: 1rem 0 1rem 5%;
+}
+
+//RESPONSIVE
+@media (max-width: 800px){
+    .cart-info{
+        h2{
+            font-size: 1.2rem;
         }
     }
-}
-#botonCartFinal{
-    margin: 1%;
-}
-.botonCartBorrar{
-    width: auto;
-    background: #EC5555!important;
-    color: white;
-}
-#botonCart{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.loader{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.vacio{
-    display: flex;
-    p{
-        text-align: center;
+    .container-contenidoCarrito{
+        display: block;
     }
-    
 }

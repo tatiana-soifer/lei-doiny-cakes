@@ -1,6 +1,6 @@
 import React from 'react';
-import {useCart} from '../Context/CartContext';
-import Formulario from '../Formulario.js';
+import {useCart} from './CartContext.js';
+import Formulario from './Formulario.js';
 import '../css/Main.css';
 
 function CheckOut () {

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import {useForm} from 'react-hook-form';
 import {getFireStore} from '../../Factory/Firebase.js';
-import {useCart} from '../Context/CartContext';
+import {useCart} from './CartContext';
 import '../css/Main.css';
 
 const Formulario = (itemProduct) => {
@@ -23,7 +23,7 @@ const Formulario = (itemProduct) => {
         const buyer = data;
         //CREA LA ORDEN PARA EL FIREBASE
         const db = getFireStore();
-        const ordenes = db.collection("orders");
+        const ordenes = db.collection('orders');
         const newOrden = { 
             buyer: buyer,
             items: itemProduct.value.itemQuantity,
@@ -44,23 +44,23 @@ const Formulario = (itemProduct) => {
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="col-md-3">
                             <div className="form-item">
-                                <label htmlFor="nombre">Tu nombre</label>
-                                <input type="name" {...register('nombre', {required: 'Debes ingresar tu nombre', maxLength: 20, minLength: 2})} />
+                                <label htmlFor="nombre">Nombre</label>
+                                <input type="name" {...register('nombre', {required: 'Por favor ingresa tu nombre', maxLength: 20, minLength: 2})} />
                                 {e.nombre && (<p>{e.nombre.message}</p>)}
                             </div>
                             <div className="form-item">
-                                <label htmlFor="nombre">Tu apellido</label>
-                                <input type="name" {...register("apellido", {required: 'Debes ingresar tu apellido', maxLength: 20, minLength: 2})} />
+                                <label htmlFor="nombre">Apellido</label>
+                                <input type="name" {...register("apellido", {required: 'Por favor ingresa tu apellido', maxLength: 20, minLength: 2})} />
                                 {e.apellido && (<p>{e.apellido.message}</p>)}
                             </div>
                             <div className="form-item">
                                 <label >Tu teléfono</label>
-                                <input type="phone" {...register("tel", {required: 'Debes ingresar tu teléfono'})} />
+                                <input type="phone" {...register("tel", {required: 'Por favor ingresa tu teléfono'})} />
                                 {e.tel && (<p>{e.tel.message}</p>)}
                             </div>
                             <div className="form-item">
                             <label>Tu Mail:</label>
-                                <input type="email" {...register("email", {required: 'Debes ingresar tu email'})}/>
+                                <input type="email" {...register("email", {required: 'Por favor ingresa tu email'})}/>
                                 {e.email && (<p>{e.email.message}</p>)}
                             </div>
                             <div className="form-item">
@@ -79,12 +79,12 @@ const Formulario = (itemProduct) => {
                         </div>
                     </form>
                 </div>
-                    : 
-                    <div className="container-confCompra">
-                        <h2>Muchas gracias por tu compra!!</h2>
-                        <p>Tu nro de orden es: <span>{orderId}</span>. Recirás un email cuando tu pedido esté listo para ser retirado.</p>
-                        <Link to="/" className="btn btn-important" onClick={removerItem()}>Volver al inicio</Link>
-                    </div>
+                : 
+                <div className="container-confCompra">
+                    <h2>Muchas gracias por tu compra!!</h2>
+                    <p>Tu nro de orden es: <span>{orderId}</span>. Recirás un email cuando tu pedido esté listo para ser retirado.</p>
+                    <Link to="/" className="btn btn-important" onClick={removerItem()}>Volver al inicio</Link>
+                </div>
             }
         </>
     );

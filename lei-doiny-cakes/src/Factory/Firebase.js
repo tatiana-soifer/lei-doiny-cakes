@@ -1,7 +1,7 @@
 import firebase from 'firebase/app';
-import 'firebase/firestore';
+import '@firebase/firestore';
 
-const app = firebase.initializeApp({
+const firebaseConfig =  ({
     apiKey: "AIzaSyAhnjJUAGeYhHSNBte7SDFnnklia5WGKHQ",
     authDomain: "lei-doiny-cakes-reactjs.firebaseapp.com",
     projectId: "lei-doiny-cakes-reactjs",
@@ -11,9 +11,6 @@ const app = firebase.initializeApp({
     measurementId: "G-837TRN7F87"
 });
 
-export function getFirebase(){
-    return app;
-}
-export function getFirestore(){
-    return firebase.firestore(app);
-}
+const app = firebase.initializeApp(firebaseConfig)  
+export const getFirebase = () => app;
+export const getFireStore = () => firebase.firestore(app);

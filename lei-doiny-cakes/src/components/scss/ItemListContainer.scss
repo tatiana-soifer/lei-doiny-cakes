@@ -1,12 +1,14 @@
-.menuProductos{
+.container-home{
+    text-align: center;
+}
+.container-item-list{
+    margin: 3rem ;
     display: flex;
-    padding-bottom: 5%;
-    //justify-content: center;
-    //align-items: center;
-    //flex-wrap: wrap;
-    //div{
-        //display: flex;
-        //justify-content: center;
-        //align-items: center;
-    //}    
+    flex-direction: column;
+}
+.container-itemList{
+    min-height: 50vh;
+}
+.links-category{
+    padding-left: 8rem;
 }
