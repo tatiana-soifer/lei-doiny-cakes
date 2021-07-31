@@ -1,9 +1,7 @@
 import React, {useState, createContext, useContext, useEffect} from 'react';
-import '../css/Main.css';
 
 export const CartContext = createContext();
 export const useCart = () => useContext(CartContext);
-
 const initialState = {items: [], totalPrice: 0}
 
 export const CartProvider = ({children}) => {
@@ -26,18 +24,23 @@ export const CartProvider = ({children}) => {
     useEffect(() => {
         setLocalStorage("cartInfo", cartInfo);
     }, [cartInfo]);
-
-    const addItem = (description, photo,  quantity, price, id, stock) =>{
+    const addItem = (description, photo,  quantity, price, id, stock) => {
         const itemIndex = cartInfo.items.findIndex(i => id === i.item.id)
         if (itemIndex !== -1){
-            return( setCartInfo({ ...cartInfo, items: [...cartInfo.items.slice(0,itemIndex), 
-                {'item': {photo, id, price, stock}, 'quantity':cartInfo.items[itemIndex].quantity + quantity}, 
-                ...cartInfo.items.slice(itemIndex+1)]}));
+            return( 
+                setCartInfo({
+                    ...cartInfo, items: [
+                        ...cartInfo.items.slice(0,itemIndex), 
+                        {'item': {photo, id, price, stock}, 'quantity':cartInfo.items[itemIndex].quantity + quantity}, 
+                        ...cartInfo.items.slice(itemIndex+1)
+                    ]
+                })
+            );
         } else{
             setCartInfo({ ...cartInfo, items:[ ...cartInfo.items, {'item': {photo, id, price, description, stock}, quantity}]})
         }
         const newItem = [...cartInfo.items, {item: {id, price, description, photo, stock}, quantity}]
-        setCartInfo({ ...cartInfo, items: newItem})
+        setCartInfo({...cartInfo, items: newItem})
     }
     const removeItems = (item) => {
         const cartWithoutItem = cartInfo.items.filter((remove) => {

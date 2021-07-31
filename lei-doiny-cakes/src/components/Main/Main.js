@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import {CartProvider} from '../Cart/CartContext.js';
 import NavBar from '../NavBar/NavBar.js';
+import NavProductos from '../Sections/NavProductos.js';
 import ItemListContainer from '../Item/ItemList/ItemListContainer.js';
 import ItemDetailContainer from '../Item/ItemDetail/ItemDetailContainer.js';
 import Home from '../Sections/Home.js';
@@ -10,8 +11,9 @@ import Contacto from '../Sections/Contacto.js';
 import FAQ from '../Sections/FAQ.js';
 import Nosotros from '../Sections/Nosotros.js';
 import Cart from '../Cart/Cart.js';
-import CheckOut from '../Cart/CheckOut.js'
+import CheckOut from '../Cart/CheckOut.js';
 import Footer from '../Sections/Footer.js';
+import Register from '../Sections/Register.js';
 import '../css/Main.css';
 
 
@@ -20,6 +22,7 @@ function Main () {
         <CartProvider>
             <BrowserRouter>
                 <NavBar />
+                <NavProductos />
                 <Switch>
                     <Route exact path="/">
                         <Home />
@@ -48,8 +51,11 @@ function Main () {
                     <Route exact path="/cart/CheckOut">
                         <CheckOut />
                     </Route>
+                    <Route exact path="/register">
+                        <Register />
+                    </Route>
                 </Switch>
-            <Footer />
+                <Footer />
             </BrowserRouter>
         </CartProvider>
     );

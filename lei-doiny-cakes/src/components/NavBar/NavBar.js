@@ -3,10 +3,10 @@ import {Link} from 'react-router-dom';
 import logo from '../../assets/logo/logo.png';
 import '../css/Main.css';
 
-class Navbar extends Component {
+class Navbar extends Component{
     state = {clicked: false}
     handleClick = () => {
-        this.setState ({ clicked: !this.state.clicked})
+        this.setState ({clicked: !this.state.clicked})
     }
     render() {
         return (

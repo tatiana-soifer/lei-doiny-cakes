@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router';
 import {Link} from 'react-router-dom';
-import {getFirestore} from '../../../Factory/Firebase.js';
+import {getFireStore} from '../../../Factory/Firebase.js';
 import ItemDetail from './ItemDetail.js';
 import Loader from '../../Loader/Loader.js';
 import '../../css/Main.css';
@@ -13,7 +13,7 @@ function ItemDetailContainer(){
     const { pId } = useParams();
     useEffect(() => {
         setLoader(true);
-        const db = getFirestore();
+        const db = getFireStore();
         const itemCollection = db.collection('itemCollection');
         const productid = pId;
         const item = itemCollection.doc(productid);

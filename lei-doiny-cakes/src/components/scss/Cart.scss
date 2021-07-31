@@ -42,6 +42,11 @@
     h3{
         font-size: 1.2rem;
     }
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;      
+    }
 }
 .cart-info{
     display: grid;
@@ -59,11 +64,6 @@
     span{
         color:#F22973;
     }
-}
-.item-resumenCompra{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;        
 }
 
 //BOTONES

@@ -1,16 +1,16 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import CartContext from './CartContext.js';
+import {useCart} from './CartContext.js';
 import CartContent from './CartContent.js';
 import '../css/Main.css';
 
 function Cart(){
-    const cartInfo = CartContext();
+    const cartInfo = useCart();
     const cartItems = cartInfo.cartInfo.items;
     const clearProducts = () => {
         cartInfo.clear();
     };
-    const totalPriceItems= () => {
+    const totalPriceItems = () => {
         return cartInfo.totalPrice();
     };
     return(
@@ -34,7 +34,7 @@ function Cart(){
                                     return (
                                         <CartContent item={i.item} quantity={i.quantity} key={i.item.id} />
                                     )
-                                })} 
+                                })}
                                 <div className="total-price">
                                     <h2><span> Total $ </span>{totalPriceItems()}</h2>
                                 </div>
