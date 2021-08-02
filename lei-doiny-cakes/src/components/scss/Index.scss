@@ -14,7 +14,6 @@ body{
 //TITULOS
 h1{
   font-family: 'Lobster', cursive;
-  font-size: 64px;
   font-style: normal;
   line-height: 66px;
   letter-spacing: 0em;
@@ -65,4 +64,47 @@ p{
   width: 196px;
   left: 136px;
   top: 27px;
+}
+.cart-list-container {
+  width: 350px;
+  margin: 30px auto;
+}
+.cart-item-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 15px;
+  button {
+      margin-left: 15px;
+      margin-right: 0;
+      padding: 6px 10px;
+      font-size: 12px;
+  }
+} 
+.product-cart-img{
+  height: 100%;
+  margin: 0 auto;
+}
+.cart-info {
+  width: 240px;
+}
+.product-cart-img-container {
+  height:50px;
+  width: 50px;
+  padding: 5px;
+  margin-right: 15px;
+  background-color: #CCC5B9;
+  border-radius:50%;
+  text-align: center;
+} 
+
+//RESPONSIVE
+@media (max-width: 576px){
+  .cart-list-container{
+      width: 100%;
+      margin: 30px auto;
+  }
+  .cart-info{
+      width: 80%;
+  }
 }

@@ -1,0 +1,20 @@
+.filter{
+    button{
+        color:#7C7874;
+        border: none;
+        background-color: none;
+        border-radius: 20px;
+        margin: 15px 3px;
+        padding: 3px 13px;
+        font-size: 1rem;
+        outline: none;
+    }
+    button:hover {
+        color:#F22973;
+    }
+}
+.nav{
+    .filters {
+        margin-bottom:45px ;
+    }
+}

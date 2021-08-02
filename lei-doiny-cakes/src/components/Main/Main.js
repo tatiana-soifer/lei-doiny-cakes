@@ -1,57 +1,26 @@
-import React from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import {CartProvider} from '../Cart/CartContext.js';
-import NavBar from '../NavBar/NavBar.js';
-import ItemListContainer from '../Item/ItemList/ItemListContainer.js';
-import ItemDetailContainer from '../Item/ItemDetail/ItemDetailContainer.js';
-import Home from '../Sections/Home.js';
-import ComoComprar from '../Sections/ComoComprar.js';
-import Contacto from '../Sections/Contacto.js';
-import FAQ from '../Sections/FAQ.js';
-import Nosotros from '../Sections/Nosotros.js';
-import Cart from '../Cart/Cart.js';
-import CheckOut from '../Cart/CheckOut.js';
-import Footer from '../Sections/Footer.js';
+import {Link} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
+import logo from '../../assets/logo/logo.png';
+import ProductsContextProvider from '../Context/ProductsContext';
+import CartContextProvider from '../Context/CartContext';
+import Home from '../Containers/Home';
+//import NavBar from '../NavBar/NavBar';
 import '../css/Main.css';
 
-
-function Main () {
+function Main() {
     return (
-        <CartProvider>
-            <BrowserRouter>
-                <NavBar />
-                <Switch>
-                    <Route exact path="/">
-                        <Home />
-                    </Route>
-                    <Route exact path="/comoComprar">
-                        <ComoComprar />
-                    </Route>
-                    <Route exact path="/category/:category">
-                        <ItemListContainer />
-                    </Route>               
-                    <Route exact path="/productDetail/:pid">
-                        <ItemDetailContainer />
-                    </Route>
-                    <Route exact path="/Contacto">
-                        <Contacto/>
-                    </Route>
-                    <Route exact path="/FAQ">
-                        <FAQ />
-                    </Route>
-                    <Route exact path="/Nosotros">
-                        <Nosotros />
-                    </Route>
-                    <Route exact path="/cart">
-                        <Cart />
-                    </Route>
-                    <Route exact path="/cart/CheckOut">
-                        <CheckOut />
-                    </Route>
-                </Switch>
-                <Footer />
-            </BrowserRouter>
-        </CartProvider>
+        <ProductsContextProvider>
+            <CartContextProvider>
+                <BrowserRouter>
+                <div className="App container">
+                    <Link to="/">
+                        <img src={logo} className="App-logo" alt="logo" />
+                    </Link>
+                    <Home />
+                </div>
+                </ BrowserRouter>
+            </CartContextProvider>
+        </ ProductsContextProvider>
     );
 };
 
