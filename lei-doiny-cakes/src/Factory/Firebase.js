@@ -2,7 +2,7 @@ import firebase from 'firebase/app';
 import '@firebase/firestore';
 
 const firebaseConfig =  ({
-    apiKey: "AIzaSyAhnjJUAGeYhHSNBte7SDFnnklia5WGKHQ",
+    apiKey: process.env.REACT_APP_API_KEY,    
     authDomain: "lei-doiny-cakes-reactjs.firebaseapp.com",
     projectId: "lei-doiny-cakes-reactjs",
     storageBucket: "lei-doiny-cakes-reactjs.appspot.com",
@@ -13,4 +13,4 @@ const firebaseConfig =  ({
 
 const app = firebase.initializeApp(firebaseConfig)  
 export const getFirebase = () => app;
-export const getFireStore = () => firebase.firestore(app);
+export const getFirestore = () => firebase.firestore(app);

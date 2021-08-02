@@ -1,0 +1,35 @@
+.botonCounter{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    border: 1px solid #F22973;
+    border-radius: 0.8rem;
+    width: 10rem;
+} 
+.counter{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .btn{
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+    h4{
+        font-size: 2rem;
+    }
+}
+.itemCount{
+    font-size: 2rem;
+    border: none;
+    margin: 0 0.3rem;
+    background-color: #fff;
+    color: #F22973;
+}
+
+//RESPONSIVE
+@media (min-width: 678px){
+    .counter{
+        align-items: flex-start;
+    }
+}

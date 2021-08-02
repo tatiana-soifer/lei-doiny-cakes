@@ -25,10 +25,10 @@ export default function NavHamburguesa() {
     const totalPriceItems = () => {
         return cartInfo.totalPrice();
     };
-    return (
+    return(
         <div>
-            <Button aria-controls="customized-menu" aria-haspopup="true" onClick={handleClick}>
-                <div className="button-carrito">
+            <Button className="justify-content-end" aria-controls="customized-menu" aria-haspopup="true" onClick={handleClick}>
+                <div className="button-carrito justify-content-end">
                     <i className="fas fa-shopping-bag" />
                     <Cartwidget/> 
                 </div>

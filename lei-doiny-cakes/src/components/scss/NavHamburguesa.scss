@@ -6,6 +6,9 @@
 .linea-carrito{
     border-left: 1px solid #F22973;
     padding-left: 1rem;
+    p{
+        color: white;
+    }
 }
 .navBar-card{
     display: flex;
@@ -28,11 +31,15 @@
     display: flex;
     flex-direction: row;
 }
-/*
-body{
-    padding-right: 0!important;
+.MuiButton-label{
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 0;
 }
-*/
+.MuiMenu-list{
+    border: 1px solid white;
+    border-radius: 10px;
+}
 
 //BOTONES
 .button-carrito{
@@ -42,6 +49,7 @@ body{
     align-content: center;
     padding-right: 1rem;
     column-gap: 0.5rem ;
+    color: white;
 }
 .navBarCard-btn{
     margin-right: auto;

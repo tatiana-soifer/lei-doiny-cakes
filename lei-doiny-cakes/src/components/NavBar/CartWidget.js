@@ -4,7 +4,7 @@ import '../css/Main.css';
 
 const Cartwidget = () => {
     const cartInfo = useCart()
-    const {totalQuantity}= useCart()
+    const {totalQuantity} = useCart()
     const totalQuantitys = () => {
         return totalQuantity() 
         }

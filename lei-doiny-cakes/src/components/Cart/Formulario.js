@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import {useForm} from 'react-hook-form';
-import {getFireStore} from '../../Factory/Firebase.js';
+import {getFirestore} from '../../Factory/Firebase.js';
 import {useCart} from './CartContext';
 import '../css/Main.css';
 
@@ -22,7 +22,7 @@ const Formulario = (itemProduct) => {
         e.preventDefault();
         const buyer = data;
         //CREA LA ORDEN PARA EL FIREBASE
-        const db = getFireStore();
+        const db = getFirestore();
         const ordenes = db.collection('orders');
         const newOrden = { 
             buyer: buyer,
@@ -54,17 +54,17 @@ const Formulario = (itemProduct) => {
                                 {errors.apellido && (<p>{errors.apellido.message}</p>)}
                             </div>
                             <div className="form-item">
-                                <label >Tu teléfono</label>
+                                <label >Teléfono</label>
                                 <input type="phone" {...register("tel", {required: 'Por favor ingresa tu teléfono'})} />
                                 {errors.tel && (<p>{errors.tel.message}</p>)}
                             </div>
                             <div className="form-item">
-                            <label>Tu Mail:</label>
+                            <label>Mail:</label>
                                 <input type="email" {...register("email", {required: 'Por favor ingresa tu email'})}/>
                                 {errors.email && (<p>{errors.email.message}</p>)}
                             </div>
                             <div className="form-item">
-                                <label>Confirma tu email</label>
+                                <label>Confirma tu mail</label>
                                 <input {...register("emailConfirmation", {required: 'Por favor confirma tu email!', validate:{matchesPreviousPassword : (value) => {
                                     const {email} = getValues();
                                     return email === value || "Los emails deben coincidir";

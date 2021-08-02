@@ -1,5 +1,4 @@
 import cocinera from '../../assets/img/cocinera.png';
-import Footer from '../Sections/Footer.js';
 import '../css/Main.css';
 
 function Nosotros (){
@@ -22,9 +21,6 @@ function Nosotros (){
                     </div>
                 </div>
             </div>
-            <footer>
-                <Footer />
-            </footer>
         </>
     )
 };

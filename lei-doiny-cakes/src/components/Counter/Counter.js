@@ -14,12 +14,12 @@ const Counter = ({stock, initial, onAdd}) => {
     }
     return (
         <div className="counter">
-            <div className="boton_counter">
+            <div className="botonCounter">
                 <button className="btn btn-secondary boton" onClick={() => onAddCount(-1)}>-</button> 
                 <h4>{stockRequired}</h4>
                 <button className="btn btn-secondary boton" onClick={() => onAddCount(+1)}>+</button>
             </div>  
-            <button id="boton_anadir" className="btn btn-secondary" onClick={handleClick} value={stockRequired}>Agregar al carrito</button> 
+            <button className="btn btn-secondary" onClick={handleClick} value={stockRequired}>Agregar al carrito</button> 
         </div>
     )
 }

@@ -28,15 +28,6 @@
     }
 }
 
-//CUADRICULA DE PRODUCTOS
-.cuadriculaProductos{
-    display: flex;
-    flex-wrap: wrap;
-}
-.producto_item{
-	transition: all .4s;
-}
-
 //MENU LISTADO PRODUCTOS
 .menuListado{
     display: flex;

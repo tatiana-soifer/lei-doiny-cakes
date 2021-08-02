@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
-import {getFireStore} from '../../../Factory/Firebase.js';
+import {getFirestore} from '../../../Factory/Firebase.js';
 import ItemList from './ItemList.js';
 import Loader from '../../Loader/Loader.js';
 import './../../css/Main.css';
@@ -11,7 +11,7 @@ const ItemListContainer = () => {
     const {pId} = useParams();
     useEffect(() => {
         setLoader(true);
-        const db = getFireStore();
+        const db = getFirestore();
         const itemCollection = db.collection('itemCollection');
         const filteredItems = pId ? itemCollection.where('category', '===', pId) : itemCollection
         filteredItems.get().then((querySnapshot) => {
