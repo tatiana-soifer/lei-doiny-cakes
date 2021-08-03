@@ -21,7 +21,7 @@ const Cart = () => {
             <button className="primary">Confirmar Pedido</button>
           </Link>
         </div>
-    )
+      )
     }
     //CASO CONTRARIO, SI NO HAY PRODUCTOS MOSTRAR:
     return (

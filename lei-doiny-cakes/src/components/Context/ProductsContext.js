@@ -32,7 +32,7 @@ const ProductsContextProvider = ({children}) => {
     //FUNCION PARA FILTRAR LOS PRODUCTOS POR CATEGORIA
     function GetByCategory(category) {
         SetLoading(true)
-        const filter = allProducts.where('category', "===", category);
+        const filter = allProducts.where('category', "==", category);
         filter
             .get()
             .then((result) => {
@@ -46,10 +46,9 @@ const ProductsContextProvider = ({children}) => {
             .catch((error) => console.log(error))
             .finally(() => {});
     }
-    // disparo getall al iniciar para que traiga los productos de la base de datos
+    //DISPARO EL GETALL AL INICIAR PARA QUE TRAIGA LOS PRODUCTOS DE LA DB
     useEffect(() => {
         GetAll();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
     return (
         <ProductsContext.Provider value={{SourceProducts, setProducts, GetAll, GetByCategory, SetLoading, IsLoading, ActiveFilter}}>

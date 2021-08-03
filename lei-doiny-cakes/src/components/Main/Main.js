@@ -1,10 +1,9 @@
-import {Link} from 'react-router-dom';
 import {BrowserRouter} from 'react-router-dom';
-import logo from '../../assets/logo/logo.png';
 import ProductsContextProvider from '../Context/ProductsContext';
 import CartContextProvider from '../Context/CartContext';
 import Home from '../Containers/Home';
-//import NavBar from '../NavBar/NavBar';
+import NavHeader from '../NavBar/NavHeader';
+import Footer from '../Sections/Footer';
 import '../css/Main.css';
 
 function Main() {
@@ -12,11 +11,10 @@ function Main() {
         <ProductsContextProvider>
             <CartContextProvider>
                 <BrowserRouter>
-                <div className="App container">
-                    <Link to="/">
-                        <img src={logo} className="App-logo" alt="logo" />
-                    </Link>
+                <div className="mainContainer">
+                    <NavHeader />
                     <Home />
+                    <Footer />
                 </div>
                 </ BrowserRouter>
             </CartContextProvider>

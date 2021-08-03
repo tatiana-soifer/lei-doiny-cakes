@@ -20,11 +20,11 @@ const CartContextProvider = ({children}) => {
     const addProduct = (product) => {
     //VERIFICAR SI EL PRODUCTO ESTA EN EL CARRITO
         const productInCart = getFromCart(product.id)
-        if(!!productInCart) {
+        if(!!productInCart){
             //ESTA EN EL CARRITO
             if(product.stock > productInCart.amount) {
                 setCartList(
-                    cartList.map((p) => p.id === product.id ? {...p, amount: p.amount + 1} : p )
+                    cartList.map((p) => p.id === product.id ? {...p, amount: p.amount + 1} : p)
                 );
             } else {
                 //SI SE ALCANZO EL STOCK DISPONIBLE, ABRIR EL MODAL CON EL MENSAJE Y TERMINAR LA EJECUCION DE LA FUNCION
@@ -46,7 +46,7 @@ const CartContextProvider = ({children}) => {
         const productInCart = getFromCart(product.id);
         if(productInCart.amount > 1) {
             //SI EL PRODUCTO TIENE MAS DE 2 UNIDADES RESTARLE UNA
-            console.log('hay mas de uno');
+            console.log('Hay mas de una unidad de ese producto');
             setCartList(
                 cartList.map((p) => p.id === product.id ? {...p, amount: p.amount - 1 } : p )
             );
@@ -63,6 +63,6 @@ const CartContextProvider = ({children}) => {
             {children}
         </CartContext.Provider>
     );
-}
+};
 
 export default CartContextProvider;

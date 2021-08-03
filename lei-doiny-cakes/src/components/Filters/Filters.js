@@ -5,8 +5,8 @@ import '../css/Main.css';
 
 const Filters = () => {
   const {GetAll, GetByCategory, ActiveFilter} = useProductsContext();
-  // al dispararl las funciones getall y getby category seteo el valor de active filter la opcion que corresponda para que el boton elegido se coloree (style active)
-  return (
+  //AL DISPARAR LAS FUNCIONES GETALL Y GETBY CATEGORY SE SETEA EL VALOR DE ACTIVE FILTER PARA LA OPCION QUE CORRESPONDA PARA QUE EL BOTON QUE SE ELIJE SE PONGA EN COLOR
+  return(
     <div>
       <ul className="nav justify-content-center filters">
         <li className="nav-item">

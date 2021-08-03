@@ -8,8 +8,8 @@ const ProductsContainer = () => {
     if(cartList.length === 0){
         return(
             <p>Tu carrito está vacío.</p>
-        )
-    }
+        );
+    };
     return(
         //CASO CONTRARIO MOSTRAR LOS PRODUCTOS
         cartList.map((item, i) => {

@@ -10,7 +10,7 @@ const OrderDetailContainer = () => {
                 <OrderDetail prod={item}/>
             </li>
         })
-    )
-}
+    );
+};
 
 export default OrderDetailContainer;

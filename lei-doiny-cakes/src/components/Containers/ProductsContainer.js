@@ -4,7 +4,7 @@ import EachProduct from '../EachProduct/EachProduct';
 
 const ProductsContainer = () => {
     const {SourceProducts} = useProductsContext();
-//RECORRIDO DE LOS PRODUCTOS EN EL CARRITO Y CARGO SUS DATOS EN EL COMPONENTE EACHPRODUCTS  
+    //RECORRIDO DE LOS PRODUCTOS EN EL CARRITO Y CARGO SUS DATOS EN EL COMPONENTE EACHPRODUCTS  
     return (
         SourceProducts.map((item, i) => {
             return (
@@ -13,7 +13,7 @@ const ProductsContainer = () => {
                 </div>
             )
         })
-    )
-}
+    );
+};
 
 export default ProductsContainer;

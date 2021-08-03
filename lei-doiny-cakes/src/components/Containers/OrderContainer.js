@@ -69,19 +69,28 @@ const OrderContainer = () => {
                         <OrderDetailContainer />
                         <div className="divider"></div>  
                     </ul>
-                    {cartList.length > 0 ? <p>$ {totalPrice}</p> : null}
-                    {cartList.length > 0 ? <button className="primary" onClick={postNewOrder}>Confirmar</button> : <Link to={`/`}><button className="secondary">Volver al inicio</button></Link>}
-                </div>}
-                <div>
-                    <Modal show={show}>
-                        <Modal.Header />
-                        <Modal.Body>Se creó el pedido bajo el ID: {OrderId}</Modal.Body>
-                        <Modal.Footer>
-                            <button className="secondary" onClick={() => window.location.reload()}>
-                                Close
-                            </button>
-                        </Modal.Footer>
-                    </Modal>
+                    {cartList.length > 0 ? 
+                        <p>$ {totalPrice}</p> : null
+                    }
+                    {
+                        cartList.length > 0 ?
+                        <button className="primary" onClick={postNewOrder}>Confirmar</button> : 
+                        <Link to={`/`}>
+                            <button className="secondary">Volver al inicio</button>
+                        </Link>
+                    }
+                </div>
+            }
+            <div>
+                <Modal show={show}>
+                    <Modal.Header />
+                    <Modal.Body>Se creó el pedido! Tu ID es: {OrderId}</Modal.Body>
+                    <Modal.Footer>
+                        <button className="secondary" onClick={() => window.location.reload()}>
+                            Close
+                        </button>
+                    </Modal.Footer>
+                </Modal>
             </div>
         </div>
     );

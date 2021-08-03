@@ -1,4 +1,4 @@
-.filter{
+.filters{
     button{
         color:#7C7874;
         border: none;
@@ -17,4 +17,13 @@
     .filters {
         margin-bottom:45px ;
     }
+}
+a{
+    color: #7C7874;
+}
+a:hover {
+    color: #F22973;
+}
+a.nav-link.active {
+    color: #F22973;
 }

@@ -4,9 +4,9 @@
     background-position: center center;
     border: none;
     padding-top: 5%;
+    height: 100%;
     h1{
-        position: absolute;
-        width: 50%;
+        width: 20%;
         top: 32%;
     }
     p{
@@ -14,7 +14,6 @@
         width: 40%;
         left: 5%;
         padding-left: 5%;
-        padding-top: 25%;
         font-size: 23px;
         color: #5A5A5A;
     }
@@ -25,7 +24,9 @@
     display: flex;
     padding-bottom: 2%;
     justify-content: space-around;
-    ol{
+    border: none;
+    background-color: transparent;
+    ul{
         width: 50%;
     }
     li:hover{
