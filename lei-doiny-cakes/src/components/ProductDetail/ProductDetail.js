@@ -4,9 +4,7 @@ import {useCartContext} from '../Context/CartContext';
 import '../css/Main.css';
 
 const ProductDetail = ({product}) => {
-
     const {addProduct, show, handleClose} = useCartContext();
-
     return (
         <div key={product.id} className="row detail-container">
             <div className="col-md-6 detail-img">

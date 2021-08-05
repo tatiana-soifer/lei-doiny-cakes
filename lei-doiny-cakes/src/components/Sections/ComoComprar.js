@@ -5,7 +5,7 @@ import '../css/Main.css';
 
 function ComoComprar(){
     return(
-        <div className="como_comprar">
+        <div className="comoComprar">
             <h2>Cómo comprar</h2>
             <div className="grid_como_comprar">
                 <div className="tortas">

@@ -10,29 +10,29 @@ const Filters = () => {
     <div>
       <ul className="nav justify-content-center filters">
         <li className="nav-item">
-          {ActiveFilter === "All" ? 
+          {ActiveFilter === 'All' ? 
           <button className="nav-link filter active" onClick={() => GetAll()}>Todas</button> :
           <button className="nav-link filter" onClick={() => GetAll()}>Todas</button>}
         </li>
         <li className="nav-item">
-          {ActiveFilter === "tortas" ? 
-          <button className="nav-link filter active" onClick={() =>GetByCategory("tortas")}>Tortas</button> :
-          <button className="nav-link filter" onClick={() =>GetByCategory("tortas")}>Tortas</button>}
+          {ActiveFilter === 'tortas' ? 
+          <button className="nav-link filter active" onClick={() =>GetByCategory('tortas')}>Tortas</button> :
+          <button className="nav-link filter" onClick={() =>GetByCategory('tortas')}>Tortas</button>}
         </li>
         <li className="nav-item">
-          {ActiveFilter === "desayunoMerienda" ? 
-          <button className="nav-link filter active" onClick={() => GetByCategory("desayunoMerienda")}>Desayunos y Meriendas</button> :
-          <button className="nav-link filter" onClick={() => GetByCategory("desayunoMerienda")}>Desayunos y Meriendas</button>}
+          {ActiveFilter === 'desayunoMerienda' ? 
+          <button className="nav-link filter active" onClick={() => GetByCategory('desayunoMerienda')}>Desayunos y Meriendas</button> :
+          <button className="nav-link filter" onClick={() => GetByCategory('desayunoMerienda')}>Desayunos y Meriendas</button>}
         </li>
         <li className="nav-item">
-          {ActiveFilter === "shots" ? 
-          <button className="nav-link filter active" onClick={() => GetByCategory("shots")}>Shots</button> :
-          <button className="nav-link filter" onClick={() => GetByCategory("shots")}>Shots</button>}
+          {ActiveFilter === 'shots' ? 
+          <button className="nav-link filter active" onClick={() => GetByCategory('shots')}>Shots</button> :
+          <button className="nav-link filter" onClick={() => GetByCategory('shots')}>Shots</button>}
         </li>
         <li className="nav-item">
-          {ActiveFilter === "letterCake" ? 
-          <button className="nav-link filter active" onClick={() => GetByCategory("letterCake")}>Letter Cake</button> :
-          <button className="nav-link filter" onClick={() => GetByCategory("letterCake")}>Letter Cake</button>}
+          {ActiveFilter === 'letterCake' ? 
+          <button className="nav-link filter active" onClick={() => GetByCategory('letterCake')}>Letter Cake</button> :
+          <button className="nav-link filter" onClick={() => GetByCategory('letterCake')}>Letter Cake</button>}
         </li>
       </ul>
     </div>

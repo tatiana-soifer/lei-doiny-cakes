@@ -56,10 +56,10 @@ const OrderContainer = () => {
                 .finally(() => {
                     SetLoading(false)
                 });
-        })
-    }
-    return (
-        <div>
+        });
+    };
+    return(
+        <>
             <Title title="Confirmá tu pedido" />
             { IsLoading ? <Loader /> :
                 <div className="order-container">
@@ -80,8 +80,8 @@ const OrderContainer = () => {
                         </Link>
                     }
                 </div>
-            }
-            <div>
+            };
+            <>
                 <Modal show={show}>
                     <Modal.Header />
                     <Modal.Body>Se creó el pedido! Tu ID es: {OrderId}</Modal.Body>
@@ -91,8 +91,8 @@ const OrderContainer = () => {
                         </button>
                     </Modal.Footer>
                 </Modal>
-            </div>
-        </div>
+            </>
+        </>
     );
 };
 

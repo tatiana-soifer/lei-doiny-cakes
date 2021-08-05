@@ -22,7 +22,7 @@ function Nosotros (){
                 </div>
             </div>
         </>
-    )
+    );
 };
 
 export default Nosotros;

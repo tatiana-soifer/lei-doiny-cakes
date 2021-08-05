@@ -7,8 +7,8 @@ const ProductsContainer = () => {
     //RECORRIDO DE LOS PRODUCTOS EN EL CARRITO Y CARGO SUS DATOS EN EL COMPONENTE EACHPRODUCTS  
     return (
         SourceProducts.map((item, i) => {
-            return (
-                <div className="col-md-3">
+            return(
+                <div className="cuadriculaProductos col-md-3">
                     <EachProduct product={item}/>
                 </div>
             )

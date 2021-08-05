@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {useCartContext} from '../Context/CartContext';
-import Title from '../Titles/Title';
+import Title from '../Title/Title';
 import CartProductsContainer from './CartProductsContainer';
 
 const Cart = () => {
@@ -9,7 +9,7 @@ const Cart = () => {
     const {cartAmount, totalPrice} = useCartContext();
     //SI EL CARRITO TIENE PRODUCTOS MOSTRAR:
     if (cartAmount > 0) {
-      return (
+      return(
         <div>
           <Title title="Carrito" />
           <ul className="cart-list-container">
@@ -21,10 +21,10 @@ const Cart = () => {
             <button className="primary">Confirmar Pedido</button>
           </Link>
         </div>
-      )
-    }
+      );
+    };
     //CASO CONTRARIO, SI NO HAY PRODUCTOS MOSTRAR:
-    return (
+    return(
       <div>
           <Title title="Carrito" />
           <div className="detail-container">

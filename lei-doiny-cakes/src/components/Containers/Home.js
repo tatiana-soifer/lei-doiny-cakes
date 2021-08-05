@@ -12,8 +12,8 @@ import '../css/Main.css'
 const Home = () => {
     const {IsLoading} = useProductsContext();
     const {show, handleClose} = useCartContext();
-//MOSTRAR PRODUCTOS Y EL MODAL SI ES QUE LOS PRODUCTOS EN EL CARRITO SON IGUALES AL STOCK DISPONIBLE
-    return (
+    //MOSTRAR PRODUCTOS Y EL MODAL SI ES QUE LOS PRODUCTOS EN EL CARRITO SON IGUALES AL STOCK DISPONIBLE
+    return(
             <>
             <div className="presentacion">
                 <h1>Disfrutá increibles tortas artesanales</h1>
@@ -21,15 +21,17 @@ const Home = () => {
             </div>
             <ComoComprar />
             <div>
-                <Title title="Tienda Online" />
+                <Title title="Explorá nuestro menú" />
                 <Filters/>
-                { IsLoading ? <Loader /> :
+                {IsLoading ? <Loader /> :
                     <div className="row">
                         <ProductsContainer />
                         <div>
                             <Modal show={show} onHide={handleClose}>
                                 <Modal.Header closeButton />
-                                <Modal.Body>Lamentablemente no hay más stock disponible para agregar.</Modal.Body>
+                                <Modal.Body>
+                                    Lamentablemente no hay más stock disponible para agregar.
+                                </Modal.Body>
                                 <Modal.Footer>
                                     <button className="secondary" onClick={handleClose}>Cerrar</button>
                                 </Modal.Footer>
