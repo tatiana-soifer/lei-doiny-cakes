@@ -1,7 +1,7 @@
 import React from 'react';
 import {useParams} from 'react-router-dom';
-import {useProductsContext} from '../Context/ProductsContext';
 import ProductDetail from '../ProductDetail/ProductDetail';
+import {useProductsContext} from '../Context/ProductsContext';
 
 const ProductDetailContainer = () => {
     const { SourceProducts } = useProductsContext();
@@ -9,10 +9,11 @@ const ProductDetailContainer = () => {
     const products = SourceProducts.filter((item) => item.id === id);
     return(
         products.map((item, i) => {
-            return <div>
-                        <ProductDetail product={item}/>
-                    </div>
-            
+            return(
+                <div>
+                    <ProductDetail product={item}/>
+                </div>
+            )
         })
     );
 };

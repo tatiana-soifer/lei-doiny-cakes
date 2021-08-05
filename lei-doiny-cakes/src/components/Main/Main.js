@@ -1,7 +1,6 @@
 import {BrowserRouter} from 'react-router-dom';
 import ProductsContextProvider from '../Context/ProductsContext';
 import CartContextProvider from '../Context/CartContext';
-import Home from '../Containers/Home';
 import NavBar from '../NavBar/NavBar';
 import Footer from '../Sections/Footer';
 import '../css/Main.css';
@@ -13,7 +12,6 @@ function Main(){
                 <BrowserRouter>
                 <div className="mainContainer">
                     <NavBar />
-                    <Home />
                     <Footer />
                 </div>
                 </ BrowserRouter>

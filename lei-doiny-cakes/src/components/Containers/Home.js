@@ -13,7 +13,7 @@ const Home = () => {
     const {IsLoading} = useProductsContext();
     const {show, handleClose} = useCartContext();
     //MOSTRAR PRODUCTOS Y EL MODAL SI ES QUE LOS PRODUCTOS EN EL CARRITO SON IGUALES AL STOCK DISPONIBLE
-    return(
+    return (
             <>
             <div className="presentacion">
                 <h1>Disfrutá increibles tortas artesanales</h1>

@@ -8,16 +8,15 @@ const ProductDetail = ({product}) => {
     return (
         <div key={product.id} className="row detail-container">
             <div className="col-md-6 detail-img">
-                <img src={product.photo[1]} className="detail-img" alt={product.title} />
+                <img src={product.photo} className="detail-img" alt={product.title} />
             </div>
             <div className="col-md-6 detail-info">
                 <h1>{product.title}</h1>
-                <h3>{product.description}</h3>
+                <h4>{product.description}</h4>
                 <p>$ {product.price}</p>
                 <span className="light">Stock: {product.stock}</span>
                 <div className="divider">
                 </div>
-                <p>{product.description}</p>
                 {
                     product.stock > 0 ? 
                     <button className="primary" onClick={() => addProduct(product)}>

@@ -153,8 +153,12 @@
   .each-product h3 {
     font-size: 24px; }
 
-.fa-info-circle, .fa-cart-plus {
-  background-color: transparent;
+.each-product:hover .cardCapa {
+  opacity: 1 !important;
+  visibility: visible !important; }
+
+.fa-cart-plus {
+  background-color: white;
   font-size: 2rem;
   border: 1px solid #fff;
   transition: 1s;
@@ -162,13 +166,10 @@
   border-radius: 50%;
   padding: 18%; }
 
-.fa-info-circle:hover {
-  color: white;
-  transition: 1s; }
-
 .fa-cart-plus:hover {
   color: white;
-  transition: 1s; }
+  transition: 1s;
+  background-color: #F22973; }
 
 .fondoBoton {
   background: none;
@@ -191,6 +192,28 @@
       float: right; }
   .cuadriculaProductos .card_show img {
     border-radius: 17px 17px 0px 0px; }
+  .cuadriculaProductos .card_show .cardCapa {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(75, 64, 71, 0.7);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease-out;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 17px 17px 0px 0px; }
+    .cuadriculaProductos .card_show .cardCapa h2 {
+      font-size: 40px;
+      letter-spacing: 0.3rem;
+      color: black;
+      text-align: center;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif; }
 
 .filters button {
   color: #7C7874;
@@ -376,27 +399,14 @@ h3, h4, h5, p {
   .cart-info {
     width: 80%; } }
 
-.loader {
-  border: 16px solid #f3f3f3;
-  border-top: 16px solid #F22973;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
+#loader {
+  color: 16px solid #F22973; }
 
 nav {
   position: -webkit-sticky;
   position: sticky;
-  background-color: none; }
+  background-color: none;
+  padding-top: 5%; }
   nav a {
     color: white; }
   nav a:hover {
@@ -457,11 +467,25 @@ button .primary:active, button .secondary:active {
   margin-top: 30px; }
 
 .detail-container {
-  margin: 30px auto 0; }
+  padding-top: 15%; }
 
 .detail-info {
   text-align: left; }
+  .detail-info h4 {
+    font-size: 20px;
+    padding: 2%; }
+  .detail-info .light {
+    opacity: 0.5; }
+  .detail-info p {
+    font-size: 20px;
+    font-weight: bold; }
 
 .detail-img {
   width: 100%;
   border-radius: 15px; }
+
+.divider {
+  background: none; }
+
+.primary {
+  border: none; }
