@@ -8,7 +8,7 @@ const ProductsContainer = () => {
     return (
         SourceProducts.map((item, i) => {
             return(
-                <div className="cuadriculaProductos">
+                <div className="cuadriculaProductos col-md-6">
                     <EachProduct product={item}/>
                 </div>
             )
