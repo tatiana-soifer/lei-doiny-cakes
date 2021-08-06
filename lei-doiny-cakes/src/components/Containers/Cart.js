@@ -14,7 +14,6 @@ const Cart = () => {
         <Title title="Carrito" />
         <ul className="cart-list-container">
           <CartProductsContainer />
-          <div className="divider"></div>
           <div className="cart-footer">
             <h4>$ {totalPrice}</h4>
             <Link to={`/orden`}>

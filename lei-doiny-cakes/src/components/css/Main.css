@@ -27,7 +27,6 @@
   display: flex;
   flex-direction: column;
   margin: 1rem auto;
-  background-color: #f0f0f0;
   border-radius: 10px;
   padding: 2rem; }
   .container-resumenCompra p {
@@ -44,13 +43,12 @@
     justify-content: space-between; }
 
 .cart-info {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
   justify-content: space-between;
   justify-items: center;
   align-items: center;
   text-align: center;
-  font-size: 1.3rem; }
+  font-size: 1.3rem;
+  width: 240px; }
 
 .total-price h2 {
   text-align: end;
@@ -70,16 +68,26 @@
   display: flex; }
 
 .cart-list-container {
-  display: flex;
-  justify-content: center;
   margin: 30px auto;
   list-style: none; }
+  .cart-list-container h4 {
+    color: #7C7874;
+    margin-right: 5%;
+    text-align: center; }
+  .cart-list-container button {
+    color: white;
+    font-weight: bold;
+    background-color: #F22973;
+    justify-content: center;
+    text-align: center;
+    border-radius: 17px; }
+  .cart-list-container button:hover {
+    color: #F22973; }
 
 .cart-item-container {
   display: flex;
-  justify-content: left;
-  align-items: center;
-  margin-bottom: 15px; }
+  justify-content: center;
+  align-items: center; }
   .cart-item-container button {
     margin-left: 15px;
     margin-right: 0;
@@ -94,9 +102,6 @@
 .product-cart-img {
   height: 100%;
   margin: 0 auto; }
-
-.cart-info {
-  width: 240px; }
 
 .product-cart-img-container img {
   height: 280px;
@@ -211,9 +216,7 @@
   visibility: visible !important; }
 
 .fa-cart-plus {
-  background-color: white;
   font-size: 2rem;
-  border: 1px solid #fff;
   transition: 1s;
   color: #F22973;
   border-radius: 50%;
@@ -221,8 +224,7 @@
 
 .fa-cart-plus:hover {
   color: white;
-  transition: 1s;
-  background-color: #F22973; }
+  transition: 1s; }
 
 .fondoBoton {
   background: none;

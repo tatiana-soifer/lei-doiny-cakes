@@ -9,7 +9,7 @@ const CartEachProduct = ({prod}) => {
             <div className="inline product-cart-img-container">
                 <img src={prod.photo} className="product-cart-img" alt={prod.title} />
             </div>
-            <div className="inline text-left cart-info">
+            <div className="inline cart-info">
                 <p>{prod.title} x {prod.amount} = ${prod.price * prod.amount}</p>
             </div>
             <button className="inline secondary" onClick={() => removeProduct(prod)}>
