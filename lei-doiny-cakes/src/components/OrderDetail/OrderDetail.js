@@ -2,7 +2,7 @@ import React from 'react';
 
 const OrderDetail = ({prod}) => {
     return(
-        <div>
+        <div className="orderDetail">
             <li>{prod.title} x {prod.amount}</li>
         </div>
     );

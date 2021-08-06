@@ -490,6 +490,26 @@ button .primary:active, button .secondary:active {
 .order-container {
   margin-top: 30px; }
 
+.orderContainer {
+  margin-top: 10%; }
+  .orderContainer .main-title {
+    text-align: center; }
+  .orderContainer button {
+    color: white;
+    font-weight: bold;
+    background-color: #F22973;
+    border-radius: 17px;
+    box-shadow: 2px 2px 2px #c0bcbc;
+    border: none; }
+  .orderContainer button:hover {
+    color: #F22973;
+    background-color: white;
+    box-shadow: 2px 2px 2px #c0bcbc; }
+
+.orderDetail {
+  color: #5A5A5A;
+  font-family: 'Montserrat', sans-serif; }
+
 .detail-container {
   padding-top: 5%; }
 

@@ -59,38 +59,40 @@ const OrderContainer = () => {
         });
     };
     return(
-        <div>
-            <Title title="Confirmá tu pedido" />
-            { IsLoading ? <Loader /> :
-                <div className="order-container">
-                    <h4>{newOrderTem.cliente.nombre}</h4>
-                    {cartList.length > 0 ? <p>El detalle de tu pedido es:</p> : <p>¡Muchas gracias por tu compra!</p>}
-                    <ul className="cart-list-container">
-                        <OrderDetailContainer />
-                        <div className="divider"></div>  
-                    </ul>
-                    {cartList.length > 0 ? 
-                        <p>$ {totalPrice}</p> : null
-                    }
-                    {
-                        cartList.length > 0 ?
-                        <button className="primary" onClick={postNewOrder}>Confirmar</button> : 
-                        <Link to={`/`}>
-                            <button className="secondary">Volver al inicio</button>
-                        </Link>
-                    }
+        <div className="container">
+            <div className="row orderContainer">
+                <Title title="Confirmá tu pedido" />
+                { IsLoading ? <Loader /> :
+                    <div className="order-container">
+                        <h4>{newOrderTem.cliente.nombre}</h4>
+                        {cartList.length > 0 ? <p>El detalle de tu pedido es:</p> : <p>¡Muchas gracias por tu compra!</p>}
+                        <ul className="cart-list-container">
+                            <OrderDetailContainer />
+                            <div className="divider"></div>  
+                        </ul>
+                        {cartList.length > 0 ? 
+                            <p>El total a pagar es: $ {totalPrice}</p> : null
+                        }
+                        {
+                            cartList.length > 0 ?
+                            <button className="primary" onClick={postNewOrder}>Confirmar</button> : 
+                            <Link to={`/`}>
+                                <button className="secondary">Volver al inicio</button>
+                            </Link>
+                        }
+                    </div>
+                }
+                <div>
+                    <Modal show={show}>
+                        <Modal.Header />
+                        <Modal.Body>Se creó el pedido! Tu ID es: {OrderId}</Modal.Body>
+                        <Modal.Footer>
+                            <button className="secondary" onClick={() => window.location.reload()}>
+                                Close
+                            </button>
+                        </Modal.Footer>
+                    </Modal>
                 </div>
-            }
-            <div>
-                <Modal show={show}>
-                    <Modal.Header />
-                    <Modal.Body>Se creó el pedido! Tu ID es: {OrderId}</Modal.Body>
-                    <Modal.Footer>
-                        <button className="secondary" onClick={() => window.location.reload()}>
-                            Close
-                        </button>
-                    </Modal.Footer>
-                </Modal>
             </div>
         </div>
     );

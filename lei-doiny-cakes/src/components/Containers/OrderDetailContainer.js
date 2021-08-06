@@ -7,9 +7,10 @@ const OrderDetailContainer = () => {
     return (
         cartList.map((item, i) => {
             return (
-            <li key={i}>
-                <OrderDetail prod={item}/>
-            </li>)
+                <li key={i}>
+                    <OrderDetail prod={item}/>
+                </li>
+            )
         })
     );
 };
