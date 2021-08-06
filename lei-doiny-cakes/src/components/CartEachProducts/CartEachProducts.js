@@ -5,7 +5,7 @@ import '../css/Main.css';;
 const CartEachProduct = ({prod}) => {
     const {removeProduct} = useCartContext();
     return(
-        <div className="cart-item-container col-md-2">
+        <div className="cart-item-container">
             <div className="inline product-cart-img-container">
                 <img src={prod.photo} className="product-cart-img" alt={prod.title} />
             </div>

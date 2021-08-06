@@ -14,9 +14,14 @@ const ProductsContainer = () => {
         //CASO CONTRARIO MOSTRAR LOS PRODUCTOS
         cartList.map((item, i) => {
             return(
-                <li>
-                    <CartEachProduct prod={item}/>
-                </li>)
+                <div className="container">
+                    <div className="row">
+                        <li>
+                            <CartEachProduct prod={item}/>
+                        </li>
+                    </div>
+                </div>
+            )
         })
     );
 };
