@@ -6,9 +6,10 @@ const OrderDetailContainer = () => {
     const {cartList} = useCartContext();
     return (
         cartList.map((item, i) => {
-            return <li key={i}>
+            return (
+            <li key={i}>
                 <OrderDetail prod={item}/>
-            </li>
+            </li>)
         })
     );
 };
