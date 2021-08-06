@@ -1,3 +1,18 @@
-#loader{
-    color: 16px solid #F22973;
+.loader{
+    border: 10px solid #F22973;
+    border-left-color: transparent;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

@@ -15,7 +15,7 @@ const NavBar = () => {
   return(
     <>
       <ul className="nav main-nav">
-        <li>
+        <li className="logo">
           <NavLink to="/">
             <img src={logo} id="logo" alt="logo" />
           </NavLink>

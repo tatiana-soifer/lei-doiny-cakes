@@ -17,6 +17,9 @@ nav{
 	position: sticky;
     top: 0;
     z-index: 1000;
+    justify-content: space-around;
+    z-index: 1000;
+    background-color: none;
 }
 .menu-icon {
     height: 17px;
@@ -43,4 +46,6 @@ button{
 }
 #logo{
     height: 100px;
+    position: absolute;
+    z-index: 1000;
 }

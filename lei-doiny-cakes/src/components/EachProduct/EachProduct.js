@@ -9,14 +9,14 @@ const EachProduct = ({product}) => {
     //SI NO HAY STOCK, SE OCULTA EL BOTON DEL CARRITO.
     return (
         <div key={product.id} className="each-product card shadow mb-1 rounded">
-            <div className="card_show">
-                <img src={product.photo} className="product-img card-img-top" alt={product.title} />
-                <Link to={`/${product.id}`}>
+            <Link to={`/${product.id}`}>
+                <div className="card_show">
+                    <img src={product.photo} className="product-img card-img-top" alt={product.title} />
                     <div className="cardCapa">
                         <h2>VER MÁS</h2>
                     </div>
-                </Link>
-            </div>
+                </div>
+            </Link>
             <div className="product-card-body card-body">
                 <h2 className="card-title">{product.title}</h2>
                 <h3 className="precio">$ {product.price} . -</h3>

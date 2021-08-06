@@ -24,18 +24,20 @@ const Home = () => {
                 <Title title="Explorá nuestro menú" />
                 <Filters/>
                 {IsLoading ? <Loader /> :
-                    <div className="row">
-                        <ProductsContainer />
-                        <div>
-                            <Modal show={show} onHide={handleClose}>
-                                <Modal.Header closeButton />
-                                <Modal.Body>
-                                    Lamentablemente no hay más stock disponible para agregar.
-                                </Modal.Body>
-                                <Modal.Footer>
-                                    <button className="secondary" onClick={handleClose}>Cerrar</button>
-                                </Modal.Footer>
-                            </Modal>
+                    <div className="container">
+                        <div className="row">
+                            <ProductsContainer />
+                            <div>
+                                <Modal show={show} onHide={handleClose}>
+                                    <Modal.Header closeButton />
+                                    <Modal.Body>
+                                        Lamentablemente no hay más stock disponible para agregar.
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <button className="secondary" onClick={handleClose}>Cerrar</button>
+                                    </Modal.Footer>
+                                </Modal>
+                            </div>
                         </div>
                     </div>
                 }

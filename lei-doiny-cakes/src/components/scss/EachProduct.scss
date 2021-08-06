@@ -10,7 +10,7 @@
         font-size: 24px;
     }
 }
-.each-product:hover .cardCapa{
+.card_show:hover .cardCapa{
     opacity: 1!important;
     visibility: visible!important;
 }
@@ -54,29 +54,29 @@
         img{
             border-radius: 17px 17px 0px 0px;
         }
-        .cardCapa{
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(75, 64, 71, 0.7);
-            display: flex;
-            align-content: center;
-            justify-content: center;
-            align-items: center;
-            transition: all 1s ease-out;
-            opacity: 0;
-            visibility: hidden;
-            border-radius: 17px 17px 0px 0px;
-            h2{
-                font-size: 40px;
-                letter-spacing: 0.3rem;
-                color: black;
-                text-align: center;
-                padding: 0;
-                font-family: 'Montserrat', sans-serif;
-            }
-        }
+    }
+}
+.cardCapa{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 56%;
+    background-color: rgba(75, 64, 71, 0.7);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease-out;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 17px 17px 0px 0px;
+    h2{
+        font-size: 40px;
+        letter-spacing: 0.3rem;
+        color: black;
+        text-align: center;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
     }
 }

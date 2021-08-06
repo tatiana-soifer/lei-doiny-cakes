@@ -1,34 +1,14 @@
 import React from "react";
-import {makeStyles} from '@material-ui/core/styles';
-import LinearProgress from '@material-ui/core/LinearProgress';
 import '../css/Main.css';
 
-const useStyles = makeStyles({
-    root: {
-        width: '100%',
-    },
-});
-
-export default function Spinner() {
-    const classes = useStyles();
-    const [progress, setProgress] = React.useState(0);
-    React.useEffect(() => {
-        const timer = setInterval(() => {
-        setProgress((oldProgress) => {
-                if (oldProgress === 100) {
-                    return 0;
-                }
-            const diff = Math.random() * 10;
-            return Math.min(oldProgress + diff, 100);
-        });
-        }, 500);
-        return() => {
-            clearInterval(timer);
-        };
-    }, []);
+const loader = () => {
     return(
-        <div id="loader" className={classes.root}>
-            <LinearProgress variant="determinate" value={progress} />
+        <div className="container">
+            <div className="row">
+                <div className="loader"></div>
+            </div>
         </div>
-    );
-};
+    )
+}
+
+export default loader;
