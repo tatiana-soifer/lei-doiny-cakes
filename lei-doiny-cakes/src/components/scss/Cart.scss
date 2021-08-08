@@ -48,12 +48,9 @@
     }
 }
 .cart-info{
-    justify-content: space-between;
-    justify-items: center;
-    align-items: center;
     text-align: center;
     font-size: 1.3rem;
-    width: 240px;
+    width: 35%;
 }
 .total-price{
     h2{
@@ -128,6 +125,11 @@
         border-radius: 17px;
     }
 }
+.cart-item-container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
 
 //BOTONES
 .btn-carrito{
@@ -144,7 +146,12 @@
     font-size: 1.5rem;
     margin: 1rem 0 1rem 5%;
 }
-
+.cart-buttons{
+    display: grid;
+    button{
+        margin-bottom: 60%;
+    }
+}
 //RESPONSIVE
 @media (max-width: 576px){
     .cart-list-container{

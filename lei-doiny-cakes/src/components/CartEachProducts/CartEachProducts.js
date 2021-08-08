@@ -13,12 +13,14 @@ const CartEachProduct = ({prod}) => {
             <div className="inline cart-info">
                 <p>{prod.title} x {prod.amount} = ${prod.price * prod.amount}</p>
             </div>
-            <button className="inline secondary" onClick={() => removeProduct(prod)}>
-                <i className="fas fa-minus"></i>
-            </button>
-            <button className="inline secondary" onClick={() => addProduct(prod)}>
-                <i className="fas fa-plus"></i>
-            </button>
+            <div className="cart-buttons">
+                <button className="inline secondary" onClick={() => removeProduct(prod)}>
+                    <i className="fas fa-minus"></i>
+                </button>
+                <button className="inline secondary" onClick={() => addProduct(prod)}>
+                    <i className="fas fa-plus"></i>
+                </button>
+            </div>
         </div>    
     );
 };

@@ -43,12 +43,9 @@
     justify-content: space-between; }
 
 .cart-info {
-  justify-content: space-between;
-  justify-items: center;
-  align-items: center;
   text-align: center;
   font-size: 1.3rem;
-  width: 240px; }
+  width: 35%; }
 
 .total-price h2 {
   text-align: end;
@@ -107,6 +104,11 @@
   margin-right: 15px;
   border-radius: 17px; }
 
+.cart-item-container {
+  justify-content: center;
+  align-items: center;
+  display: flex; }
+
 .btn-carrito {
   font-size: 1.8rem;
   margin: 1rem 1rem 1rem 0; }
@@ -120,6 +122,11 @@
   background-color: #ffffff;
   font-size: 1.5rem;
   margin: 1rem 0 1rem 5%; }
+
+.cart-buttons {
+  display: grid; }
+  .cart-buttons button {
+    margin-bottom: 60%; }
 
 @media (max-width: 576px) {
   .cart-list-container {
