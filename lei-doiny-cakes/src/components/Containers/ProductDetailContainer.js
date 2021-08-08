@@ -10,9 +10,9 @@ const ProductDetailContainer = () => {
     return(
         products.map((item, i) => {
             return(
-                <div>
+                <>
                     <ProductDetail product={item}/>
-                </div>
+                </>
             )
         })
     );

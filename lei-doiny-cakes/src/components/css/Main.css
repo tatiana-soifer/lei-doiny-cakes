@@ -354,16 +354,16 @@ a.nav-link.active {
   background-position: center center;
   border: none;
   padding-top: 5%;
-  height: 600px; }
+  height: 600px;
+  padding-left: 5%; }
   .presentacion h1 {
-    width: 20%;
+    width: 30%;
     top: 32%;
-    padding-left: 3%; }
+    text-align: center; }
   .presentacion p {
     height: 78px;
     width: 40%;
-    left: 5%;
-    padding-left: 5%;
+    text-align: center;
     font-size: 23px;
     color: #5A5A5A; }
 
