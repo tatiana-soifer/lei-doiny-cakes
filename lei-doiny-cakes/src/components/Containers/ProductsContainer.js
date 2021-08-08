@@ -5,7 +5,7 @@ import EachProduct from '../EachProduct/EachProduct';
 const ProductsContainer = () => {
     const {SourceProducts} = useProductsContext();
     //RECORRIDO DE LOS PRODUCTOS EN EL CARRITO Y CARGO SUS DATOS EN EL COMPONENTE EACHPRODUCTS  
-    return (
+    return(
         SourceProducts.map((item, i) => {
             return(
                 <div className="cuadriculaProductos col-md-3">

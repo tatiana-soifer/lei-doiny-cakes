@@ -14,9 +14,9 @@ function Main(){
                     <NavBar />
                     <Footer />
                 </div>
-                </ BrowserRouter>
+                </BrowserRouter>
             </CartContextProvider>
-        </ ProductsContextProvider>
+        </ProductsContextProvider>
     );
 };
 

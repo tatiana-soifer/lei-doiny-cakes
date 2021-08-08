@@ -40,6 +40,7 @@ const CartContextProvider = ({children}) => {
         setTotalPrice(totalPrice + product.price);
         setCartAmount(cartAmount + 1);
     };
+    //AGREAR PRODUCTO CON UNA UNIDAD
     //ELIMINAR PRODUCTOS DEL CARRITO
     const removeProduct = (product) => {
         //VERIFICAR SI EL PRODUCTO ESTA EN EL CARRITO
